@@ -1,0 +1,83 @@
+﻿Phase:	subTocSubSubChapterExtractor
+Input: Token Number Date
+Options: control = appelt 
+
+Rule: subtoc-subsubchapter
+Priority:60
+
+
+(({Token.kind==number, Token.category==ADJA, Token.length==2}):subtocsubsubchapternumber
+(((({Token.string=="Nr"}{Token.string=="."})?{Token.kind==word,  Token.string!="Nr", Token.length>1, Token.string!="Rn", Token.string!="Aufl", Token.string!="Abs"})|{Token.kind==number, Token.category!=ADJA}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")",Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|
+({Token.kind==word, Token.category==CARD}{Token.string!="."})|
+ ({Token.string=="bzw"}{Token.string=="."})|
+  ({Token.string=="Nr"}{Token.string=="."}{Token.kind==number}({Token.kind==word}|({Token.string==","}{Token.kind==number}))?)|
+{Token.string=="-"}|{Token.string=="–"}|{Token.string==";"}|
+(({Token.string=="("})({Token.string=="Nr"}{Token.string=="."}{Token.kind==number})?(({Token.string!="."}|({Token.string=="u"}{Token.string=="."}))[0,3])({Token.string==")"})))+):subtocsubsubchapter
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn",Token.string!="Nr" ,Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+({Token.kind==punctuation, Token.string=="."})+
+({Token.kind==number, Token.kind!=word, Token.category!=ADJA, !Date}):page
+	):SubTocSubSubChapter 
+
+
+-->
+{
+		gate.AnnotationSet subTocSubSubChapter = (AnnotationSet)bindings.get("SubTocSubSubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+
+	
+		String subsubchapternumberStr ="";
+	
+		try {
+		gate.Annotation subsubchapternumberAnn = ((gate.AnnotationSet)bindings.get("subtocsubsubchapternumber")).iterator().next();
+		subsubchapternumberStr = doc.getContent().getContent(subsubchapternumberAnn.getStartNode().getOffset(),subsubchapternumberAnn.getEndNode().getOffset()).toString();
+
+			if(".".equals(subsubchapternumberStr.substring(subsubchapternumberStr.length() - 1, subsubchapternumberStr.length() )))
+			{subsubchapternumberStr=subsubchapternumberStr.substring(0,subsubchapternumberStr.length() - 1);}
+			
+
+		Out.println("Here 6 "+subsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapternumber", subsubchapternumberStr);
+		
+	String subsubchapterStr ="";
+		
+	
+	
+	try {
+	gate.AnnotationSet subSubChapterAs = (gate.AnnotationSet)bindings.get("subtocsubsubchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subSubChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subsubchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+	
+		
+		Out.println("Here 7 "+subsubchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapter", subsubchapterStr);
+	
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","subtoc-subsubchapter");
+outputAS.add(subTocSubSubChapter.firstNode(), subTocSubSubChapter.lastNode(),"SubSubChapter", features);
+		
+	}
+	

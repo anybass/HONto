@@ -1,0 +1,135 @@
+﻿Phase: reference
+Input: Token Number Date
+Options: control= appelt
+
+Rule: reference
+Priority:50
+
+(
+(({Token.string=="§"})+({ Token.string!="(", Token.string!=")", Token.string!="\"", Token.string!="/", Token.string!=";", Token.string!="Rn", Token.category!=VAFIN, Token.string!="nach", Token.string!="gemäß", Token.orth!=allCaps,  Token.orth!=mixedCaps, Token.category!=VVPP})[1,15](({Token.orth==allCaps, Token.category!=CARD}|{Token.orth==mixedCaps})+):gesetz1)
+|
+({Token.string=="Art"}{Token.string=="."}({ Token.string!="(", Token.string!=")", Token.string!="\"", Token.string!="/", Token.string!=";", Token.string!="Rn", Token.category!=VAFIN,Token.string!="nach", Token.string!="gemäß"})[1,10](({Token.orth==allCaps,Token.category!=CARD}|{Token.orth==mixedCaps})+):gesetz2)
+|
+({Date}{Token.string=="/"}({Token.orth==allCaps}):gesetz3)
+|
+({Date}{Token.string=="/"}{Number}{Token.string=="/"}({Token.orth==allCaps}):gesetz4)
+|
+({Number}{Token.string=="/"}{Number}{Token.string=="/"}({Token.orth==allCaps}):gesetz5)
+):ref
+{!Date, Token.string!= "Rn",  Token.string!= "Band"}
+-->
+{
+	gate.AnnotationSet REF = (AnnotationSet)bindings.get("ref");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	gate.AnnotationSet Gesetz = (AnnotationSet)bindings.get("ref");
+	
+	
+	gate.FeatureMap features2 = Factory.newFeatureMap();
+	
+String refStr ="";
+	
+	try {
+		gate.AnnotationSet refToken = gate.Utils.getContainedAnnotations(inputAS, REF, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(refToken);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			refStr+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+ 
+		Out.println("Here 1 "+refStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String gesetz1Str = "";
+	
+	try {
+		gate.AnnotationSet gesetz1As = (AnnotationSet)bindings.get("gesetz1");
+		gate.AnnotationSet gesetz1Token = gate.Utils.getContainedAnnotations(inputAS, gesetz1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(gesetz1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			gesetz1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 2 "+gesetz1Str);}
+	catch (Exception p) {
+		Out.println(p);
+		}
+		
+		
+	String gesetz2Str = "";
+	
+	try {
+		gate.AnnotationSet gesetz2As = (AnnotationSet)bindings.get("gesetz2");
+		gate.AnnotationSet gesetz2Token = gate.Utils.getContainedAnnotations(inputAS, gesetz2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(gesetz2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			gesetz2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		
+		Out.println("Here 3 "+gesetz2Str);}
+	catch (Exception p) {
+		Out.println(p);
+		}
+		
+	String gesetz3Str = "";
+	
+	try {
+		gate.AnnotationSet gesetz3As = (AnnotationSet)bindings.get("gesetz3");
+		gate.AnnotationSet gesetz3Token = gate.Utils.getContainedAnnotations(inputAS, gesetz3As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(gesetz3Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			gesetz3Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+gesetz3Str);}
+	catch (Exception p) {
+		Out.println(p);
+		}
+		String gesetz4Str = "";
+	
+	try {
+		gate.AnnotationSet gesetz4As = (AnnotationSet)bindings.get("gesetz4");
+		gate.AnnotationSet gesetz4Token = gate.Utils.getContainedAnnotations(inputAS, gesetz4As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(gesetz4Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			gesetz4Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 5 "+gesetz4Str);}
+	catch (Exception p) {
+		Out.println(p);
+		}
+		String gesetz5Str = "";
+	
+	try {
+		gate.AnnotationSet gesetz5As = (AnnotationSet)bindings.get("gesetz5");
+		gate.AnnotationSet gesetz5Token = gate.Utils.getContainedAnnotations(inputAS, gesetz5As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(gesetz5Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			gesetz5Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 6 "+gesetz5Str);}
+	catch (Exception p) {
+		Out.println(p);
+		}
+				
+		features.put("ref", refStr);
+		features.put("rule","reference");
+		features2.put("rule", "regulation");
+		features2.put("gesetz",  gesetz1Str + gesetz2Str + gesetz3Str + gesetz4Str + gesetz5Str);
+		outputAS.add(REF.firstNode(), REF.lastNode(),"REF", features);
+		outputAS.add(Gesetz.firstNode(), Gesetz.lastNode(),"Gesetz", features2);
+	
+		
+	
+}

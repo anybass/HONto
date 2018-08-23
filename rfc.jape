@@ -1,0 +1,1754 @@
+﻿Phase:	reasonsForCitingNe
+Input: Token Gesetz
+Options: control = appelt
+
+Rule: posPatternNeDef1a
+Priority:80
+
+ 
+ (({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"})
+ (({Token.kind==word, Token.string!="."})*
+ ({Gesetz}):ref1
+  ({Token.string!=".", Token.kind!= punctuation})*
+   ({Token.string=="Begriff"}|{Token.string=="Grundsatz"}):defFlag1
+   {Token.category==ART}
+ (   {Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?|
+ ((({Token.category==APPRART})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ ((
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc1
+     ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*
+
+ ):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	Boolean defFlag = false;
+	String defFlag1Str ="";
+
+
+	
+	try {
+		gate.Annotation FAnn = ((gate.AnnotationSet)bindings.get("defFlag1")).iterator().next();
+		defFlag1Str = doc.getContent().getContent(FAnn.getStartNode().getOffset(),FAnn.getEndNode().getOffset()).toString();
+		
+
+		if (defFlag1Str != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+		
+		Out.println("Here 01 "+defFlag1Str);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+	String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+	
+		
+
+
+		String ref1Str ="";
+	
+		try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", "" );
+		features.put("explicitReference1",ref1Str );
+		features.put("explicitReference2", "");
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNeDef1a");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+Rule: posPatternNeDef1b
+Priority:70
+
+
+ (({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string==","})
+ (({Token.kind==word, Token.string!="."})*
+ (({Token.string=="Begriff"}|{Token.string=="Grundsatz"}):defFlag2)+
+ (({Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==ART})|
+ (({Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.string!="nach"})*{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPRART}|
+  {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ ((
+ ({Token.category==NN, Token.kind!=punctuation}(({Token.kind!=punctuation})+{Token.category==ADJA}))|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2
+ ({Token.string=="("}{Token.kind==word}{Token.string==")"})?
+  ( ({Token.string=="in"}{Token.string=="den"})|
+   ({Token.string=="nach"}|{Token.string=="gemäß"}|({Token.string=="gem"}{Token.string=="."}) |((({Token.string=="i"}{Token.string=="."})|{Token.string=="im"})(({Token.string=="S"}{Token.string=="."})|{Token.string=="Sinne"})({Token.string=="v"}{Token.string=="."})|{Token.string=="von"}))*)
+	 ({Gesetz}):ref2
+	        ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*
+
+ ):rfc
+  ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	Boolean defFlag = false;
+
+	String defFlag2Str ="";
+
+	
+	try {
+		gate.Annotation F2Ann = ((gate.AnnotationSet)bindings.get("defFlag2")).iterator().next();
+		defFlag2Str = doc.getContent().getContent(F2Ann.getStartNode().getOffset(),F2Ann.getEndNode().getOffset()).toString();
+
+		 if (defFlag2Str != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+		
+		Out.println("Here 02 "+defFlag2Str);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+
+
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	
+
+		
+		
+		features.put("rfc1", "");
+		features.put("rfc2", rfc2Str );
+		features.put("explicitReference1", "");
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNeDef1b");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+}
+
+Rule: posPatternNeDef2
+Priority:60
+
+ (({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="."})
+ ({Token.kind==word})*
+( (
+((({Token.kind==word, Token.category!="NN"}|{Token.kind==punctuation, Token.string==",", Token.string!="."}|{Token.category==APPR}|{Token.category==PROAV}|{Token.category==ART}|{Token.category==ADJA})*
+{Token.category==NN, Token.kind!=punctuation}):rfc2_1
+)
+| 
+(( ({Token.category==VVFIN})
+   ({Token.kind==word}|{Token.kind==punctuation, Token.string==",", Token.string!="."})*
+ ({Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?)|
+ (({Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPRART}|
+  {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ (((
+({Token.category==APPR})? {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ (({Token.category==APPR})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ {Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2_2))
+ 
+({Token.string=="("}{Token.kind==word}{Token.string==")"})?
+({Token.category==VAFIN})?	
+	 
+({Token.string=="in"}|{Token.string=="nach"}|{Token.string=="gemäß"}|({Token.string=="gem"}{Token.string=="."}) |((({Token.string=="i"}{Token.string=="."})|{Token.string=="im"})(({Token.string=="S"}{Token.string=="."})|{Token.string=="Sinne"})({Token.string=="v"}{Token.string=="."})|{Token.string=="von"})):defFlag2_2
+({Gesetz}):ref2_2
+):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	Boolean defFlag = false;
+
+	String defFlag2Str_2 ="";
+	
+	try {
+	
+		gate.Annotation F2_2Ann = ((gate.AnnotationSet)bindings.get("defFlag2_2")).iterator().next();
+		defFlag2Str_2 = doc.getContent().getContent(F2_2Ann.getStartNode().getOffset(),F2_2Ann.getEndNode().getOffset()).toString();
+	 if (defFlag2Str_2 != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+
+		Out.println("Here 03 "+defFlag2Str_2);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+String rfc2Str_1 ="";
+	
+	try {
+		gate.AnnotationSet rfc2_1As = (AnnotationSet)bindings.get("rfc2_1");
+		gate.AnnotationSet rfc2_1Token = gate.Utils.getContainedAnnotations(inputAS, rfc2_1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2_1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str_1+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2"+rfc2Str_1);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		String rfc2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet rfc2_2As = (AnnotationSet)bindings.get("rfc2_2");
+		gate.AnnotationSet rfc2_2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2.5 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+
+
+		
+			String ref2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet ref2_2As = (AnnotationSet)bindings.get("ref2_2");
+		gate.AnnotationSet ref2_2Token = gate.Utils.getContainedAnnotations(inputAS, ref2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4.5 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1",rfc2Str_1);
+		features.put("rfc2", rfc2Str_2);
+		features.put("explicitReference1","");
+		features.put("explicitReference2", ref2Str_2);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNeDef2");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+Rule: posPatternNeDef3
+Priority:55
+
+
+ (((
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2_2
+	 ({Token.category==VAFIN})?
+	 ({Token.string=="nach"}|{Token.string=="gemäß"}|({Token.string=="gem"}{Token.string=="."}) |((({Token.string=="i"}{Token.string=="."})|{Token.string=="im"})(({Token.string=="S"}{Token.string=="."})|{Token.string=="Sinne"})({Token.string=="v"}{Token.string=="."})|{Token.string=="von"})):defFlag2_2
+	 ({Gesetz}):ref2_2
+):rfc	 	( {Token.category==KON}|
+	  ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei" })*  
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("}))
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	Boolean defFlag = false;
+
+	String defFlag2Str_2 ="";
+	
+	try {
+	
+		gate.Annotation F2_2Ann = ((gate.AnnotationSet)bindings.get("defFlag2_2")).iterator().next();
+		defFlag2Str_2 = doc.getContent().getContent(F2_2Ann.getStartNode().getOffset(),F2_2Ann.getEndNode().getOffset()).toString();
+	 if (defFlag2Str_2 != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+
+		Out.println("Here 03 "+defFlag2Str_2);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+
+		String rfc2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet rfc2_2As = (AnnotationSet)bindings.get("rfc2_2");
+		gate.AnnotationSet rfc2_2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2.5 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+
+
+		
+			String ref2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet ref2_2As = (AnnotationSet)bindings.get("ref2_2");
+		gate.AnnotationSet ref2_2Token = gate.Utils.getContainedAnnotations(inputAS, ref2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4.5 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1","");
+		features.put("rfc2", rfc2Str_2);
+		features.put("explicitReference1","");
+		features.put("explicitReference2", ref2Str_2);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNeDef3");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+Rule: posPatternNeDef4
+Priority:52
+
+
+ (((
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2_2
+	 ({Gesetz}):ref2_2
+	  ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei" })*   
+
+ 
+):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	Boolean defFlag = true;
+
+	String defFlag2Str_2 ="true";
+	
+	
+
+		String rfc2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet rfc2_2As = (AnnotationSet)bindings.get("rfc2_2");
+		gate.AnnotationSet rfc2_2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+
+
+		
+			String ref2Str_2 ="";
+	
+	try {
+		gate.AnnotationSet ref2_2As = (AnnotationSet)bindings.get("ref2_2");
+		gate.AnnotationSet ref2_2Token = gate.Utils.getContainedAnnotations(inputAS, ref2_2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2_2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str_2+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4.5 "+rfc2Str_2);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1","");
+		features.put("rfc2", rfc2Str_2);
+		features.put("explicitReference1","");
+		features.put("explicitReference2", ref2Str_2);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNeDef4");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+Rule: patternPrel
+Priority:50
+
+ ((
+( {Token.string==","}{Token.category==PREL})
+ (({Token.string=="in"}{Token.string=="den"})|{Token.string=="nach"}|{Token.string=="gemäß"}|{Token.string=="aufgrund"}|{Token.string=="wegen"})?
+ ({Gesetz}):ref1
+  ({Token.kind!= punctuation, Token.string!="."})*
+ ((((
+  {Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?|
+ {Token.category==APPRART})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ ((
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}({Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})?)|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})|
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation})|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc1
+({Token.kind!= punctuation, !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*
+({Token.kind==word})*
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"})
+ ) 
+ |
+ (
+ (({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==")"})
+ ({!Gesetz, Token.kind==word, Token.string!="."})*
+ ((
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"})|
+({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ ({Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word , Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==ART}|
+ {Token.category==ADJA, Token.kind==word}|
+ {Token.category==JJ}|
+ {Token.category==JJR}|
+ {Token.category==JJS}|{Token.category==VBG}|
+ {Token.category==VBN})*
+((
+ {Token.category==ADJD, Token.kind!=punctuation}|
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+  ({Token.category==ADJA, Token.kind==word})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2
+{Token.string==","}{Token.category==PREL}
+(({Token.string=="in"}{Token.string=="den"})|{Token.string=="nach"}|{Token.string=="gemäß"}|{Token.string=="aufgrund"}|{Token.string=="wegen"})?
+ ({Gesetz}):ref2
+   ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei" })*	       
+
+):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string=="("}))
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+
+	String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternPrel");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+
+Rule: posPatternNe
+Priority:41
+
+ 
+ (({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string=="/"})
+(( ({Token.kind==word, Token.string!="."}|{Token.kind==number, Token.string!="."})*
+ (({Token.string=="in"}{Token.string=="den"})|{Token.string=="nach"}|{Token.string=="gemäß"})?
+ ({Gesetz}):ref1
+  ({Token.kind!= punctuation, Token.string!="."})*
+ ((((
+  {Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?|
+ {Token.category==APPRART})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ 
+ ((
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}({Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})?)|
+ ({Token.category==NN,  Token.kind!=punctuation,  Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})|
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation})|
+ {Token.category==NN,  Token.kind!=punctuation,  Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ (({Token.category==APPRART})? {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPRART}|{Token.category==APPR}|{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*))+):rfc1
+     ({Token.kind!= punctuation, !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string=="("})
+ ) |
+(({Token.kind!=punctuation})*
+ ({Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ 
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"})|
+({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ (({Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word , Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==ART}|
+ {Token.category==ADJA, Token.kind==word}|
+ {Token.category==JJ}|
+ {Token.category==JJR}|
+ {Token.category==JJS}|{Token.category==VBG}|
+ {Token.category==VBN})*
+((
+  {Token.category==ADJD, Token.kind!=punctuation}|
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+  ({Token.category==NN, Token.kind!=punctuation,  Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==APPRART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN,  Token.kind!=punctuation,  Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation,   Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==APPR, Token.kind==word, Token.string!="nach"})|
+ {Token.category==NN, Token.kind!=punctuation,   Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==XY, Token.orth!=allCaps, Token.kind==word})+):rfc2
+	({Token.kind!= punctuation, Token.category!= NN,  Token.category!= NE,  Token.category!= XY,  Token.string!=".", Token.string!="nach", Token.string!="gemäß"})*
+			(({Token.string=="in"}{Token.string=="den"})|({Token.string=="nach"}|{Token.string=="gemäß"}))?
+	 ({Gesetz}({Token.category==KON}{Gesetz})?):ref2
+	     ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei" })*)
+
+):rfc
+ (({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"})|{Token.string=="und"})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag =false;
+
+	String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","posPatternNe");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+
+Rule: patternBeforeBrackets
+Priority:40                                                                                                                                                                                                                                                                                                                                                                                                                 
+(
+ ((({Gesetz})+):ref1(({Token.category==ADJD, Token.kind!=punctuation})+):rfc1({Token.category==VVFIN}|{Token.category==PTKNEG}|{Token.category==ADV}|{Token.category==APPR}|{Token.category==CARD})*{Token.string=="("}
+)
+|
+(({Token.kind==punctuation})?({Token.kind==word})*({Gesetz}):ref2{Token.string=="("}
+({Token.category==NN, Token.kind!=punctuation}({Token.category==APPR}|{Token.category==ADJA}|{Token.category==ART}|{Token.category==KON}|{Token.category==NN, Token.kind!=punctuation})*):rfc2 ({Token.kind!=punctuation, Token.category!=NN, Token.kind!=punctuation})[0,3]{Token.string==")"})
+):rfc
+
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+
+String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 1 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 2 "+ref2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}	
+	
+String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 3 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternBeforeBrackets");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+Rule: patternAroundBrackets
+Priority:38                                                                                                                                                                                                                                                                                                                                                                                                        
+
+((((({Token.category==NN, Token.kind!=punctuation}{Token.category==APPRART}{Token.category==ADJA})|{Token.category==ADJA})?{Token.category==NN, Token.kind!=punctuation}|{Token.category==NE}|{Token.category==ADJD, Token.kind!=punctuation})+):rfc2
+({Token.string!="(", Token.string!=")",  Token.kind==word, Token.category!=NN, Token.kind!=punctuation})[0,5]
+{Token.string=="("}
+({!Gesetz, Token.category!=NN, Token.string!=")"}|{Token.category==NN, Token.length<2})*{Token.string==")"}
+({Token.string!="(", Token.string!=")",  Token.kind==word})[0,5]
+({Gesetz}):ref2 
+
+	({Token.kind!=punctuation})*
+):rfc
+
+{Token.kind==punctuation}
+
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+
+	
+
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here  4"+ref2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	
+
+		
+		features.put("rfc1", "");
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1","");
+		features.put("explicitReference2", ref2Str );
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternAroundBrackets");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+Rule: patternWithBrackets
+Priority:37                                                                                                                                                                                                                                                                                                                                                                                                          
+(
+(({Token.category==ART})?((({Token.category==ADJA}|{Token.category==APPRART}|{Token.category==ADJD, Token.kind!=punctuation}|{Token.category==TRUNC})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps}|{Token.category==NE, Token.orth!=allCaps})+):rfc1
+({Token.kind==word}|{Token.kind==number}|{Token.string==","})[0,5]
+{Token.string=="("}
+({!Gesetz, Token.string!=")"})*({Gesetz}):ref1 (((({!Gesetz, Token.string!=")"})+{Gesetz}):ref3)|{!Gesetz, Token.string!=")"})*
+)|(
+{Token.string=="("}
+({!Gesetz, Token.string!=")"})*({Gesetz}):ref2 (((({!Gesetz, Token.string!=")"})+{Gesetz}):ref4)|{!Gesetz, Token.string!=")"})*
+((({Token.category==ADJA})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps}|{Token.category==NE, Token.orth!=allCaps}|{Token.category==ADJD, Token.kind!=punctuation})+):rfc2
+)
+):rfc
+{Token.string==")"}
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+
+	
+	
+String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3"+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here  4"+ref2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+			String ref3Str ="";
+	
+		try {
+		gate.AnnotationSet ref3As = (AnnotationSet)bindings.get("ref3");
+		gate.AnnotationSet ref3Token = gate.Utils.getContainedAnnotations(inputAS, ref3As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref3Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref3Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 5 "+ref3Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		String ref4Str ="";
+	try {
+		gate.AnnotationSet ref4As = (AnnotationSet)bindings.get("ref4");
+		gate.AnnotationSet ref4Token = gate.Utils.getContainedAnnotations(inputAS, ref4As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref4Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref4Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 6 "+ref4Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str +  ref3Str);
+		features.put("explicitReference2", ref2Str + ref4Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternWithBrackets");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+Rule: patternBetweenBrackets
+Priority:35                                                                                                                                                                                                                                                                                                                                                                                                                                     
+(
+   (({Gesetz})+):ref1
+   {Token.string=="("}
+   ((({Token.category==NN, Token.kind!=punctuation}({Token.category==NN, Token.kind!=punctuation}|{Token.category==ART}|{Token.category==APPR}|{Token.category==ADJA}|{Token.string==","})*)+{Token.string==","})
+ |
+ ((({Token.string!=".", Token.string!=",", Token.orth!=allCaps, Token.kind!=number})+)*)):rfc1({Token.orth==allCaps}|{Token.string==","}|{ Token.kind==number})* {Token.string==")"}
+ ({Token.string=="i"}{Token.string=="."}{Token.string=="V"}{Token.string=="."}{Token.string=="m"}{Token.string=="."}({Gesetz}):ref2)?
+ 
+ ):rfc
+-->
+	{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+		String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 2 "+ref2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 3 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		features.put("rfc1", rfc1Str);
+		features.put("rfc1", "");
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternBetweenBrackets");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+}
+
+Rule: patternBrackets
+Priority:20                                                                                                                                                                                                                                                                                                                                                                                                                                       
+(
+
+(
+({Token.string=="("}({Token.kind==word})?
+  ({Gesetz}):ref1
+	  ({Token.category==NN, Token.kind!=punctuation}({Token.category==NN, Token.kind!=punctuation}|{Token.category==NE}|{Token.category==APPRART}|{Token.category==ART}|{Token.category==ADJA}|{Token.category==ADJD, Token.kind!=punctuation}|{Token.category==APPR})[0,5]):rfc1))
+|
+(({Token.category==NN, Token.kind!=punctuation}):rfc2 
+  {Token.string=="("}{Token.string=="vgl"}{Token.string=="."}({Token})?
+  ({Gesetz}({Gesetz}|{Token.string==","})?):ref2
+	  ({Token})?)
+  ):rfc 
+  ({Token.string==")"}{Token.string=="."}| {Token.string==","})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 2 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 1 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 2 "+ref2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}	
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str );
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternBrackets");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+}
+
+Rule: patternNe
+Priority:15
+
+ 
+ ((({Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="ff"}){Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}|{Token.kind==punctuation, Token.string==";"}|{Token.string=="nach"})|(({Token.kind==punctuation}({Token.kind!=punctuation}|({Token.kind==word, Token.length<4}{Token.string=="."})))?({Token.kind==punctuation, Token.string=="/"}):defFlag1))
+ ((({  !Gesetz, Token.kind==word, Token.string!="."})*
+ ((({Token.string=="in"}{Token.string=="den"})|{Token.string=="aufgrund"}|{Token.string=="wegen"}|({Token.category==ADV}{Token.category==KOUS}))|({Token.string=="nach"}|{Token.string=="gemäß"}):defFlag1_2)?
+ ({Gesetz}):ref1
+  ({Token.kind!= punctuation, Token.string!=".", Token.category!=KON})[0,5]
+   ({Token.kind== punctuation, Token.string=="("})?
+ ((((
+  {Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?|
+ {Token.category==APPRART})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|{Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ (
+ (
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA, Token.kind!=punctuation}{Token.category==NN, Token.kind!=punctuation}({Token.category==ADJA, Token.kind!=punctuation}{Token.category==NN, Token.kind!=punctuation})?)|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN,  Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA, Token.kind!=punctuation}{Token.category==ADJA, Token.kind!=punctuation}{Token.category==NN, Token.kind!=punctuation})|
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation}({Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation})?)|
+ (({Token.category==ADJA, Token.kind!=punctuation})?{Token.category==NN,  Token.kind!=punctuation,Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==ADJD, Token.kind!=punctuation})+):rfc1
+     ({ !Gesetz, Token.kind!= punctuation, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})[0,4]
+ 
+ ) |
+ (({ !Gesetz, Token.kind==word, Token.string!="."})*
+({Token.string=="(", Token.string!="."})?
+		      
+ ({Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ 
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"})|
+({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+(( {Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word , Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==ART}|
+ {Token.category==ADJA, Token.kind==word}|
+ {Token.category==JJ}|
+ {Token.category==JJR}|
+ {Token.category==JJS}|{Token.category==VBG}|
+ {Token.category==VBN})*
+((
+ {Token.category==ADJD, Token.kind!=punctuation}|
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+  ({Token.category==ADJA, Token.kind==word}|({Token.category==TRUNC}{Token.category==XY}))?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2
+   ({Token.string==")"})?
+    ({Token.string==":"})?
+	({Token.string!=".", Token.string!=",", Token.string!="(", Token.string!="nach", Token.string!="gemäß", Token.kind!=number})*
+			((({Token.string=="in"}{Token.string=="den"})|{Token.string=="aufgrund"}|{Token.string=="wegen"})|({Token.string=="nach"}|{Token.string=="gemäß"}):defFlag2)?
+	 ({Gesetz}):ref2
+	     ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei",  Token.category!=KON} )*
+	       
+ 
+)):rfc
+({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string=="("}|{Token.kind==punctuation, Token.string==")"}|{Token.category==KON})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+String defFlag1Str ="";
+
+
+	
+	try {
+		gate.Annotation FAnn = ((gate.AnnotationSet)bindings.get("defFlag1")).iterator().next();
+		defFlag1Str = doc.getContent().getContent(FAnn.getStartNode().getOffset(),FAnn.getEndNode().getOffset()).toString();
+		
+
+		if (defFlag1Str != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+		
+		Out.println("Here 01 "+defFlag1Str);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+String defFlag1Str_2 ="";
+
+
+	
+	try {
+		gate.Annotation FAnn = ((gate.AnnotationSet)bindings.get("defFlag1_2")).iterator().next();
+		defFlag1Str_2 = doc.getContent().getContent(FAnn.getStartNode().getOffset(),FAnn.getEndNode().getOffset()).toString();
+		
+
+		if (defFlag1Str_2 != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+		
+		Out.println("Here 01 "+defFlag1Str_2);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	String defFlag2Str ="";
+
+
+	
+	try {
+		gate.Annotation FAnn = ((gate.AnnotationSet)bindings.get("defFlag2")).iterator().next();
+		defFlag2Str = doc.getContent().getContent(FAnn.getStartNode().getOffset(),FAnn.getEndNode().getOffset()).toString();
+		
+
+		if (defFlag2Str != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+		
+		Out.println("Here 02 "+defFlag2Str);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternNe");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+}
+
+Rule: patternAufz
+Priority:10
+
+ (
+
+({Token.string=="und"}|{Token.string==","}|{Token.string=="sowie"}|{Token.string=="oder"})
+ ({Token.string=="nach"}
+ ({Gesetz}):ref1
+  ({Token.kind!= punctuation, Token.string!="."})*
+   
+
+ ((((
+  {Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}({Token.category==ART})?|
+ {Token.category==APPRART})?{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART})|
+ {Token.category==PTKZU}|
+ {Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ {Token.category==ART}|
+ {Token.category==ADJA, Token.kind==word}|{Token.category==JJ}|{Token.category==JJR}|{Token.category==JJS}|{Token.category==VBG}|{Token.category==VBN})*
+ (
+ (
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}({Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})?)|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+ ({Token.category==NN, Token.kind!=punctuation}{Token.category==ADJA}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation})|
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==NN, Token.kind!=punctuation})|
+ {Token.category==NN, Token.length>1, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.kind!=punctuation}|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc1
+     ({Token.kind!= punctuation, !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})*
+     ({Token.kind==word})*
+ ({Token.kind==punctuation, Token.string=="."}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string==")"}))
+  | 
+ ((
+ (
+  ({Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}{Token.category==ADJA}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"})|
+({Token.category==APPR, Token.kind==word, Token.string!="nach"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation}{Token.category==APPR, Token.kind==word, Token.string!="nach"}|
+ ({Token.category==APPRART})?({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?{Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==APPR, Token.kind==word , Token.string!="nach"})?{Token.category==ART})|
+ ({Token.category==NN, Token.kind!=punctuation}{Token.string=="("})|
+ {Token.category==PTKZU}|
+ {Token.category==ART}|
+    {Token.category==APPR}|
+ {Token.category==ADJA}|
+ {Token.category==JJ}|
+ {Token.category==JJR}|
+ {Token.category==JJS}|{Token.category==VBG}|
+ {Token.category==VBN})*
+((
+ {Token.category==ADJD, Token.kind!=punctuation}|
+ {Token.category==NE, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ ({Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}({Token.category==ART}{Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})?)|
+(  ({Token.category==NN, Token.kind!=punctuation}{Token.category==PPOSAT})?({Token.category==ADJA, Token.kind==word})?{Token.category==NN, Token.length<1, Token.kind==word, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})|
+{Token.category==NNS, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNP, Token.orth!=allCaps, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NN, Token.kind!=punctuation, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"}|
+ {Token.category==NNPS, Token.orth!=allCaps,  Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn"})+):rfc2
+   ({Token.string==")"})?
+    ({Token.string==":"})?
+	({Token.string!=".", Token.string!=",", Token.string!="(", Token.string!="nach", Token.string!="gemäß", Token.kind!=number})*
+			(({Token.string=="in"}{Token.string=="den"})|({Token.string=="nach"}|{Token.string=="gemäß"}|{Token.string=="aufgrund"}|{Token.string=="wegen"})?):defFlag2
+	 ({Gesetz}):ref2
+	     ({Token.kind!= punctuation, Token.string!=".", !Gesetz, Token.string!="Art", Token.string!="Abs", Token.string!="Abschn", Token.string!="Rn", Token.string!="bei" })*)
+	       
+
+):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.category==KON}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string=="("}|{Token.kind==punctuation, Token.subkind==dashpunct})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+	
+
+	String defFlag2Str_2 ="";
+	
+	try {
+	
+		gate.Annotation F2_2Ann = ((gate.AnnotationSet)bindings.get("defFlag2")).iterator().next();
+		defFlag2Str_2 = doc.getContent().getContent(F2_2Ann.getStartNode().getOffset(),F2_2Ann.getEndNode().getOffset()).toString();
+	 if (defFlag2Str_2 != ""){
+			defFlag = true;
+		}
+		else {defFlag= false;}
+		
+
+		Out.println("Here 03 "+defFlag2Str_2);
+		Out.println("Here 0 "+defFlag);
+		}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+	String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1As = (AnnotationSet)bindings.get("rfc1");
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, rfc1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1As = (AnnotationSet)bindings.get("ref1");
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, ref1As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+ref1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1", ref1Str);
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","patternAufz");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}
+
+Rule: prelAufz2
+Priority:5
+
+ (
+
+{Token.string==","}  {Token.category==PRELS} ( {Token.category==APPR})?({Token.category==NN, Token.kind!=punctuation}({Token.category==NN, Token.kind!=punctuation}|{Token.category==ADJA}|{Token.category==PPOSAT})*):rfc2 ({Gesetz}):ref2
+ 
+):rfc
+ ({Token.kind==punctuation, Token.string=="."}|{Token.category==KON}|{Token.kind==punctuation, Token.string==";"}|{Token.kind==punctuation, Token.string==","}|{Token.kind==punctuation, Token.string=="("}|{Token.kind==punctuation, Token.subkind==dashpunct})
+-->
+{
+	gate.AnnotationSet RFC = (AnnotationSet)bindings.get("rfc");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+	
+	Boolean defFlag = false;
+	
+
+	
+		String rfc2Str ="";
+	
+	try {
+		gate.AnnotationSet rfc2As = (AnnotationSet)bindings.get("rfc2");
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, rfc2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+	
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2As = (AnnotationSet)bindings.get("ref2");
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, ref2As, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 4 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("rfc1", "");
+		features.put("rfc2", rfc2Str);
+		features.put("explicitReference1","");
+		features.put("explicitReference2", ref2Str);
+		features.put("Begriffsdefinition", defFlag);
+		features.put("rule","prelAufz2");
+		outputAS.add(RFC.firstNode(), RFC.lastNode(),"RFC_NE", features);
+	
+		
+	
+	
+}

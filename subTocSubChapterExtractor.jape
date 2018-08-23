@@ -1,0 +1,158 @@
+﻿Imports: {
+  import gate.Utils;
+  import org.apache.commons.lang.StringUtils;
+}
+
+Phase:	subTocSubChapterExtractor
+Input: Token Number Date 
+Options: control = appelt 
+
+Rule: subtoc-subchapter
+Priority:50
+( ({Number.type==roman, Token.string=~"[XV]+^[I]"}):subtocsubchapternumber
+	{Token.kind==punctuation, Token.string=="."}
+(((({Token.string=="Nr"}{Token.string=="."})?{Token.kind==word, Token.length>1, Token.string!="Nr"})|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string==","}|{Token.string=="-"}|({Token.kind==word, Token.category==CARD}{Token.string!="."})|
+ ({Token.string=="bzw"}{Token.string=="."})|
+  ({Token.string=="Nr"}{Token.string=="."}{Token.kind==number}({Token.kind==word}|({Token.string==","}{Token.kind==number}))?)|
+{Token.string=="–"}|{Token.string==";"}|(({Token.string=="("})({Token.string=="Nr"}{Token.string=="."}{Token.kind==number})?(({Token.string!="."}|({Token.string=="u"}{Token.string=="."}))[0,3])({Token.string==")"})))+):subchapter
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+({Token.kind==punctuation, Token.string=="."})+
+({Token.kind==number, Token.category!=ADJA, !Date}):page):SubChapter
+	{Token.kind!=punctuation, Token.length<4}{Token.string=="."}
+
+
+
+-->
+{
+		gate.AnnotationSet SubChapter = (AnnotationSet)bindings.get("SubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	String subtocsubchapternumberStr ="";
+	
+	try {
+		gate.AnnotationSet subtocsubchapternumberAnn = (AnnotationSet)bindings.get("subtocsubchapternumber");
+		gate.AnnotationSet numberToken = inputAS.get("Number", subtocsubchapternumberAnn.firstNode().getOffset(), subtocsubchapternumberAnn.lastNode().getOffset());
+		gate.Annotation numberTokens = numberToken.iterator().next();
+		subtocsubchapternumberStr = numberTokens.getFeatures().get("value").toString();
+		subtocsubchapternumberStr=  subtocsubchapternumberStr.substring(0, subtocsubchapternumberStr.length() - 2);
+		
+		Out.println("Here 4 "+subtocsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapternumber", subtocsubchapternumberStr);
+		
+	String subchapterStr ="";
+	
+	try {
+	gate.AnnotationSet subChapterAs = (gate.AnnotationSet)bindings.get("subchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+			
+
+		Out.println("Here 5 "+subchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapter", subchapterStr);
+		
+
+		
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","subtoc-subchapter");
+outputAS.add(SubChapter.firstNode(), SubChapter.lastNode(),"SubChapter", features);
+
+ }
+ 
+Rule: subtoc-subchapter2
+Priority:40
+{Token.kind==number}
+( ({Number.type==roman, Token.string=~"[XIV]+"}):subtocsubchapternumber
+	{Token.kind==punctuation, Token.string=="."}
+(((({Token.string=="Nr"}{Token.string=="."})?{Token.kind==word, Token.length>1, Token.string!="Nr"})|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string==","}|{Token.string=="-"}|({Token.kind==word, Token.category==CARD}{Token.string!="."})|
+ ({Token.string=="bzw"}{Token.string=="."})|
+  ({Token.string=="Nr"}{Token.string=="."}{Token.kind==number}({Token.kind==word}|({Token.string==","}{Token.kind==number}))?)|
+{Token.string=="–"}|{Token.string==";"}|(({Token.string=="("})({Token.string=="Nr"}{Token.string=="."}{Token.kind==number})?(({Token.string!="."}|({Token.string=="u"}{Token.string=="."}))[0,3])({Token.string==")"})))+):subchapter
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+({Token.kind==punctuation, Token.string=="."})+
+({Token.kind==number, Token.category!=ADJA, !Date}):page):SubChapter
+	{Token.string!="J", Token.kind!=punctuation, Token.length<4}{Token.string=="."}
+
+
+
+-->
+{
+		gate.AnnotationSet SubChapter = (AnnotationSet)bindings.get("SubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	String subtocsubchapternumberStr ="";
+	
+	try {
+		gate.AnnotationSet subtocsubchapternumberAnn = (AnnotationSet)bindings.get("subtocsubchapternumber");
+		gate.AnnotationSet numberToken = inputAS.get("Number", subtocsubchapternumberAnn.firstNode().getOffset(), subtocsubchapternumberAnn.lastNode().getOffset());
+		gate.Annotation numberTokens = numberToken.iterator().next();
+		subtocsubchapternumberStr = numberTokens.getFeatures().get("value").toString();
+		subtocsubchapternumberStr=  subtocsubchapternumberStr.substring(0, subtocsubchapternumberStr.length() - 2);
+		
+		Out.println("Here 4 "+subtocsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapternumber", subtocsubchapternumberStr);
+		
+	String subchapterStr ="";
+	
+	try {
+	gate.AnnotationSet subChapterAs = (gate.AnnotationSet)bindings.get("subchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+			
+
+		Out.println("Here 5 "+subchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapter", subchapterStr);
+		
+
+		
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","subtoc-subchapter2");
+outputAS.add(SubChapter.firstNode(), SubChapter.lastNode(),"SubChapter", features);
+
+ }
+ 

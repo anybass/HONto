@@ -1,0 +1,79 @@
+﻿Phase:	subTocPartExtractor
+Input: Token Number Lookup Date
+Options: control = appelt 
+
+Rule: subtoc-part
+Priority:30
+ ({Token.kind==word, Token.orth!=lowercase}|({Token.string!="Abs"}{Token.kind==punctuation}{Token.kind==number}))
+ (({Token.orth==upperInitial, Token.string=~"[ABCDEFGHJK]", Token.length==1}):partnumber 
+ {Token.string=="."}
+ (({Token.kind==word, Token.length>1}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==ADJA}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==NN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==VVFIN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string=="–"}|{Token.string==";"}|{Token.string=="-"}|
+ ({Token.kind==number}{Token.string=="ff"}{Token.string=="."}{Token.kind==word})|{Token.string==","}|
+ ({Token.string=="bzw"}{Token.string=="."})|
+   ({Token.string=="Nr"}{Token.string=="."}{Token.kind==number}({Token.kind==word}|({Token.string==","}{Token.kind==number}))?)|
+ (({Token.string=="("})({Token.string=="Nr"}{Token.string=="."}{Token.kind==number})?(({Token.string!="."}|({Token.string=="u"}{Token.string=="."}))[0,3])({Token.string==")"})))+):parttopic 
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+ ({Token.string=="."})+
+({Token.kind==number, !Date}):Partpage):Part
+
+
+-->
+
+{
+	gate.AnnotationSet Part = (AnnotationSet)bindings.get("Part");
+	
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+
+		
+	String partnumberStr ="";
+	
+	try {
+	gate.Annotation partnumberAnn = ((gate.AnnotationSet)bindings.get("partnumber")).iterator().next();
+	partnumberStr = doc.getContent().getContent(partnumberAnn.getStartNode().getOffset(),partnumberAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 2 "+partnumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		
+	String parttopicStr ="";
+	
+		try {
+		gate.AnnotationSet parttopicAs = (gate.AnnotationSet)bindings.get("parttopic");
+		java.util.ArrayList tokens = new java.util.ArrayList(parttopicAs);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		String text = "";
+		Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		parttopicStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+parttopicStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+			String partpageStr ="";
+	
+	try {
+	gate.Annotation partpageAnn = ((gate.AnnotationSet)bindings.get("Partpage")).iterator().next();
+	partpageStr = doc.getContent().getContent(partpageAnn.getStartNode().getOffset(),partpageAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 4 "+partpageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("partnumber", partnumberStr);
+		features.put("parttopic", parttopicStr);
+		features.put("partpage", partpageStr);
+		features.put("rule","subtoc-part");
+		outputAS.add(Part.firstNode(), Part.lastNode(),"Part", features);
+}
+

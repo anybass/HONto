@@ -1,0 +1,66 @@
+﻿Phase:	tocChapterExtractor
+Input: Token Number
+Options: control = appelt 
+
+Rule: toc-chapter
+Priority:30
+(({Token.kind==word, Token.string=="Kapitel"}|({Token.kind==word, Token.string=="Kap"}{Token.kind==punctuation, Token.string=="."}))({Number.type==roman}):chapternumber
+({Token.subkind==dashpunct})?
+ (({Token.length>1, Token.kind==word, Token.string!="Inhalt", Token.string!="Inhaltsübersicht"})+):chaptertopic
+):Chapter
+//({Token.length==1})?
+//({Token.kind==word, Token.string=="Inhalt"}|{Token.kind==word, Token.string=="Inhaltsübersicht"})?
+//({Token.kind==word, Token.length==1}
+ // {Token.kind==punctuation, Token.string=="."} )
+
+-->
+
+{
+	gate.AnnotationSet Chapter = (AnnotationSet)bindings.get("Chapter");
+	
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	String chapternumberStr="";
+	
+	try {
+	
+	gate.AnnotationSet chapternumberAnn = (AnnotationSet)bindings.get("chapternumber");
+
+		gate.AnnotationSet numberToken = inputAS.get("Number", chapternumberAnn.firstNode().getOffset(), chapternumberAnn.lastNode().getOffset());
+		gate.Annotation numberTokens = numberToken.iterator().next();
+		chapternumberStr = numberTokens.getFeatures().get("value").toString();
+		chapternumberStr=  chapternumberStr.substring(0, chapternumberStr.length() - 2);
+		
+	
+	
+	Out.println("Here 0 "+chapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+	String chaptertopicStr ="";
+	
+		try {
+		gate.AnnotationSet chapterAs = (gate.AnnotationSet)bindings.get("chaptertopic");
+		java.util.ArrayList tokens = new java.util.ArrayList(chapterAs);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		String text = "";
+		Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		chaptertopicStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 1 "+chaptertopicStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+
+		
+		features.put("chapternumber", chapternumberStr);
+		
+		features.put("chaptertopic", chaptertopicStr);	
+		features.put("rule","toc-chapter");
+		outputAS.add(Chapter.firstNode(), Chapter.lastNode(),"Chapter", features);
+}

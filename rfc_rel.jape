@@ -1,0 +1,194 @@
+Phase:	reasonsForCitingRel
+Input: Token RFC_NE 
+Options: control = appelt
+
+Rule: posPatternRel
+Priority:50
+
+
+({RFC_NE}):rel
+-->
+{
+	gate.AnnotationSet REL = (AnnotationSet)bindings.get("rel");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+String rfc1Str ="";
+	
+	try {
+		gate.AnnotationSet rfc1Token = gate.Utils.getContainedAnnotations(inputAS, REL, "RFC_NE");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("rfc1");
+	 
+ 
+		Out.println("Here 1 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		String rfc2Str ="";
+	
+		try {
+		gate.AnnotationSet rfc2Token = gate.Utils.getContainedAnnotations(inputAS, REL, "RFC_NE");
+		java.util.ArrayList tokens = new java.util.ArrayList(rfc2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			rfc2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("rfc2");
+	 
+		
+		Out.println("Here 2 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+
+		String rel1_1Str ="";
+		String relCandidate="";
+		String relString="";
+		String relLength="";
+		String prevrelCandidate="";
+		String prevrelString="";
+		Annotation Temp;
+	
+	try {
+		gate.AnnotationSet rel1_1Token = gate.Utils.getContainedAnnotations(inputAS, REL, "Token");
+		java.util.ArrayList tokens = new java.util.ArrayList(rel1_1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext()){
+			Temp =  (Annotation)tokIter.next();
+			relCandidate= (String)(Temp).getFeatures().get("category");
+			relString=(String)(Temp).getFeatures().get("string");
+			relLength=(String)(Temp).getFeatures().get("length");
+			
+			
+			Out.println("RELCANDIDATE                " + relCandidate+ "        " +relString);
+			
+			
+			 if("PTKNEG".equals(relCandidate)){
+					rel1_1Str+=  " "  + relString;
+			 }
+			 else if("VVINF".equals(relCandidate)  & !"f".equals(relString) & !"denke".equals(relString) ){
+					rel1_1Str+=  " "  + relString;
+			 }
+			  else if("VAINF".equals(relCandidate) & !"denke".equals(relString) ){
+					rel1_1Str+=  " "  + relString;
+			 }
+			  else if("VMINF".equals(relCandidate) & !"denke".equals(relString) ){
+					rel1_1Str+=  " "  + relString;
+			 }
+			  else if("VAPP".equals(relCandidate) & !"denke".equals(relString) ){
+					rel1_1Str+=  " "  + relString;
+			  }
+			else if("VVPP".equals(relCandidate) & !".".equals(relString) ){
+				if("ADJD".equals(prevrelCandidate) )
+					{rel1_1Str+=  " "  + prevrelString +" " + relString;}
+				else{
+					rel1_1Str+=  " "  + relString;
+				}
+			}
+			else if("VMPP".equals(relCandidate) & !"denke".equals(relString) ){
+					rel1_1Str+=  " "  + relString;
+			  }
+			
+			else if("VVFIN".equals(relCandidate) & !"f".equals(relString) & !"denke".equals(relString) & !"(".equals(relString) & !"ff".equals(relString) &!"1".equals(relLength) ){
+					rel1_1Str+=  " " + relString;
+			}
+			else if("VAFIN".equals(relCandidate)){
+					rel1_1Str+=  " "  + relString;
+			}
+			else if("VMFIN".equals(relCandidate)){
+					rel1_1Str+=  " "  + relString;
+			}
+			else if("Beispiel".equals(relString) &"NN".equals(relCandidate) ){
+					rel1_1Str+=  " "  + relString;
+			}
+			else if("Widerspruch".equals(relString) &"NN".equals(relCandidate) ){
+					rel1_1Str+=  " "  + relString;
+			}
+			
+			prevrelCandidate=relCandidate;
+			prevrelString=relString;
+			
+				}	
+				
+				Out.println("Here 3 "+rel1_1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+// Set all empty rel values to "ist" if the RFC contains a definition
+				
+		Boolean relDef=true;
+	try {
+		
+		java.util.ArrayList tokens = new java.util.ArrayList(REL);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext()){
+			Temp =  (Annotation)tokIter.next();
+			relDef=(Boolean)(Temp).getFeatures().get("Begriffsdefinition");	
+			
+			if(relDef.equals(true) & "".equals(rel1_1Str)){
+					rel1_1Str+="ist";
+			}
+			prevrelCandidate=relCandidate;
+			prevrelString=relString;
+			
+				}
+			
+		Out.println("Here 3 "+rel1_1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+	
+	
+	
+	String ref1Str ="";
+	
+	try {
+		gate.AnnotationSet ref1Token = gate.Utils.getContainedAnnotations(inputAS, REL, "RFC_NE");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref1Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref1Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("explicitReference1");
+	 
+ 
+		Out.println("Here 9 "+rfc1Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+	
+		
+	String ref2Str ="";
+	
+	try {
+		gate.AnnotationSet ref2Token = gate.Utils.getContainedAnnotations(inputAS, REL, "RFC_NE");
+		java.util.ArrayList tokens = new java.util.ArrayList(ref2Token);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		Iterator tokIter =  tokens.iterator();
+		while(tokIter.hasNext())
+			ref2Str+=  " " + (String)((Annotation)tokIter.next()).getFeatures().get("explicitReference2");
+	 
+ 
+		Out.println("Here 10 "+rfc2Str);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		features.put("rel", rel1_1Str); 
+		features.put("rfc1", rfc1Str);
+		features.put("rfc2", rfc2Str);
+		features.put("ref1", ref1Str);
+		features.put("ref2", ref2Str);
+		features.put("rule","posPatternRel");
+		outputAS.add(REL.firstNode(), REL.lastNode(),"RFC_REL", features);
+	
+		
+	
+	
+}

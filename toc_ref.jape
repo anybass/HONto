@@ -1,0 +1,15 @@
+/*
+*  main2.jape
+*
+*/
+
+MultiPhase:	TestTheGrammars
+Phases: 
+tocChapterExtractor
+subTocPartExtractor
+subTocSubChapterExtractor
+subTocSubSubChapterExtractor
+tocPostProcessExtractor
+tocPostProcessExtractor
+tocPostProcessExtractor
+reference
