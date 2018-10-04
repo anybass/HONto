@@ -1,0 +1,2524 @@
+id:ID,type,fieldstring,property_1,property_2,:LABEL
+00,Book,Handbuch zum deutschen und europäischen Bankrecht,,,Node
+10,Reference,§ 138 BGB,,Generalklausel,Node
+20,RFC,Generalklausel,BGB,Generalklausel,Node
+60,Chapter,Bankvertragliche-Grundlagen,,,Node
+50,Part,Zum Begriff Bankrecht,,,Node
+40,Subchapter,Prüfstein Sonderprivatrecht,,,Node
+30,Subsubchapter,Information,,,Node
+11,Reference,§ 826 BGB,,Generalklausel,Node
+21,RFC,Generalklausel,BGB,Generalklausel,Node
+51,Part,Rechtsquellen,,,Node
+41,Subchapter,Privatrechtliche Normen,,,Node
+31,Subsubchapter,Generalklausel : § 826 BGB,,,Node
+12,Reference,§ 307 BGB,,Generalklausel,Node
+22,RFC,Generalklausel,BGB,Generalklausel,Node
+32,Subsubchapter,EGV und Richtlinien,,,Node
+13,Reference,§ 1 I KWG, ist,Bankgeschäfts,Node
+23,RFC,Bankgeschäfts,KWG,Kreditwesengesetz,Node
+14,Reference,§ 1 I Nr. 2 KWG,,Kreditgeschäft,Node
+24,RFC,Kreditgeschäft,KWG,Kreditwesengesetz,Node
+15,Reference,§§ 488 ff. BGB,ist,Gelddarlehen,Node
+25,RFC,Gelddarlehen,BGB,,Node
+16,Reference,§ 491 BGB, voraussetzt,Unternehmer,Node
+26,RFC,Unternehmer,BGB,,Node
+17,Reference,§ 14 BGB, ist,Unternehmer,Node
+27,RFC,Unternehmer,BGB,,Node
+18,Reference,§ 1 I Nr. 8 KWG, ist,Bankgeschäft,Node
+28,RFC,Bankgeschäft,KWG,Kreditwesengesetz,Node
+19,Reference,§§ 765 ff. BGB,ist,Bürgschaftsrecht,Node
+29,RFC,Bürgschaftsrecht,BGB,,Node
+110,Reference,§ 676a BGB,ist, man denke an den Überweisungsvertrag,Node
+210,RFC, man denke an den Überweisungsvertrag,BGB,,Node
+111,Reference,§ 676d BGB,ist,Zahlungsvertrag,Node
+211,RFC,Zahlungsvertrag,BGB,,Node
+112,Reference,§ 676f BGB,ist,Girovertrag,Node
+212,RFC,Girovertrag,BGB,,Node
+113,Reference,§ 1 I 1 KWG, dürfte nicht beschränken,Bankgeschäfts dürfte sich nicht auf den aufsichtsrechtlichen,Node
+213,RFC,Bankgeschäfts dürfte sich nicht auf den aufsichtsrechtlichen,KWG,Kreditwesengesetz,Node
+114,Reference,§ 1 Ia KWG,ist, sondern auch das Finanzdienstleistungsunternehmen,Node
+214,RFC, sondern auch das Finanzdienstleistungsunternehmen,KWG,Kreditwesengesetz,Node
+115,Reference,§§ 126 127 InvG,,Widerruf,Node
+215,RFC,Widerruf,InvG,,Node
+116,Reference,§ 37d WpHG,,Schadensersatzanspruch wegen Verstoßes gegen Informationspflicht,Node
+216,RFC,Schadensersatzanspruch wegen Verstoßes gegen Informationspflicht,WpHG,,Node
+117,Reference,§§ 232 235 372 698 702 935 1006 BGB, vorkommt,Vorschriften,Node
+217,RFC,Vorschriften,BGB,,Node
+317,Subsubchapter,Kredit und Kreditsicherheiten,,,Node
+118,Reference,§ 270 BGB,,Geld im abstrakten Sinne,Node
+218,RFC,Geld im abstrakten Sinne,BGB,,Node
+119,Reference,§§ 270 1806 2119 BGB, bezeichnet werden wird miterfasst,Geld im konkret-funktionellen Sinn,Node
+219,RFC,Geld im konkret-funktionellen Sinn,BGB,Bundesautobahn_17,Node
+419,Subchapter,Begriff der Bank und der Bankgeschäfte,,,Node
+120,Reference,2000/ 46/ EG,,E-Geld-Richtlinie,Node
+220,RFC,E-Geld-Richtlinie,EG,,Node
+121,Reference,§ 1 Abs. 1 Nr. 11 KWG,ist,Bankgeschäft,Node
+221,RFC,Bankgeschäft,KWG,Kreditwesengesetz,Node
+122,Reference,§ 19 Abs. 1 Nr. 1 BBankG,,Geldmarkt,Node
+222,RFC,Geldmarkt,BBankG,Geldmarkt,Node
+123,Reference,§ 793 BGB,ist,Schuldverschreibungen,Node
+223,RFC,Schuldverschreibungen,BGB,,Node
+124,Reference,§ 2 Abs. 1 WpHG,ist,vergleichbare Wertpapiere,Node
+224,RFC,vergleichbare Wertpapiere,WpHG,,Node
+424,Subchapter,Funktionaler Begriff,,,Node
+125,Reference,§§ 4 ff. PfandbriefG,,Pfandbriefen,Node
+225,RFC,Pfandbriefen,PfandbriefG,,Node
+525,Part,Einige historische Aspekte und zukünftige Entwicklungen,,,Node
+325,Subsubchapter,Zahlungsverkehr,,,Node
+126,Reference,§ 2 Abs. 5 WpHG, organisierte,Regulierten Markt,Node
+226,RFC,Regulierten Markt,WpHG,Regulierter_Markt,Node
+426,Subchapter,Kodifikatorische Vorhaben,,,Node
+127,Reference,§ 48 BörsenG,,Freiverkehr,Node
+227,RFC,Freiverkehr,BörsenG,Freiverkehr,Node
+128,Reference,§§ 58 bis 60 BörsenG, organisiert sind,börsenähnliche Einrichtungen,Node
+228,RFC,börsenähnliche Einrichtungen,BörsenG,,Node
+129,Reference,§ 2 Abs. 5 WpHG,ist,organisierten Märkte,Node
+229,RFC,organisierten Märkte,WpHG,,Node
+130,Reference,§ 8g Abs. 1 VerkaufsprospekteG, anstellt,Finanzaufsicht,Node
+230,RFC,Finanzaufsicht,VerkaufsprospekteG,,Node
+131,Reference,§ 32b ZPO, führen,KapMuG,Node
+231,RFC,KapMuG,ZPO,Zivilprozessordnung_(Deutschland),Node
+132,Reference,§ 37e Satz 2 WpHG, sind,Finanztermingeschäfte,Node
+232,RFC,Finanztermingeschäfte,WpHG,,Node
+133,Reference,§ 37d WpHG,ist,besondere Verbraucherinformationspflichten,Node
+233,RFC,besondere Verbraucherinformationspflichten,WpHG,,Node
+134,Reference,§§ 31 ff. WpHG, ausgelöst werden können,Verhaltenspflichten,Node
+234,RFC,Verhaltenspflichten,WpHG,,Node
+135,Reference,§§ 2 Abs. 1a Abs. 2 31 ff. WpHG, können sein,anwendbar,Node
+235,RFC,anwendbar,WpHG,,Node
+136,Reference,§§ 488 ff. BGB,ist,Gestalt des Darlehensvertrags,Node
+236,RFC,Gestalt des Darlehensvertrags,BGB,,Node
+137,Reference,§§ 491 bis 498 BGB,ist,Besonderheiten für Verbraucherdarlehen,Node
+237,RFC,Besonderheiten für Verbraucherdarlehen,BGB,Verbraucherdarlehensvertrag,Node
+337,Subsubchapter,Märkte für Geld,,,Node
+138,Reference,§ 507 BGB,ist,Existenzgründer,Node
+238,RFC,Existenzgründer,BGB,,Node
+139,Reference,§ 14 BGB,ist,Unternehmer,Node
+239,RFC,Unternehmer,BGB,,Node
+339,Subsubchapter,Zum Geldbegriff,,,Node
+140,Reference,§§ 355i. V.m. 495 BGB, ist überlagert,Widerruf,Node
+240,RFC,Widerruf,BGB,,Node
+141,Reference,§§ 358 359 BGB,ist,Geschäfte,Node
+241,RFC,Geschäfte,BGB,,Node
+142,Reference,§ 359 BGB, getreten wäre,Einwendungsdurchgriff,Node
+242,RFC,Einwendungsdurchgriff,BGB,,Node
+143,Reference,§ 358 Abs. 4 Satz 3 BGB, entsteht,Falle des Widerrufs,Node
+243,RFC,Falle des Widerrufs,BGB,Bürgerliches_Gesetzbuch,Node
+144,Reference,§ 357i. V.m.§ 346 BGB, enthält,Regelung,Node
+244,RFC,Regelung,BGB,Bürgerliches_Gesetzbuch,Node
+145,Reference,85/ 577/ EWG,,Haustürgeschäfterichtlinie,Node
+245,RFC,Haustürgeschäfterichtlinie,EWG,,Node
+146,Reference,§ 276 Abs. 1 BGB, ist nicht,abzuleitender Schadensersatzanspruch,Node
+246,RFC,abzuleitender Schadensersatzanspruch,BGB,,Node
+147,Reference,§§ 765 bis 778 BGB, ist,Typus,Node
+247,RFC,Typus,BGB,Hermesdeckungen,Node
+148,Reference,§§ 1113 bis 1190 BGB,,gesicherten Forderung,Node
+248,RFC,gesicherten Forderung,BGB,Hypothek,Node
+149,Reference,§§ 1191 bis 1198 BGB,,Grundschuld,Node
+249,RFC,Grundschuld,BGB,Grundschuld,Node
+150,Reference,§§ 1199 bis 1203 BGB,,Rentenschuld,Node
+250,RFC,Rentenschuld,BGB,Rentenschuld,Node
+151,Reference,§§ 1204 bis 1259 BGB,,akzessorisches Mobiliarpfandrecht,Node
+251,RFC,akzessorisches Mobiliarpfandrecht,BGB,,Node
+152,Reference,§§ 1273 bis 1296 BGB,,Rechten,Node
+252,RFC,Rechten,BGB,,Node
+153,Reference,§§ 1279 bis 1290 BGB,,Forderungen,Node
+253,RFC,Forderungen,BGB,,Node
+154,Reference,§ 1205 I 1 BGB, machte,Gläubiger,Node
+254,RFC,Gläubiger,BGB,,Node
+155,Reference,§ 1280 BGB,ist,Anzeigepflicht,Node
+255,RFC,Anzeigepflicht,BGB,,Node
+156,Reference,§§ 929 ff.resp. 398 ff. BGB,ist,Instrumentalisierung der Regelungen über Verfügungsgeschäfte,Node
+256,RFC,Instrumentalisierung der Regelungen über Verfügungsgeschäfte,BGB,,Node
+157,Reference,Art. 43 I EGBGB, gilt,lex rei sitae,Node
+257,RFC,lex rei sitae,EGBGB,Internationales_Privatrecht,Node
+158,Reference,Art. 43 III EGBGB, entspricht,Regelung,Node
+258,RFC,Regelung,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+159,Reference,§§ 676a bis 676c BGB, gefunden hat,Überweisungsvertrag,Node
+259,RFC,Überweisungsvertrag,BGB,,Node
+160,Reference,Art. 3 ScheckG,,Gestalt,Node
+260,RFC,Gestalt,ScheckG,,Node
+161,Reference,§§ 383 ff. HGB, sonderprivatrechtlich geprägt ist,sonderprivatrechtlich,Node
+261,RFC,sonderprivatrechtlich,HGB,Handelsgesetzbuch,Node
+162,Reference,§§ 611 ff. BGB, sind,Dienstverträge,Node
+262,RFC,Dienstverträge,BGB,Bürgerliches_Gesetzbuch,Node
+163,Reference,§§ 631 ff. BGB,ist,Werkverträge,Node
+263,RFC,Werkverträge,BGB,Bürgerliches_Gesetzbuch,Node
+164,Reference,§§ 19 Nr. 4i. V.m. 3 BBankG Art. 31 ScheckG 38 II WG,,Abrechnungsvertrag im Zuge,Node
+264,RFC,Abrechnungsvertrag im Zuge,BBankG,,Node
+165,Reference,§ 675a BGB,ist,Informationspflichten von Kreditinstituten,Node
+265,RFC,Informationspflichten von Kreditinstituten,BGB,,Node
+166,Reference,§ 138 BGB,,Generalklausel,Node
+266,RFC,Generalklausel,BGB,Generalklausel,Node
+167,Reference,§ 402 BGB,,Verschwiegenheitspflicht,Node
+267,RFC,Verschwiegenheitspflicht,BGB,Verschwiegenheitspflicht,Node
+168,Reference,§ 138 I BGB, betrifft,Bankrecht,Node
+268,RFC,Bankrecht,BGB,,Node
+169,Reference,§ 826 BGB,,Gestalt,Node
+269,RFC,Gestalt,BGB,Bürgerliches_Gesetzbuch,Node
+170,Reference,§§ 767 ZPO, ist,Vollstreckungsabwehrklage,Node
+270,RFC,Vollstreckungsabwehrklage,ZPO,Vollstreckungsabwehrklage,Node
+171,Reference,§ 826 BGB,ist,Rechtsbehelf,Node
+271,RFC,Rechtsbehelf,BGB,Rechtsbehelf,Node
+172,Reference,§ 13 BGB,ist,Verbrauchers,Node
+272,RFC,Verbrauchers,BGB,Bürgerliches_Gesetzbuch,Node
+173,Reference,§ 826 BGB,,Generalklausel,Node
+273,RFC,Generalklausel,BGB,Generalklausel,Node
+174,Reference,§ 826 BGB, kann bieten,Schadensausgleich,Node
+274,RFC,Schadensausgleich,BGB,Bürgerliches_Gesetzbuch,Node
+175,Reference,§§ 37b 37c WpHG, nicht,Haftung des Emittenten für falsche und unterlassene Kapitalmarktinformationen,Node
+275,RFC,Haftung des Emittenten für falsche und unterlassene Kapitalmarktinformationen,WpHG,,Node
+176,Reference,§ 400 AktG, kann,Strafbarkeit,Node
+276,RFC,Strafbarkeit,AktG,Aktienrecht,Node
+177,Reference,§ 32 KWG,,null,Node
+277,RFC,null,KWG,Kreditwesengesetz,Node
+178,Reference,§ 31 WpHG, krit,kreditfinanziertem Erwerb,Node
+278,RFC,kreditfinanziertem Erwerb,WpHG,Bundesgerichtshof,Node
+179,Reference,§ 307 BGB,,Generalklausel,Node
+279,RFC,Generalklausel,BGB,Generalklausel,Node
+180,Reference,§ 307 I 2 BGB,,kodifizierten Transparenzgrundsatz,Node
+280,RFC,kodifizierten Transparenzgrundsatz,BGB,,Node
+181,Reference,§ 305c I BGB,ist,überraschend,Node
+281,RFC,überraschend,BGB,Bürgerliches_Gesetzbuch,Node
+182,Reference,§ 793 ff. BGB,ist,Schuldverschreibung,Node
+282,RFC,Schuldverschreibung,BGB,Verzinsliches_Wertpapier,Node
+183,Reference,§ 952 BGB, findet,Funktionsweise,Node
+283,RFC,Funktionsweise,BGB,,Node
+184,Reference,§§ 126a 126b BGB, sind,privatrechtliche Anknüpfungsnormen,Node
+284,RFC,privatrechtliche Anknüpfungsnormen,BGB,,Node
+185,Reference,§ 780 BGB,ist,Instrumente,Node
+285,RFC,Instrumente,BGB,Schuldanerkenntnis,Node
+186,Reference,§ 700 BGB,ist,unregelmäßige Verwahrung,Node
+286,RFC,unregelmäßige Verwahrung,BGB,,Node
+187,Reference,§ 280 BGB, darstellt,Pflichtverletzung,Node
+287,RFC,Pflichtverletzung,BGB,Bürgerliches_Gesetzbuch,Node
+188,Reference,§§ 37b und 37c WpHG, entstehen,Schadensersatzansprüche,Node
+288,RFC,Schadensersatzansprüche,WpHG,,Node
+189,Reference,§ 12 WpÜG,,Angebotsunterlagen,Node
+289,RFC,Angebotsunterlagen,WpÜG,,Node
+190,Reference,§ 127 InvG,ist,Käufers,Node
+290,RFC,Käufers,InvG,,Node
+191,Reference,§ 126 InvG,ist,Widerrufsrecht,Node
+291,RFC,Widerrufsrecht,InvG,Widerruf_(Recht),Node
+192,Reference,§ 53 BörsG,,privatrechtlichen Vorschriften zur Börsentermingeschäftsfähigkeit,Node
+292,RFC,privatrechtlichen Vorschriften zur Börsentermingeschäftsfähigkeit,BörsG,,Node
+193,Reference,Art. 88 Satz 1 GG, verfassungsrechtlich gestützt,verfassungsrechtlich,Node
+293,RFC,verfassungsrechtlich,GG,,Node
+194,Reference,Art. 88 Satz 2 GG, sind,Maßgabe,Node
+294,RFC,Maßgabe,GG,Europäische_Zentralbank,Node
+195,Reference,Art. 8 105 ff. EGV, übertragen worden,Zentralbanken,Node
+295,RFC,Zentralbanken,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+196,Reference,§ 3 Satz 1 BBankG,ist,Bestandteil,Node
+296,RFC,Bestandteil,BBankG,Deutsche_Bundesbank,Node
+197,Reference,§ 4 WpÜG,,Aufsicht,Node
+297,RFC,Aufsicht,WpÜG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+198,Reference,Art. 59 ff. EGV,ist, namentlich die Kapital- und Zahlungsverkehrsfreiheit,Node
+298,RFC, namentlich die Kapital- und Zahlungsverkehrsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+199,Reference,Art. 3 IIlit.t 153 EGV, haben lit,Ziel,Node
+299,RFC,Ziel,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1100,Reference,87/ 102/ EWG, haben,Verbraucherdarlehen,Node
+2100,RFC,Verbraucherdarlehen,EWG,Verbraucherdarlehensvertrag,Node
+1101,Reference,2002/ 65/ EG, ist erfasst,Fernabsatzgeschäft,Node
+2101,RFC,Fernabsatzgeschäft,EG,Fernabsatzvertrag,Node
+1102,Reference,85/ 577/ EWG,,Einfluss der Haustürgeschäftrichtlinie,Node
+2102,RFC,Einfluss der Haustürgeschäftrichtlinie,EWG,,Node
+1103,Reference,93/ 13/ EWG, haben,Richtlinie,Node
+2103,RFC,Richtlinie,EWG,,Node
+1104,Reference,2000/ 31/ EG, gewährleistet,Richtlinie über den elektronischen Geschäftsverkehr,Node
+2104,RFC,Richtlinie über den elektronischen Geschäftsverkehr,EG,,Node
+1105,Reference,2007/ 64/ EG, ist,Zahlungsverkehr,Node
+2105,RFC,Zahlungsverkehr,EG,Zahlungsdienste,Node
+1106,Reference,98/ 26/ EG,,Zahlungssicherungsrichtlinie,Node
+2106,RFC,Zahlungssicherungsrichtlinie,EG,,Node
+1107,Reference,2002/ 47/ EG, finden,Finanzsicherheitenrichtlinie,Node
+2107,RFC,Finanzsicherheitenrichtlinie,EG,,Node
+1108,Reference,§ 1259 BGB, führte,Wiederbelebung,Node
+2108,RFC,Wiederbelebung,BGB,,Node
+1109,Reference,2000/ 35/ EG, berührt,Zahlungsverzugsrichtlinie,Node
+2109,RFC,Zahlungsverzugsrichtlinie,EG,Eigentumsvorbehalt_(Deutschland),Node
+1110,Reference,2004/ 39/ EG, ist bezeichnet,gebräuchlicher Weise,Node
+2110,RFC,gebräuchlicher Weise,EG,EG_über_Märkte_für_Finanzinstrumente,Node
+1111,Reference,85/ 611/ EWG, ist,OGAW- ) Richtlinie,Node
+2111,RFC,OGAW- ) Richtlinie,EWG,OGAW-Richtlinie,Node
+1112,Reference,91/ 308/ EWG,,Problematik der Richtlinie,Node
+2112,RFC,Problematik der Richtlinie,EWG,,Node
+1113,Reference,2003/ 6/ EG, gefolgt,Marktmissbrauchrichtlinie,Node
+2113,RFC,Marktmissbrauchrichtlinie,EG,,Node
+1114,Reference,2004/ 109/ EG, enthält,Transparenzrichtlinie,Node
+2114,RFC,Transparenzrichtlinie,EG,,Node
+1115,Reference,2003/ 71/ EG, sind umgesetzt,Gegenstand der Wertpapierprospekterichtlinie,Node
+2115,RFC,Gegenstand der Wertpapierprospekterichtlinie,EG,,Node
+1116,Reference,2004/ 25/ EG, regelt,Übernahmerichtlinie,Node
+2116,RFC,Übernahmerichtlinie,EG,,Node
+1117,Reference,§ 2 Abs. 2 Nr. 2 WpÜG,,Aktien,Node
+2117,RFC,Aktien,WpÜG,,Node
+1118,Reference,2000/ 12/ EG, ist zusammengefasst,Koordinierungsrichtlinie,Node
+2118,RFC,Koordinierungsrichtlinie,EG,,Node
+1119,Reference,94/ 19/ EG,,Einlagensicherungsrichtlinie,Node
+2119,RFC,Einlagensicherungsrichtlinie,EG,,Node
+1120,Reference,§ 676b BGB, reicht nicht Beispiel ist,Bankgeschäft,Node
+2120,RFC,Bankgeschäft,BGB,Bürgerliches_Gesetzbuch,Node
+1121,Reference,Art. 14des UNCITRAL-Modellgesetzes,,Überweisungsverkehr,Node
+2121,RFC,Überweisungsverkehr,UNCITRAL-Modellgesetzes,,Node
+1122,Reference,§§ 21 ff. 37v bis 37z WpHG,,Transparenzrichtlinie- Umsetzungsgesetz,Node
+2122,RFC,Transparenzrichtlinie- Umsetzungsgesetz,WpHG,,Node
+1123,Reference,§ 40 KWG, bleibt,unverändert,Node
+2123,RFC,unverändert,KWG,Kreditwesengesetz,Node
+4123,Subchapter,Öffentliches Bankrecht,,,Node
+1124,Reference,§§ 112 bis 120 InvG,,Deutschland,Node
+2124,RFC,Deutschland,InvG,,Node
+1125,Reference,2007/ 64/ EG, wird ermöglichen,Richtlinie über Zahlungsdienste im Binnenmarkt,Node
+2125,RFC,Richtlinie über Zahlungsdienste im Binnenmarkt,EG,Zahlungsdienste,Node
+1126,Reference,97/ 5/ EG, ist,Überweisungsrichtlinie,Node
+2126,RFC,Überweisungsrichtlinie,EG,,Node
+1127,Reference,§ 2 Abs. 3 Nr. 9 und Abs. 3a WpHG, ist nicht,Anlageberatung,Node
+2127,RFC,Anlageberatung,WpHG,Anlageberatung,Node
+1128,Reference,§ 19 BörsenG, gewährleistet,geregelten Märkten,Node
+2128,RFC,geregelten Märkten,BörsenG,,Node
+1129,Reference,§§ 305 ff. BGB,,Anwendungsprobleme mit Blick,Node
+2129,RFC,Anwendungsprobleme mit Blick,BGB,,Node
+5129,Part,Entwicklung,,,Node
+4129,Subchapter,Nr,,,Node
+3129,Subsubchapter,Haftung bei,,,Node
+1130,Reference,§§ 676a ff. BGB, tragen,Schuldrechtsmodernisierungsgesetz,Node
+2130,RFC,Schuldrechtsmodernisierungsgesetz,BGB,Schuldrechtsmodernisierung,Node
+5130,Part,Anwendungsprobleme mit Blick auf die §§ 305 ff. BGB,,,Node
+4130,Subchapter,Zinsen und Entgelte im Privatund Firmenkundengeschäft,,,Node
+3130,Subsubchapter,Vorbehaltsgutschrift an,,,Node
+1131,Reference,§§ 307 ff. BGB, wird veranlasst überprüft,Hinweis,Node
+2131,RFC,Hinweis,BGB,Bürgerliches_Gesetzbuch,Node
+5131,Part,Kosten der Bankdienstleistungen,,,Node
+4131,Subchapter,Abweichende Regelungen in Nr,,,Node
+3131,Subsubchapter,Benachrichtigungspflicht beim Ausbleiben,,,Node
+1132,Reference,§ 305 I BGB, genügen nicht,Anforderungen,Node
+2132,RFC,Anforderungen,BGB,,Node
+3132,Subsubchapter,Vorrang von,,,Node
+1133,Reference,§ 306a BGB, gerechtfertigt ist,Anwendung,Node
+2133,RFC,Anwendung,BGB,,Node
+5133,Part,Grundregeln für die Beziehung zwischen Kunde und Bank,,,Node
+4133,Subchapter,Haftung der Bank,,,Node
+3133,Subsubchapter,Vorbehaltsgutschrift an den Gläubiger- Kunden,,,Node
+1134,Reference,§ 310 BGB,ist,Bank,Node
+2134,RFC,Bank,BGB,Deutsche_Bank,Node
+1135,Reference,§ 308 Nr. 5 BGB, ist,Wochen,Node
+2135,RFC,Wochen,BGB,,Node
+1136,Reference,§ 151 BGB, ist,Zustimmung,Node
+2136,RFC,Zustimmung,BGB,,Node
+4136,Subchapter,Kündigungsrechte der Bank,,,Node
+1137,Reference,§ 308 Nr. 5 BGB, ist nicht,vereinbar,Node
+2137,RFC,vereinbar,BGB,,Node
+3137,Subsubchapter,Zins- und,,,Node
+1138,Reference,§ 28 BDSG, ist legitimiert,Bank,Node
+2138,RFC,Bank,BDSG,Bundesdatenschutzgesetz,Node
+1139,Reference,§ 399 Alt. 2 BGB, folgt,Bankgeheimnis,Node
+2139,RFC,Bankgeheimnis,BGB,Bankgeheimnis,Node
+5139,Part,Kontoführung,,,Node
+1140,Reference,§§ 134 BGB, begründet,Verbotsgesetz iSd,Node
+2140,RFC,Verbotsgesetz iSd,BGB,Bankgeheimnis,Node
+5140,Part,Mitwirkungspflichten des Kunden,,,Node
+1141,Reference,§ 11 Nr. 2c StGB, sein sollen,Organe,Node
+2141,RFC,Organe,StGB,Strafgesetzbuch,Node
+5141,Part,Sicherheiten,,,Node
+1142,Reference,§ 134 BGB, begründet,überzeugend,Node
+2142,RFC,überzeugend,BGB,Gesetzliches_Verbot,Node
+5142,Part,Kündigungsrechte des Kunden,,,Node
+1143,Reference,§ 280 I BGB, begründen ziehen,Bankgeheimnis,Node
+2143,RFC,Bankgeheimnis,BGB,Bankgeheimnis,Node
+1144,Reference,§ 402 BGB, vermieden werden kann,Zessionar,Node
+2144,RFC,Zessionar,BGB,Bürgerliches_Gesetzbuch,Node
+1145,Reference,§ 308 Nr. 5 BGB, darf nicht handeln,Erklärung iSd,Node
+2145,RFC,Erklärung iSd,BGB,Bürgerliches_Gesetzbuch,Node
+1146,Reference,§ 4a BDSG, kann genommen werden,Vorgaben,Node
+2146,RFC,Vorgaben,BDSG,Bundesdatenschutzgesetz,Node
+1147,Reference,§ 161a StPO,,Verpflichtung zur Auskunftserteilung im Ermittlungsverfahren,Node
+2147,RFC,Verpflichtung zur Auskunftserteilung im Ermittlungsverfahren,StPO,Strafprozessordnung_(Deutschland),Node
+1148,Reference,§ 33 ErbStG,,Auskunftspflicht im Erbschaftssteuerverfahren,Node
+2148,RFC,Auskunftspflicht im Erbschaftssteuerverfahren,ErbStG,,Node
+1149,Reference,§§ 93 I 3 30a V AO,,im Besteuerungsverfahren,Node
+2149,RFC,im Besteuerungsverfahren,AO,Abgabenordnung,Node
+1150,Reference,§ 24c KWG,ist,Abruf,Node
+2150,RFC,Abruf,KWG,Kreditwesengesetz,Node
+4150,Subchapter,Geltungsbereich und Änderungen der AGB-Banken,,,Node
+1151,Reference,§ 11 GwG,ist,Kreditinstituts,Node
+2151,RFC,Kreditinstituts,GwG,Geldwäsche,Node
+4151,Subchapter,Bankgeheimnis und Bankauskunft,,,Node
+1152,Reference,§ 131 AktG, nicht,Aktionäre,Node
+2152,RFC,Aktionäre,AktG,Bankgeheimnis,Node
+3152,Subsubchapter,Prüfung und Einwendungen bei Mitteilungen der Bank,,,Node
+1153,Reference,§ 935 ZPO, sein kann,Verfügung,Node
+2153,RFC,Verfügung,ZPO,Zivilprozessordnung_(Deutschland),Node
+4153,Subchapter,Grenzen der Aufrechnungsbefugnis des Kunden,,,Node
+1154,Reference,§ 280 I BGB,ist,Anspruch auf Schadensersatz,Node
+2154,RFC,Anspruch auf Schadensersatz,BGB,,Node
+4154,Subchapter,Verfügungsberechtigung nach dem Tod des Kunden,,,Node
+1155,Reference,§ 3 BDSG, hat,Hintergrund,Node
+2155,RFC,Hintergrund,BDSG,Bundesdatenschutzgesetz,Node
+4155,Subchapter,Anwendbares Recht und Gerichtsstand,,,Node
+1156,Reference,§ 28 BDSG, angelehnt ist,Umfangs,Node
+2156,RFC,Umfangs,BDSG,Bundesdatenschutzgesetz,Node
+4156,Subchapter,Rechnungsabschluss und Einwendungen,,,Node
+1157,Reference,§§ 276 278 BGB,,Haftungsmaßstab,Node
+2157,RFC,Haftungsmaßstab,BGB,Bürgerliches_Gesetzbuch,Node
+4157,Subchapter,Genehmigung von Belastungen aus Lastschriften,,,Node
+1158,Reference,§ 254 BGB, kommt,insoweit,Node
+2158,RFC,insoweit,BGB,Bürgerliches_Gesetzbuch,Node
+4158,Subchapter,Fremdwährungsgeschäfte und Fremdwährungskonten,,,Node
+1159,Reference,§ 664 I 2 BGB, ankäme,Voraussetzungen,Node
+2159,RFC,Voraussetzungen,BGB,,Node
+1160,Reference,§§ 453 454 HGB, bietet,Spediteur iSd,Node
+2160,RFC,Spediteur iSd,HGB,Handelsgesetzbuch,Node
+4160,Subchapter,Anspruch auf Bestellung und Verstärkung von Sicherheiten,,,Node
+3160,Subsubchapter,Vereinbarung eines,,,Node
+1161,Reference,§ 664 I 2 BGB, kann ergeben,Umständen,Node
+2161,RFC,Umständen,BGB,,Node
+4161,Subchapter,Begründung eines Pfandrechts,,,Node
+1162,Reference,§ 675 I BGB, gilt,Rahmen,Node
+2162,RFC,Rahmen,BGB,,Node
+4162,Subchapter,Sicherungsrechte bei Einzugspapieren und diskontierten Wechseln,,,Node
+1163,Reference,§§ 664 I 3 278 BGB, hat,Verschulden,Node
+2163,RFC,Verschulden,BGB,,Node
+3163,Subsubchapter,Außerordentliche Kündigung aus,,,Node
+1164,Reference,§ 664 I 2 BGB, verweisen,Bank,Node
+2164,RFC,Bank,BGB,Bürgerliches_Gesetzbuch,Node
+4164,Subchapter,Senats eine Abkehr von der Genehmigungstheorie eingeleitet ist,,,Node
+1165,Reference,§ 307 BGB, kann vereinbart werden ist überprüfen,Vereinbarkeit,Node
+2165,RFC,Vereinbarkeit,BGB,Bürgerliches_Gesetzbuch,Node
+1166,Reference,§ 307 Abs. 2 Nr. 2 BGB, nimmt,ff,Node
+2166,RFC,ff,BGB,Bürgerliches_Gesetzbuch,Node
+3166,Subsubchapter,Frist für die Bestellung oder,,,Node
+1167,Reference,§ 676c I 3 BGB, folge,Rechtsgedanken,Node
+2167,RFC,Rechtsgedanken,BGB,Bürgerliches_Gesetzbuch,Node
+3167,Subsubchapter,Vorrang von Sondervereinbarungen,,,Node
+1168,Reference,§ 676c I 3 BGB, sein mag,analogiefähig,Node
+2168,RFC,analogiefähig,BGB,Bürgerliches_Gesetzbuch,Node
+1169,Reference,§§ 453 454 HBG, gilt,Wertung,Node
+2169,RFC,Wertung,HBG,,Node
+1170,Reference,§ 676c I 3 BGB, stellt,klar,Node
+2170,RFC,klar,BGB,Bürgerliches_Gesetzbuch,Node
+1171,Reference,§ 307 BGB, nicht beanstanden sein kann,Auftragsweiterleitung,Node
+2171,RFC,Auftragsweiterleitung,BGB,,Node
+1172,Reference,§ 664 I 2 BGB, kommt,Substitution,Node
+2172,RFC,Substitution,BGB,,Node
+1173,Reference,§§ 307 ff. BGB, vereinbart wurde standhält,Inhaltskontrolle,Node
+2173,RFC,Inhaltskontrolle,BGB,,Node
+1174,Reference,§ 664 I S. 2 BGB, soll sein,Haftungsbeschränkung im Sinne,Node
+2174,RFC,Haftungsbeschränkung im Sinne,BGB,,Node
+1175,Reference,§ 278 BGB, vermieden wird,Erfüllungsgehilfen,Node
+2175,RFC,Erfüllungsgehilfen,BGB,Bürgerliches_Gesetzbuch,Node
+1176,Reference,§ 309 Nr. 3 BGB, hält stand,Beschränkung,Node
+2176,RFC,Beschränkung,BGB,Bürgerliches_Gesetzbuch,Node
+1177,Reference,Art. 29 EGBGB, wird beschränkt,Rechtswahl,Node
+2177,RFC,Rechtswahl,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1178,Reference,Art. 29 I Nr. 1- 3 EGBGB, nicht ergibt,Einzelheiten,Node
+2178,RFC,Einzelheiten,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1179,Reference,§ 38 ZPO, entspricht,Vorgaben,Node
+2179,RFC,Vorgaben,ZPO,Zivilprozessordnung_(Deutschland),Node
+1180,Reference,§ 493 I 1 BGB, wird getragen,Verträgen mit Verbrauchern,Node
+2180,RFC,Verträgen mit Verbrauchern,BGB,,Node
+1181,Reference,§ 781 BGB, bildet,Schuldanerkenntnisvertrag,Node
+2181,RFC,Schuldanerkenntnisvertrag,BGB,,Node
+1182,Reference,§ 308 Nr. 5 BGB, ist,Gesichtspunkt,Node
+2182,RFC,Gesichtspunkt,BGB,,Node
+1183,Reference,§ 821 BGB, kann entgegenhalten,Auszahlungsanspruch,Node
+2183,RFC,Auszahlungsanspruch,BGB,,Node
+1184,Reference,§ 377 HGB, hat gelten,Geschäftsverkehr unter Rückgriff,Node
+2184,RFC,Geschäftsverkehr unter Rückgriff,HGB,Handelsgesetzbuch,Node
+1185,Reference,§ 377 HGB, könnte entgegenhalten,Rechtsgedanken,Node
+2185,RFC,Rechtsgedanken,HGB,Handelsgesetzbuch,Node
+1186,Reference,§ 377 HGB, kommt,Rechtsgedanken,Node
+2186,RFC,Rechtsgedanken,HGB,Handelsgesetzbuch,Node
+1187,Reference,§§ 115 116 InsO, InsO beendet fortgesetzt werde,Eröffnung des Insolvenzverfahrens,Node
+2187,RFC,Eröffnung des Insolvenzverfahrens,InsO,,Node
+1188,Reference,§ 812 BGB, folgt,Rückforderungsanspruch,Node
+2188,RFC,Rückforderungsanspruch,BGB,,Node
+1189,Reference,§ 307 BGB, käme,Haftungsfreizeichnung,Node
+2189,RFC,Haftungsfreizeichnung,BGB,Bürgerliches_Gesetzbuch,Node
+1190,Reference,§ 307 BGB, streitet,Unwirksamkeit,Node
+2190,RFC,Unwirksamkeit,BGB,Bürgerliches_Gesetzbuch,Node
+1191,Reference,§ 819 BGB, versagt ist,Einrede der Entreicherung,Node
+2191,RFC,Einrede der Entreicherung,BGB,Bürgerliches_Gesetzbuch,Node
+1192,Reference,§ 307 BGB,,Auslegung,Node
+2192,RFC,Auslegung,BGB,Bürgerliches_Gesetzbuch,Node
+1193,Reference,§ 307 I BGB, ist nicht beanstanden,Gesichtspunkt,Node
+2193,RFC,Gesichtspunkt,BGB,,Node
+1194,Reference,§ 307 I BGB, verstößt,Rückwirkung,Node
+2194,RFC,Rückwirkung,BGB,,Node
+1195,Reference,§ 818 I BGB, sei verpflichtet,Kunde,Node
+2195,RFC,Kunde,BGB,Bürgerliches_Gesetzbuch,Node
+1196,Reference,§ 307 Abs. 1 BGB, liegt,Verstoß,Node
+2196,RFC,Verstoß,BGB,Bürgerliches_Gesetzbuch,Node
+1197,Reference,§ 307 I BGB, begegnet,Blick,Node
+2197,RFC,Blick,BGB,,Node
+1198,Reference,§ 305c BGB, besteht,Problem,Node
+2198,RFC,Problem,BGB,,Node
+1199,Reference,§ 307 I BGB, verwerfen,Gesichtspunkt,Node
+2199,RFC,Gesichtspunkt,BGB,,Node
+1200,Reference,§§ 305c I 307 BGB, ist nicht,Gesichtspunkt,Node
+2200,RFC,Gesichtspunkt,BGB,,Node
+1201,Reference,Art. 31 SchG, ist erklärt worden,Abrechnungsstelle iSd,Node
+2201,RFC,Abrechnungsstelle iSd,SchG,Deutsche_Bundesbank,Node
+1202,Reference,§ 664 I 2 BGB,,Vereinbarung,Node
+2202,RFC,Vereinbarung,BGB,,Node
+1203,Reference,§§ 275 ff. BGB, weicht,Regeln,Node
+2203,RFC,Regeln,BGB,Bürgerliches_Gesetzbuch,Node
+1204,Reference,§ 254 BGB, kann bewirken,Mitverschulden iSd,Node
+2204,RFC,Mitverschulden iSd,BGB,,Node
+1205,Reference,§ 307 BGB, folgern,verstoßende Intransparenz,Node
+2205,RFC,verstoßende Intransparenz,BGB,,Node
+1206,Reference,§ 307 BGB, ist nicht beanstanden,Hintergrund,Node
+2206,RFC,Hintergrund,BGB,,Node
+1207,Reference,§ 676 I 3 BGB, ist nicht,Empfängerbank,Node
+2207,RFC,Empfängerbank,BGB,,Node
+1208,Reference,§ 667 BGB,,Herausgabe,Node
+2208,RFC,Herausgabe,BGB,,Node
+1209,Reference,§ 254 BGBiVm,,Mitverschulden,Node
+2209,RFC,Mitverschulden,BGB iVm,,Node
+1210,Reference,§ 667 BGB,,Empfängerbank,Node
+2210,RFC,Empfängerbank,BGB,,Node
+1211,Reference,§ 676a I 1 BGB, verstößt,Pflicht,Node
+2211,RFC,Pflicht,BGB,,Node
+1212,Reference,§ 14 BGB,,Unternehmern iSd,Node
+2212,RFC,Unternehmern iSd,BGB,,Node
+1213,Reference,§ 13 BGB,,Verbrauchern,Node
+2213,RFC,Verbrauchern,BGB,,Node
+1214,Reference,§ 307 BGB, sind,Blick,Node
+2214,RFC,Blick,BGB,,Node
+1215,Reference,§§ 119 ff. BGB, liegt,Anfechtungsrechts,Node
+2215,RFC,Anfechtungsrechts,BGB,Bürgerliches_Gesetzbuch,Node
+1216,Reference,§§ 488 I 2 612 BGB,,konkreten Vertrag,Node
+2216,RFC,konkreten Vertrag,BGB,,Node
+1217,Reference,§ 305b BGB,,Vorrang,Node
+2217,RFC,Vorrang,BGB,Individualabrede,Node
+1218,Reference,§ 675a BGB, eingeführt worden,Reaktion,Node
+2218,RFC,Reaktion,BGB,Bürgerliches_Gesetzbuch,Node
+1219,Reference,§ 315 BGB, zusteht,Leistungsbestimmungsrecht iSd,Node
+2219,RFC,Leistungsbestimmungsrecht iSd,BGB,Bürgerliches_Gesetzbuch,Node
+1220,Reference,§ 354 HGB, ist,unproblematisch,Node
+2220,RFC,unproblematisch,HGB,Handelsgesetzbuch,Node
+1221,Reference,§ 315 BGB,,Recht zur Anpassung,Node
+2221,RFC,Recht zur Anpassung,BGB,Bürgerliches_Gesetzbuch,Node
+1222,Reference,§ 242 BGB, nicht,Pflicht,Node
+2222,RFC,Pflicht,BGB,,Node
+1223,Reference,§§ 675 670 BGB, ergibt,Anspruch,Node
+2223,RFC,Anspruch,BGB,,Node
+1224,Reference,§ 493 BGB, verlangen kann,Bank bei Überziehungskrediten iSd,Node
+2224,RFC,Bank bei Überziehungskrediten iSd,BGB,,Node
+1225,Reference,§§ 492 493 BGB, übermittelt hat,Kunden,Node
+2225,RFC,Kunden,BGB,,Node
+1226,Reference,§ 307 BGB, führt nicht,Terminologie,Node
+2226,RFC,Terminologie,BGB,,Node
+1227,Reference,§ 307 BGB, ist nicht vereinen,Abwälzung,Node
+2227,RFC,Abwälzung,BGB,,Node
+1228,Reference,§ 315 BGB, bedarf,Mitteilung,Node
+2228,RFC,Mitteilung,BGB,,Node
+1229,Reference,§ 305b BGB, wird,Blick,Node
+2229,RFC,Blick,BGB,Bürgerliches_Gesetzbuch,Node
+1230,Reference,§§ 1205 1275 BGB,ist,Bestellung eines Pfandrechts,Node
+2230,RFC,Bestellung eines Pfandrechts,BGB,,Node
+1231,Reference,§ 1280 BGB, scheitert nicht,Erwähnung des Anzeigeerfordernisses,Node
+2231,RFC,Erwähnung des Anzeigeerfordernisses,BGB,,Node
+1232,Reference,§ 1274 I 1 BGB,ist,Zustimmungserfordernisses,Node
+2232,RFC,Zustimmungserfordernisses,BGB,,Node
+1233,Reference,§ 1292 BGB, gilt,Indossaments,Node
+2233,RFC,Indossaments,BGB,,Node
+1234,Reference,§ 492 I 5 Nr. 7 BGB, ist bejahen,Schutzzweck,Node
+2234,RFC,Schutzzweck,BGB,,Node
+1235,Reference,§ 357 HGB,ist,Pfandrecht,Node
+2235,RFC,Pfandrecht,HGB,Pfandrecht,Node
+1236,Reference,§ 131 I Nr. 1 InsO, ist unterworfen,Anfechtung,Node
+2236,RFC,Anfechtung,InsO,,Node
+1237,Reference,§ 71e AktG, ist,Aktien,Node
+2237,RFC,Aktien,AktG,Aktienrecht,Node
+1238,Reference,§ 10 V Va KWG, übernehmen können unterliegen,Finanzierungsformen im Einzelfall,Node
+2238,RFC,Finanzierungsformen im Einzelfall,KWG,Kreditwesengesetz,Node
+1239,Reference,§ 1296 S. 2 BGB,,Regelung,Node
+2239,RFC,Regelung,BGB,,Node
+1240,Reference,§ 305c I BGB, ist bejahen,Gesichtspunkt,Node
+2240,RFC,Gesichtspunkt,BGB,,Node
+1241,Reference,Art. 11 I 14 I WG, erwirbt,Eigentum,Node
+2241,RFC,Eigentum,WG,,Node
+1242,Reference,§ 401 BGB, liegt,Anwendung,Node
+2242,RFC,Anwendung,BGB,,Node
+1243,Reference,§ 399 BGB,ist,Abtretungsverbote,Node
+2243,RFC,Abtretungsverbote,BGB,,Node
+1244,Reference,§ 171 I InsO, leitet,Aufschlags,Node
+2244,RFC,Aufschlags,InsO,Bundesgerichtshof,Node
+1245,Reference,§ 237 S. 1 BGB, fängt,Wertung,Node
+2245,RFC,Wertung,BGB,,Node
+1246,Reference,§ 307 BGB, ist nicht beanstanden,Aspekt,Node
+2246,RFC,Aspekt,BGB,Bürgerliches_Gesetzbuch,Node
+1247,Reference,§ 262 BGB, würde,Regelung,Node
+2247,RFC,Regelung,BGB,Sicherungsvertrag,Node
+1248,Reference,§ 1230 S. 1 BGB, ergeben,Rechtsgedanken,Node
+2248,RFC,Rechtsgedanken,BGB,Bürgerliches_Gesetzbuch,Node
+1249,Reference,§ 305b BGB, ist,Hintergrund,Node
+2249,RFC,Hintergrund,BGB,,Node
+1250,Reference,§ 237 S. 1 BGB, ist,Wertung,Node
+2250,RFC,Wertung,BGB,,Node
+1251,Reference,§§ 262 1230 BGB, übernimmt,Wertung,Node
+2251,RFC,Wertung,BGB,,Node
+1252,Reference,§ 14 UStG, ist,Erlösgutschrift,Node
+2252,RFC,Erlösgutschrift,UStG,,Node
+1253,Reference,§ 1234 BGB, nennt,Verwertung im Sinne,Node
+2253,RFC,Verwertung im Sinne,BGB,,Node
+1254,Reference,§ 366 BGB, ist,Abweichung,Node
+2254,RFC,Abweichung,BGB,,Node
+1255,Reference,§ 305b BGB,,Vorrang,Node
+2255,RFC,Vorrang,BGB,Individualabrede,Node
+1256,Reference,§ 676 S. 3 BGB, ist vorgesehen,Geschäftsbeziehungen,Node
+2256,RFC,Geschäftsbeziehungen,BGB,,Node
+1257,Reference,§ 314 BGB, folgt,Grund,Node
+2257,RFC,Grund,BGB,,Node
+1258,Reference,§ 314 BGB, ist,unabdingbar,Node
+2258,RFC,unabdingbar,BGB,Bürgerliches_Gesetzbuch,Node
+1259,Reference,§ 307 BGB, ist nicht beanstanden,Gesichtspunkt,Node
+2259,RFC,Gesichtspunkt,BGB,Bürgerliches_Gesetzbuch,Node
+1260,Reference,§ 314 I 2 BGB, ist zurückzugreifen,insoweit,Node
+2260,RFC,insoweit,BGB,Bürgerliches_Gesetzbuch,Node
+1261,Reference,§ 314 I 2 BGB, deckt, deckt sich mit der Vorgabe,Node
+2261,RFC, deckt sich mit der Vorgabe,BGB,Bürgerliches_Gesetzbuch,Node
+1262,Reference,§ 676 S. 3 BGB, ist,Regelung,Node
+2262,RFC,Regelung,BGB,Bürgerliches_Gesetzbuch,Node
+1263,Reference,§ 307 BGB, ist nicht beanstanden,Übrigen mit Blick,Node
+2263,RFC,Übrigen mit Blick,BGB,Bürgerliches_Gesetzbuch,Node
+1264,Reference,§ 498 BGB, ergibt,Vorschrift,Node
+2264,RFC,Vorschrift,BGB,Bürgerliches_Gesetzbuch,Node
+1265,Reference,§ 5 Sparkassen VO NW, vorliegen,enthaltenen Regelbeispiele,Node
+2265,RFC,enthaltenen Regelbeispiele,VO NW,,Node
+1266,Reference,§ 307 BGB,,vereinbar,Node
+2266,RFC,vereinbar,BGB,,Node
+1267,Reference,§ 308 Nr. 3 BGB, liegt nicht,Verstoß,Node
+2267,RFC,Verstoß,BGB,,Node
+1268,Reference,§§ 314 490 I BGB, ist umgestaltet angepasst worden,Vorgaben,Node
+2268,RFC,Vorgaben,BGB,,Node
+3268,Subsubchapter,Einlösung von Lastschriften,,,Node
+1269,Reference,§ 314 BGB, hat,Satz,Node
+2269,RFC,Satz,BGB,,Node
+3269,Subsubchapter,Mitteilung von,,,Node
+1270,Reference,§ 314 BGB, folgt,Berücksichtigung,Node
+2270,RFC,Berücksichtigung,BGB,,Node
+1271,Reference,§§ 307 314 BGB, ist,Blick,Node
+2271,RFC,Blick,BGB,,Node
+1272,Reference,§ 314 BGB, beabsichtigt ist,Beschränkung,Node
+2272,RFC,Beschränkung,BGB,,Node
+1273,Reference,§ 323 BGB, kommt,Gesetzestext,Node
+2273,RFC,Gesetzestext,BGB,,Node
+1274,Reference,Art. 21 II GG, ist,Blick,Node
+2274,RFC,Blick,GG,,Node
+1275,Reference,§ 307 BGB, erscheint nicht,unbedenklich,Node
+2275,RFC,unbedenklich,BGB,,Node
+1276,Reference,§ 23a I 2 KWG, ist verpflichtet,Bank,Node
+2276,RFC,Bank,KWG,Kreditwesengesetz,Node
+1277,Reference,§ 23a I 2 KWG, genügt nicht,Informationspflicht,Node
+2277,RFC,Informationspflicht,KWG,Kreditwesengesetz,Node
+1278,Reference,§§ 13– 21des AGB-Gesetzes, übernehmen sollte,unverändert,Node
+2278,RFC,unverändert,AGB-Gesetzes,,Node
+1279,Reference,§§ 662 ff. BGB, kommen,Anwendung,Node
+2279,RFC,Anwendung,BGB,,Node
+5279,Part,Grundlagen,,,Node
+4279,Subchapter,Begriffe,,,Node
+3279,Subsubchapter,Beratungsvertrag,,,Node
+1280,Reference,§ 280 I BGB, führt,Schadensersatzanspruch,Node
+2280,RFC,Schadensersatzanspruch,BGB,Bürgerliches_Gesetzbuch,Node
+4280,Subchapter,Schaden,,,Node
+3280,Subsubchapter,Beratung,,,Node
+1281,Reference,§ 281 BGB,ist,Leistung,Node
+2281,RFC,Leistung,BGB,Bürgerliches_Gesetzbuch,Node
+4281,Subchapter,Kreditgeschäft,,,Node
+3281,Subsubchapter,Warnung,,,Node
+1282,Reference,§ 282 BGB, führt,Voraussetzungen,Node
+2282,RFC,Voraussetzungen,BGB,Bürgerliches_Gesetzbuch,Node
+3282,Subsubchapter,„ Know your customer,,,Node
+1283,Reference,§ 280 I BGB,ist,Leistung,Node
+2283,RFC,Leistung,BGB,Bürgerliches_Gesetzbuch,Node
+3283,Subsubchapter,Kreditverwendung,,,Node
+1284,Reference,§§ 31 32 WpHG, sind,Sinne,Node
+2284,RFC,Sinne,WpHG,,Node
+4284,Subchapter,Verjährung,,,Node
+3284,Subsubchapter,Lastschriftverkehr,,,Node
+1285,Reference,§ 826 BGB, kommen,Betracht,Node
+2285,RFC,Betracht,BGB,Bürgerliches_Gesetzbuch,Node
+1286,Reference,§ 492 BGB,,Richtlinie,Node
+2286,RFC,Richtlinie,BGB,Bürgerliches_Gesetzbuch,Node
+1287,Reference,§ 31 Abs. 2 WpHG,,Kernelementen,Node
+2287,RFC,Kernelementen,WpHG,,Node
+1288,Reference,§ 31 WpHG, kommt,Betracht,Node
+2288,RFC,Betracht,WpHG,,Node
+1289,Reference,§ 492 BGB,ist,Informationspflichten,Node
+2289,RFC,Informationspflichten,BGB,,Node
+1290,Reference,§ 492 I 1 BGB,ist,Schriftformerfordernis,Node
+2290,RFC,Schriftformerfordernis,BGB,Bürgerliches_Gesetzbuch,Node
+1291,Reference,§ 276 BGB, sind,Maßstäbe,Node
+2291,RFC,Maßstäbe,BGB,,Node
+1292,Reference,§ 280 I BGB, haben,Bank,Node
+2292,RFC,Bank,BGB,,Node
+1293,Reference,§ 254 BGB, hat,Verletzung,Node
+2293,RFC,Verletzung,BGB,,Node
+1294,Reference,§ 280 I BGB,,Verletzung,Node
+2294,RFC,Verletzung,BGB,,Node
+1295,Reference,§ 195 BGB, verjähren,Regelverjährung,Node
+2295,RFC,Regelverjährung,BGB,,Node
+1296,Reference,§ 199 BGB, gilt,Verjährungsfrist,Node
+2296,RFC,Verjährungsfrist,BGB,,Node
+1297,Reference,§ 195 BGB,,Verjährungsfrist,Node
+2297,RFC,Verjährungsfrist,BGB,,Node
+1298,Reference,§ 18 KWG, folgt,Pflicht zur Wirtschaftlichkeitsprüfung,Node
+2298,RFC,Pflicht zur Wirtschaftlichkeitsprüfung,KWG,Kreditwesengesetz,Node
+5298,Part,Aufklärungs- und Beratungspflichten bei einzelnen Bankgeschäften,,,Node
+1299,Reference,§ 9 I VerbrKrG, scheidet,Geschäfts im Sinne,Node
+2299,RFC,Geschäfts im Sinne,VerbrKrG,,Node
+1300,Reference,§ 9 VerbrKrG, wird nicht,Gunsten,Node
+2300,RFC,Gunsten,VerbrKrG,Rechtsberatungsgesetz,Node
+4300,Subchapter,Durchführung der Aufklärung,,,Node
+1301,Reference,§§ 31 ff. WpHG, sind,Rahmen der Anlageberatung,Node
+2301,RFC,Rahmen der Anlageberatung,WpHG,Anlageberatung,Node
+1302,Reference,§ 675a BGB, sind,Informationspflichten,Node
+2302,RFC,Informationspflichten,BGB,,Node
+1303,Reference,§ 12 BGB-InfoVO,,Konditionen für Überweisungen,Node
+2303,RFC,Konditionen für Überweisungen,BGB-InfoVO,,Node
+1304,Reference,§§ 675 666 BGB, hat,Geschäftsbesorgungsverhältnis,Node
+2304,RFC,Geschäftsbesorgungsverhältnis,BGB,,Node
+4304,Subchapter,Konkretisierung von Aufklärungs- und Beratungspflichten,,,Node
+3304,Subsubchapter,Deliktsrecht,,,Node
+1305,Reference,§ 766 BGB, wird offengelegt,Schriftform,Node
+2305,RFC,Schriftform,BGB,,Node
+1306,Reference,§ 280 I 2 BGB, trifft,Verschulden,Node
+2306,RFC,Verschulden,BGB,,Node
+5306,Part,Beweislast prozessuale Fragen,,,Node
+1307,Reference,§§ 23 71 GVG,,sachliche Zuständigkeit,Node
+2307,RFC,sachliche Zuständigkeit,GVG,Gerichtsverfassungsgesetz,Node
+1308,Reference,§ 32b ZPO, hat,Kraft getretenen KapMuG,Node
+2308,RFC,Kraft getretenen KapMuG,ZPO,Zivilprozessordnung_(Deutschland),Node
+1309,Reference,Art. 29 der EGDSRL, obliegt,Datenschutzgruppe,Node
+2309,RFC,Datenschutzgruppe,EGDSRL,,Node
+5309,Part,Begriff,,,Node
+4309,Subchapter,Inhalt,,,Node
+3309,Subsubchapter,Personenbezogene Daten,,,Node
+1310,Reference,Art. 31 der EGDSRL,ist,Vertretern,Node
+2310,RFC,Vertretern,EGDSRL,,Node
+4310,Subchapter,§,,,Node
+3310,Subsubchapter,Aussichten,,,Node
+1311,Reference,§ 4 I BDSG, sind,Erhebung,Node
+2311,RFC,Erhebung,BDSG,Bundesdatenschutzgesetz,Node
+1312,Reference,§ 4a I BDSG, ist erteilen (,Einwilligung,Node
+2312,RFC,Einwilligung,BDSG,Bundesdatenschutzgesetz,Node
+5312,Part,Praktische Anwendungsfälle,,,Node
+1313,Reference,§ 35 BDSG, richtet,Löschen,Node
+2313,RFC,Löschen,BDSG,Bundesdatenschutzgesetz,Node
+1314,Reference,§ 3a BDSG,,zentralen Datei,Node
+2314,RFC,zentralen Datei,BDSG,Datenvermeidung_und_Datensparsamkeit,Node
+4314,Subchapter,Nutzung von Girokontodaten Data Warehouses,,,Node
+1315,Reference,§ 30a V AO,,Sammelauskunftsersuchen,Node
+2315,RFC,Sammelauskunftsersuchen,AO,Abgabenordnung,Node
+1316,Reference,§ 30a AO, wäre,überflüssig,Node
+2316,RFC,überflüssig,AO,Abgabenordnung,Node
+1317,Reference,§ 30a AO, wird diskutiert,Abschaffung,Node
+2317,RFC,Abschaffung,AO,Abgabenordnung,Node
+1318,Reference,§ 24c KWG, geschaffen,automatisierten Abruf,Node
+2318,RFC,automatisierten Abruf,KWG,Kreditwesengesetz,Node
+1319,Reference,§ 24c I S. 1 KWG, übermittelt,bewegungen,Node
+2319,RFC,bewegungen,KWG,Kreditwesengesetz,Node
+3319,Subsubchapter,Datenverarbeitung,,,Node
+1320,Reference,§ 24c I S. 5 und 6 KWG, nicht werden,Inhalt,Node
+2320,RFC,Inhalt,KWG,Kreditwesengesetz,Node
+3320,Subsubchapter,Inhalt,,,Node
+1321,Reference,§ 93b AO,,Daten,Node
+2321,RFC,Daten,AO,Abgabenordnung,Node
+1322,Reference,§ 93 X AO, dokumentieren,Entscheidungsfindung,Node
+2322,RFC,Entscheidungsfindung,AO,Abgabenordnung,Node
+1323,Reference,§ 24c I S. 6 KWG, erhält,am Verfahren,Node
+2323,RFC,am Verfahren,KWG,Abgabenordnung,Node
+1324,Reference,§ 28 I S. 1 Nr. 3 BDSG, sind,Daten,Node
+2324,RFC,Daten,BDSG,Bundesdatenschutzgesetz,Node
+1325,Reference,§ 28 I S. 1 Nr. 2 BDSG,,empfangenden Stelle,Node
+2325,RFC,empfangenden Stelle,BDSG,Bundesdatenschutzgesetz,Node
+1326,Reference,§ 3a S. 2 BDSG,,Gebot,Node
+2326,RFC,Gebot,BDSG,Bundesdatenschutzgesetz,Node
+1327,Reference,§ 20 I Nr. 1 UmwG,,übernehmende Bank,Node
+2327,RFC,übernehmende Bank,UmwG,,Node
+1328,Reference,§ 4 I BDSG, eingewilligt hat,Betroffene,Node
+2328,RFC,Betroffene,BDSG,Bundesdatenschutzgesetz,Node
+1329,Reference,§ 28 I BDSG,,Vertragszweck,Node
+2329,RFC,Vertragszweck,BDSG,Bundesdatenschutzgesetz,Node
+4329,Subchapter,Automatisierter Abruf von Konteninformationen,,,Node
+1330,Reference,§ 28 I S. 1 Nr. 2 BDSG,,Ausschluss,Node
+2330,RFC,Ausschluss,BDSG,Bundesdatenschutzgesetz,Node
+1331,Reference,§ 161a StPO, befragen durchsuchen (,Zeugen,Node
+2331,RFC,Zeugen,StPO,Strafprozessordnung_(Deutschland),Node
+1332,Reference,§ 98a StPO, stellt,Vorgehen,Node
+2332,RFC,Vorgehen,StPO,Rasterfahndung,Node
+1333,Reference,§ 7 S. 1 BDSG,,datenschutzrechtliche Vorschriften,Node
+2333,RFC,datenschutzrechtliche Vorschriften,BDSG,Bundesdatenschutzgesetz,Node
+4333,Subchapter,Datenschutz bei Fusionen,,,Node
+1334,Reference,§ 7 S. 2 BDSG, vermutet,Verschulden,Node
+2334,RFC,Verschulden,BDSG,Bundesdatenschutzgesetz,Node
+1335,Reference,§§ 43 44 BDSG, bestehen,Bußgeldregelungen,Node
+2335,RFC,Bußgeldregelungen,BDSG,Bundesdatenschutzgesetz,Node
+1336,Reference,§ 30a AO,,Bankgeheimnis,Node
+2336,RFC,Bankgeheimnis,AO,Bankgeheimnis,Node
+5336,Part,Schranken des Bankgeheimnisses,,,Node
+4336,Subchapter,Gesetzliche Bestimmungen,,,Node
+3336,Subsubchapter,Bankgeheimnis im steuerrechtlichen Verfahren,,,Node
+1337,Reference,Art. 2 I GG, bejaht,Literatur,Node
+2337,RFC,Literatur,GG,,Node
+5337,Part,Rechtsgrundlagen des Bankgeheimnisses,,,Node
+4337,Subchapter,Verfassungsrechtliche Grundlagen,,,Node
+1338,Reference,Art. 2 GG, ist verbunden,Bankgeheimnisses,Node
+2338,RFC,Bankgeheimnisses,GG,,Node
+1339,Reference,Art. 12 GG, verletzen,manifestierte Berufsfreiheit,Node
+2339,RFC,manifestierte Berufsfreiheit,GG,Berufsfreiheit,Node
+1340,Reference,§ 242 BGB, ziehen sei,Steindorff,Node
+2340,RFC,Steindorff,BGB,Bürgerliches_Gesetzbuch,Node
+4340,Subchapter,Zivilrechtliche Grundlagen,,,Node
+3340,Subsubchapter,Bankgeheimnis in den Schranken des allgemeinen Rechts,,,Node
+1341,Reference,§ 399 Alt. 2 BGB,ist,Darlehensverträgen,Node
+2341,RFC,Darlehensverträgen,BGB,Bürgerliches_Gesetzbuch,Node
+1342,Reference,§§ 112 113 BGB, nicht ergibt,Canaris,Node
+2342,RFC,Canaris,BGB,Bürgerliches_Gesetzbuch,Node
+5342,Part,Inhalt des Bankgeheimnisses,,,Node
+4342,Subchapter,Gegenstand des Bankgeheimnisses,,,Node
+1343,Reference,§ 2039 BGB,ist,Erben,Node
+2343,RFC,Erben,BGB,,Node
+4343,Subchapter,Geschützter Personenkreis,,,Node
+1344,Reference,§ 383 I Nr. 6 ZPO, sind berechtigt,Zeugen,Node
+2344,RFC,Zeugen,ZPO,Zivilprozessordnung_(Deutschland),Node
+3344,Subsubchapter,Bankgeheimnis im Zivilprozess,,,Node
+1345,Reference,§ 384 Nr. 3 ZPO,,Zeugnisverweigerungsrecht,Node
+2345,RFC,Zeugnisverweigerungsrecht,ZPO,Zivilprozessordnung_(Deutschland),Node
+1346,Reference,§ 384 Nr. 3 ZPO, zählt,geschützten Geheimnissen,Node
+2346,RFC,geschützten Geheimnissen,ZPO,Zivilprozessordnung_(Deutschland),Node
+1347,Reference,§ 383 I Nr. 6 ZPO,,Angestellten,Node
+2347,RFC,Angestellten,ZPO,Zeugnisverweigerungsrecht,Node
+1348,Reference,§ 376 ZPO, einholen,Aussagegenehmigung,Node
+2348,RFC,Aussagegenehmigung,ZPO,Zivilprozessordnung_(Deutschland),Node
+1349,Reference,§§ 118 I 202 SGG,,ArbGG ),Node
+2349,RFC,ArbGG ),SGG,,Node
+1350,Reference,§ 98 VwGO,,Verwaltungsgerichtsverfahren,Node
+2350,RFC,Verwaltungsgerichtsverfahren,VwGO,Verwaltungsgerichtsordnung,Node
+1351,Reference,§ 4 InsO,,Insolvenzverfahren,Node
+2351,RFC,Insolvenzverfahren,InsO,,Node
+1352,Reference,§ 15 I 1 FGG,,freiwilligen Gerichtsbarkeit,Node
+2352,RFC,freiwilligen Gerichtsbarkeit,FGG,,Node
+1353,Reference,§ 840 ZPO,,Drittschuldnererklärung,Node
+2353,RFC,Drittschuldnererklärung,ZPO,Zivilprozessordnung_(Deutschland),Node
+1354,Reference,§ 840 I Nr. 1 bis 3 ZPOzuläsBeckhusen, beschränkt,Bankgeheimnisses,Node
+2354,RFC,Bankgeheimnisses,ZPO zuläsBeckhusen,Zivilprozessordnung_(Deutschland),Node
+1355,Reference,§§ 53 bis 55 StPO, besteht,Voraussetzungen,Node
+2355,RFC,Voraussetzungen,StPO,Zeugnisverweigerungsrecht,Node
+1356,Reference,§ 53 StPO, nicht ausdrücklich benannt wird ist,Anwendung,Node
+2356,RFC,Anwendung,StPO,Bankgeheimnis,Node
+1357,Reference,§ 53a StPO,ist,Kreditinstitute ein Zeugnisverweigerungsrecht,Node
+2357,RFC,Kreditinstitute ein Zeugnisverweigerungsrecht,StPO,Zeugnisverweigerungsrecht,Node
+3357,Subsubchapter,Bankgeheimnis im Strafverfahren,,,Node
+1358,Reference,§ 161a StPO,,zur Aussage,Node
+2358,RFC,zur Aussage,StPO,Strafprozessordnung_(Deutschland),Node
+1359,Reference,§ 162 StPO,,Ermittlungsrichter,Node
+2359,RFC,Ermittlungsrichter,StPO,Strafprozessordnung_(Deutschland),Node
+1360,Reference,§ 161a StPO,,Bußgeldverfahren,Node
+2360,RFC,Bußgeldverfahren,StPO,Strafprozessordnung_(Deutschland),Node
+1361,Reference,§ 54 StPO,ist,Dienstvorgesetzten,Node
+2361,RFC,Dienstvorgesetzten,StPO,Strafprozessordnung_(Deutschland),Node
+1362,Reference,§ 55 StPO, kann verweigern,Zeuge,Node
+2362,RFC,Zeuge,StPO,Strafprozessordnung_(Deutschland),Node
+1363,Reference,§ 53 I Nr. 3 StPO, geführt werden,Berufes,Node
+2363,RFC,Berufes,StPO,Strafprozessordnung_(Deutschland),Node
+1364,Reference,§ 161a I StPO, gem,Kreditinstituten,Node
+2364,RFC,Kreditinstituten,StPO,Strafprozessordnung_(Deutschland),Node
+1365,Reference,§ 161a StPO, ist,Eingriffsnorm,Node
+2365,RFC,Eingriffsnorm,StPO,Strafprozessordnung_(Deutschland),Node
+1366,Reference,§ 161a StPO, ist,Wortlaut,Node
+2366,RFC,Wortlaut,StPO,Strafprozessordnung_(Deutschland),Node
+1367,Reference,§ 103 StPO, kann angeordnet werden,Rahmen,Node
+2367,RFC,Rahmen,StPO,Strafprozessordnung_(Deutschland),Node
+1368,Reference,§§ 98 105 StPO, angeordnet werden,Staatsanwaltschaft,Node
+2368,RFC,Staatsanwaltschaft,StPO,Strafprozessordnung_(Deutschland),Node
+1369,Reference,§ 97 StPO, ausgenommen sind,Beschlagnahme,Node
+2369,RFC,Beschlagnahme,StPO,Strafprozessordnung_(Deutschland),Node
+1370,Reference,§ 108 StPO, sind,Zufallsfunde,Node
+2370,RFC,Zufallsfunde,StPO,Strafprozessordnung_(Deutschland),Node
+1371,Reference,§ 53 I Nr. 3 StPO,,Berufes,Node
+2371,RFC,Berufes,StPO,Strafprozessordnung_(Deutschland),Node
+1372,Reference,§ 97i. V.m.§ 53a StPO, nicht beschlagnahmefähig angesehen,beschlagnahmefähig,Node
+2372,RFC,beschlagnahmefähig,StPO,Strafprozessordnung_(Deutschland),Node
+1373,Reference,§ 161a StPO, dürfen erteilen,Zeugenvernehmung,Node
+2373,RFC,Zeugenvernehmung,StPO,Strafprozessordnung_(Deutschland),Node
+1374,Reference,§ 161a StPO, wird versehen,Zeugenladung,Node
+2374,RFC,Zeugenladung,StPO,Strafprozessordnung_(Deutschland),Node
+1375,Reference,§ 261 I StGB, wird gem,Geldwäsche,Node
+2375,RFC,Geldwäsche,StGB,Geldwäsche,Node
+1376,Reference,§ 11 I GWG, ist,bloße Verdacht,Node
+2376,RFC,bloße Verdacht,GWG,,Node
+1377,Reference,§ 12 GWG,ist,Mitarbeiter des Kreditinstituts,Node
+2377,RFC,Mitarbeiter des Kreditinstituts,GWG,,Node
+1378,Reference,§ 30a AO, ist,Zusammenfassung,Node
+2378,RFC,Zusammenfassung,AO,Abgabenordnung,Node
+1379,Reference,§ 102 AO, gehört,Berufsgeheimnissen,Node
+2379,RFC,Berufsgeheimnissen,AO,Bankgeheimnis,Node
+1380,Reference,§ 393 I AO, ist,Behörde im Besteuerungsverfahren,Node
+2380,RFC,Behörde im Besteuerungsverfahren,AO,Abgabenordnung,Node
+1381,Reference,§ 93 I 1 AO, haben,Beteiligten,Node
+2381,RFC,Beteiligten,AO,Abgabenordnung,Node
+1382,Reference,§ 30a V AO,,Subsidiaritätsgrundsatz,Node
+2382,RFC,Subsidiaritätsgrundsatz,AO,Abgabenordnung,Node
+1383,Reference,§ 30a V 2 AO, ergibt,Ausnahme,Node
+2383,RFC,Ausnahme,AO,Abgabenordnung,Node
+1384,Reference,§ 385 I AO,,Regelungen,Node
+2384,RFC,Regelungen,AO,Abgabenordnung,Node
+1385,Reference,§ 399 I AO,ist,Durchführung des Ermittlungsverfahrens,Node
+2385,RFC,Durchführung des Ermittlungsverfahrens,AO,Abgabenordnung,Node
+1386,Reference,§ 161a StPO, laden vernehmen,Zeugen,Node
+2386,RFC,Zeugen,StPO,Strafprozessordnung_(Deutschland),Node
+1387,Reference,§ 30a AO, ist,Ordnungswidrigkeitsverfahrens,Node
+2387,RFC,Ordnungswidrigkeitsverfahrens,AO,Abgabenordnung,Node
+1388,Reference,§ 60 I Nr. 1 SGB, normiert,Pflicht,Node
+2388,RFC,Pflicht,SGB,,Node
+1389,Reference,§ 44 I AWG, können,Deutsche Bundesbank,Node
+2389,RFC,Deutsche Bundesbank,AWG,Deutsche_Bundesbank,Node
+1390,Reference,§§ 13 und 14 KWG, normieren,Hinblick,Node
+2390,RFC,Hinblick,KWG,Kreditwesengesetz,Node
+1391,Reference,§ 14 WpHG, legitimiert,WpHG,Node
+2391,RFC,WpHG,WpHG,,Node
+1392,Reference,§ 227 BGB§ 32 StGB,,Bankgeheimnisses im Rahmen,Node
+2392,RFC,Bankgeheimnisses im Rahmen,BGB,Bürgerliches_Gesetzbuch,Node
+1393,Reference,§ 242 BGB,,Treu,Node
+2393,RFC,Treu,BGB,Bürgerliches_Gesetzbuch,Node
+1394,Reference,§ 193 StGB,,Rechtsgedanke,Node
+2394,RFC,Rechtsgedanke,StGB,Strafgesetzbuch,Node
+1395,Reference,§ 242 BGB,ist,Glauben,Node
+2395,RFC,Glauben,BGB,Bürgerliches_Gesetzbuch,Node
+3395,Subsubchapter,Bankgeheimnis und andere Verwaltungsverfahren,,,Node
+1396,Reference,§ 402 BGB, gilt,Abtretung,Node
+2396,RFC,Abtretung,BGB,,Node
+1397,Reference,§ 1 I BDSG, macht,Aufgabe,Node
+2397,RFC,Aufgabe,BDSG,Bundesdatenschutzgesetz,Node
+1398,Reference,§ 4 I BDSG, ergeben,Einschränkungen,Node
+2398,RFC,Einschränkungen,BDSG,Bundesdatenschutzgesetz,Node
+1399,Reference,§ 28 BDSG, eröffnet,Kreditinstituten,Node
+2399,RFC,Kreditinstituten,BDSG,Bundesdatenschutzgesetz,Node
+1400,Reference,§ 28 BDSG, bietet,Möglichkeit,Node
+2400,RFC,Möglichkeit,BDSG,Bundesdatenschutzgesetz,Node
+1401,Reference,§ 4 I BDSG,,ausdrückliche Einwilligung,Node
+2401,RFC,ausdrückliche Einwilligung,BDSG,Bundesdatenschutzgesetz,Node
+1402,Reference,§ 774 BGB,ist,Hauptschuldner,Node
+2402,RFC,Hauptschuldner,BGB,,Node
+1403,Reference,§§ 412 402 BGB,ist,Kreditinstitut,Node
+2403,RFC,Kreditinstitut,BGB,Kreditinstitut,Node
+4403,Subchapter,Einwilligung des Kunden,,,Node
+1404,Reference,§ 280 BGB, kann ergeben,Schadensersatzanspruch,Node
+2404,RFC,Schadensersatzanspruch,BGB,Rechtsfolge,Node
+1405,Reference,§ 823 I BGB, ist,Anspruch,Node
+2405,RFC,Anspruch,BGB,,Node
+3405,Subsubchapter,Bankgeheimnis und Bundesdatenschutzgesetz,,,Node
+1406,Reference,§ 824 BGB,ist,Kreditgefährdung,Node
+2406,RFC,Kreditgefährdung,BGB,,Node
+1407,Reference,§ 253 BGB, scheidet,Regel,Node
+2407,RFC,Regel,BGB,,Node
+1408,Reference,§ 37h WpHG,,Finanztermingeschäfte,Node
+2408,RFC,Finanztermingeschäfte,WpHG,,Node
+6408,Chapter,Kapitalmarkt-und-Auslandsgeschäfte,,,Node
+5408,Part,Abschnitt 3. Insiderüberwachung,,,Node
+4408,Subchapter,Anspruchsgegner,,,Node
+3408,Subsubchapter,§ 31 I Nr. 2 WpHG – Pflichten bei Interessenkonflikten,,,Node
+1409,Reference,§ 20a WpHG,ist, Zur Verfassungsmäßigkeit,Node
+2409,RFC, Zur Verfassungsmäßigkeit,WpHG,,Node
+5409,Part,Abschnitt 2. Bundesanstalt für Finazdienstleistungsaufsicht (BaFin),,,Node
+4409,Subchapter,§ 4 WpHG – Aufgaben und Befugnisse der BaFin,,,Node
+3409,Subsubchapter,§ 2 IIb WpHG – Finanzinstrumente,,,Node
+1410,Reference,§ 15 WpHG,,Handel,Node
+2410,RFC,Handel,WpHG,European_Energy_Exchange,Node
+4410,Subchapter,§ 10 WpHG – Anzeige von Verdachtsfällen,,,Node
+3410,Subsubchapter,§ 2 IV WpHG – Wertpapierdienstlestungsunternehmen,,,Node
+1411,Reference,§ 15a WpHG,ist,Mitteilungspflichtigen,Node
+2411,RFC,Mitteilungspflichtigen,WpHG,,Node
+4411,Subchapter,§ 14 WpHG – Verbot von Insidergeschäften,,,Node
+3411,Subsubchapter,Verwendungsverbot,,,Node
+1412,Reference,§ 826 BGB,,Haftung,Node
+2412,RFC,Haftung,BGB,Kausalität,Node
+4412,Subchapter,§ 15a WpHG – Mitteilung von Geschäften Veröffentlichung und Übermittlung an das Unternehmensregister,,,Node
+3412,Subsubchapter,Sanktionen,,,Node
+1413,Reference,§ 22 WpHG und§ 30 WpÜG,,Stimmrechtszurechnung,Node
+2413,RFC,Stimmrechtszurechnung,WpHG,,Node
+4413,Subchapter,§§ 15b WpHG – Führung von Insiderverzeichnissen,,,Node
+3413,Subsubchapter,Mitteilungspflichtige Personen,,,Node
+1414,Reference,§ 10 WpPG,ist,Dokument,Node
+2414,RFC,Dokument,WpPG,,Node
+4414,Subchapter,§ 20a WpHG – Verbot der Kurs- und Marktpreismanipulation,,,Node
+3414,Subsubchapter,Erfasste Finanzinstrumte und Geschäftsarten,,,Node
+1415,Reference,§ 32 KWG,ist,Erlaubnispflicht,Node
+2415,RFC,Erlaubnispflicht,KWG,Kreditwesengesetz,Node
+4415,Subchapter,§ 22 WpHG – Zurechnung von Stimmrechten,,,Node
+3415,Subsubchapter,Verbotstatbestände nach §20a I 1WpHG,,,Node
+1416,Reference,§ 21 WpHG,,Mitteilungspflichten,Node
+2416,RFC,Mitteilungspflichten,WpHG,,Node
+4416,Subchapter,§ 31a WpHG – Kunden,,,Node
+1417,Reference,§ 21 WpHG,ist,Mitteilung,Node
+2417,RFC,Mitteilung,WpHG,,Node
+4417,Subchapter,§ 31d WpHG – Zuwendungen,,,Node
+1418,Reference,§ 37d WpHG,,Abschaffung,Node
+2418,RFC,Abschaffung,WpHG,EG_über_Märkte_für_Finanzinstrumente,Node
+4418,Subchapter,§ 31f WpHG – Betrieb eines multilateralen Handelssystems,,,Node
+1419,Reference,§ 34b WpHG,,Veil,Node
+2419,RFC,Veil,WpHG,,Node
+3419,Subsubchapter,Weitergabeverbot,,,Node
+1420,Reference,§ 28 S. 1 WpHG,,AktG,Node
+2420,RFC,AktG,WpHG,Aktienrecht,Node
+4420,Subchapter,§ 13 WpHG – Insiderinformation,,,Node
+1421,Reference,§ 37a WpHG,ist,Verjährung,Node
+2421,RFC,Verjährung,WpHG,,Node
+3421,Subsubchapter,Ad-hoc- Mitteilung,,,Node
+1422,Reference,§ 20a WpHG,ist,Verbot,Node
+2422,RFC,Verbot,WpHG,Marktmanipulation,Node
+3422,Subsubchapter,Befreiungsregelung,,,Node
+1423,Reference,§ 15 I 3 WpHG,,Grund,Node
+2423,RFC,Grund,WpHG,,Node
+3423,Subsubchapter,Schadensersatz nach §§ 37b 37c WpHG i.V.m. § 15 VI 1 WpHG,,,Node
+1424,Reference,§ 36b WpHG,,Werberecht,Node
+2424,RFC,Werberecht,WpHG,,Node
+1425,Reference,§§ 37b und 37c WpHG,,Anwendungsbereich,Node
+2425,RFC,Anwendungsbereich,WpHG,,Node
+4425,Subchapter,§ 28 WpHG – Rechtsverlust,,,Node
+1426,Reference,§§ 37b und 37c WpHG,,Rahmen,Node
+2426,RFC,Rahmen,WpHG,Kausalität,Node
+3426,Subsubchapter,Kosten und Beweislage,,,Node
+1427,Reference,§ 34b WpHG,,BaFin zu,Node
+2427,RFC,BaFin zu,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1428,Reference,§ 59 WpÜG,,AkTG,Node
+2428,RFC,AkTG,WpÜG,,Node
+4428,Subchapter,§ 36b WpHG – Werbung von Wertpapierdienstleistungsunternehmen,,,Node
+1429,Reference,§ 44 KWG,,BaFin,Node
+2429,RFC,BaFin,KWG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+4429,Subchapter,§ 36c WpHG – Zusammenarbeit mit zuständigen Stellen im Ausland,,,Node
+1430,Reference,§§ 21 ff. WpHG und§ 244 AktG,,Umgang mit,Node
+2430,RFC,Umgang mit,WpHG,Aktienrecht,Node
+1431,Reference,§§ 21 22 WpHG,ist,Sudmeyer  Mitteilungs- und Veröffentlichungspflichten,Node
+2431,RFC,Sudmeyer  Mitteilungs- und Veröffentlichungspflichten,WpHG,,Node
+1432,Reference,§ 30 Abs. 2 WpÜG,,Auslegung,Node
+2432,RFC,Auslegung,WpÜG,,Node
+1433,Reference,2004/ 39/ EG,ist,RiL,Node
+2433,RFC,RiL,EG,,Node
+1434,Reference,§§ 21 WpHG,ist,Rahmen der Mitteilungspflichten,Node
+2434,RFC,Rahmen der Mitteilungspflichten,WpHG,,Node
+1435,Reference,§ 15 I 3 WpHG,,Publizität,Node
+2435,RFC,Publizität,WpHG,Ad-hoc-Publizität,Node
+1436,Reference,§ 9 WpHG,,Begriff,Node
+2436,RFC,Begriff,WpHG,,Node
+1437,Reference,§ 37a WpHG,,Verjährung,Node
+2437,RFC,Verjährung,WpHG,Wertpapierdienstleistungsunternehmen,Node
+1438,Reference,§§ 37b 37c WpHG,,Schadensersatz,Node
+2438,RFC,Schadensersatz,WpHG,,Node
+1439,Reference,§ 20a I 1 WpHG,,Verbotstatbestände,Node
+2439,RFC,Verbotstatbestände,WpHG,,Node
+5439,Part,Einleitung,,,Node
+1440,Reference,§§ 21 ff. WpHG,,Zweck,Node
+2440,RFC,Zweck,WpHG,,Node
+1441,Reference,§ 10 WpHG,,Anzeigepflicht,Node
+2441,RFC,Anzeigepflicht,WpHG,,Node
+4441,Subchapter,§ 20b WpHG,,,Node
+1442,Reference,93/ 22/ EWG,,EG-Wertpapierdienstleistungsrichtlinie,Node
+2442,RFC,EG-Wertpapierdienstleistungsrichtlinie,EWG,,Node
+1443,Reference,2004/ 39/ EG,,Financial Instruments Directive ( MiFID,Node
+2443,RFC,Financial Instruments Directive ( MiFID,EG,EG_über_Märkte_für_Finanzinstrumente,Node
+4443,Subchapter,§ 36a WpHG – Unternehmen organisierte Märkte und mulitlaterale Handelssysteme mit Sitz in einem anderen EU-/EWR-Staat,,,Node
+1444,Reference,2006/ 73/ EG,,EU-Kommission zur Durchführung,Node
+2444,RFC,EU-Kommission zur Durchführung,EG,EG_über_Märkte_für_Finanzinstrumente,Node
+1445,Reference,Art. 249 EG, droht,Gesetzgeber,Node
+2445,RFC,Gesetzgeber,EG,,Node
+1446,Reference,94/ 19/ EWG,,im Falle,Node
+2446,RFC,im Falle,EWG,Bonn,Node
+1447,Reference,Art. 101 I 2 GG,ist,Richters,Node
+2447,RFC,Richters,GG,Gesetzlicher_Richter,Node
+1448,Reference,§ 52 Wertpapierhandelsgesetz 1515 8 B. Abschnitt 1. Anwendungsbereich Begriffsbestimmungen I.§ 1 WpHG,,Frisch,Node
+2448,RFC,Frisch,WpHG,Wertpapierhandelsgesetz,Node
+4448,Subchapter,§ 2 WpHG – Begriffsbestimmungen,,,Node
+1449,Reference,§ 1 I WpHG, ist,Regelungsinhalt,Node
+2449,RFC,Regelungsinhalt,WpHG,,Node
+1450,Reference,Art. 10 MAD, dient, dient der Umsetzung,Node
+2450,RFC, dient der Umsetzung,MAD,,Node
+1451,Reference,§§ 34b undc WpHG, gelten,Handlungen,Node
+2451,RFC,Handlungen,WpHG,,Node
+1452,Reference,§ 2 WpHG, enthält,Begriffen,Node
+2452,RFC,Begriffen,WpHG,,Node
+1453,Reference,§ 2 I WpHG, definiert,WpHG,Node
+2453,RFC,WpHG,WpHG,,Node
+1454,Reference,§ 2 WpHG, deckt,Konformität,Node
+2454,RFC,Konformität,WpHG,,Node
+1455,Reference,Art. 4 I Nr. 18 MiFID, bleibt nicht Beispiel,Übertragbarkeit,Node
+2455,RFC,Übertragbarkeit,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1456,Reference,§ 2 I WpHG, nicht,Geschäfte,Node
+2456,RFC,Geschäfte,WpHG,,Node
+1457,Reference,§§ 929 ff. BGB, nicht,Wertpapier,Node
+2457,RFC,Wertpapier,BGB,Wertpapier,Node
+1458,Reference,§ 2 I WpHG, nicht,Zahlungsinstrumente,Node
+2458,RFC,Zahlungsinstrumente,WpHG,,Node
+1459,Reference,§ 37a WpHG,,im Hinblick,Node
+2459,RFC,im Hinblick,WpHG,,Node
+1460,Reference,§ 2 Ia WpHG, erweitert,Anwendungsbereich auf Geldmarktinstrumente,Node
+2460,RFC,Anwendungsbereich auf Geldmarktinstrumente,WpHG,,Node
+1461,Reference,§ 2 I WpHG, erfasst werden,Instrumente,Node
+2461,RFC,Instrumente,WpHG,,Node
+1462,Reference,§ 2 V WpHG,,organisierten Markt,Node
+2462,RFC,organisierten Markt,WpHG,Organisierter_Markt,Node
+1463,Reference,§ 31f WpHG,,multilateralem Handelssystem,Node
+2463,RFC,multilateralem Handelssystem,WpHG,,Node
+1464,Reference,Art. 2 Nr. 1 DVO,,Warenderivaten,Node
+2464,RFC,Warenderivaten,DVO,,Node
+1465,Reference,2000/ 12/ EG,,Bankdienstleistungen,Node
+2465,RFC,Bankdienstleistungen,EG,,Node
+1466,Reference,Art. 39 DVO,,WpHG,Node
+2466,RFC,WpHG,DVO,,Node
+1467,Reference,§ 185 I AktG und§§ 202 203 I AktG,,Rechte,Node
+2467,RFC,Rechte,AktG,Aktienrecht,Node
+1468,Reference,§§ 383 ff. HGB;§§ 18 ff. DepotG, erfasst,fremde Rechnung,Node
+2468,RFC,fremde Rechnung,HGB,Handelsgesetzbuch,Node
+1469,Reference,§ 164 I 1 BGB,,Ausführung,Node
+2469,RFC,Ausführung,BGB,,Node
+1470,Reference,§ 185 AktG,ist,Publikum,Node
+2470,RFC,Publikum,AktG,Aktienrecht,Node
+1471,Reference,§ 2a I Nr. 14 WpHG,,Qualifizierung,Node
+2471,RFC,Qualifizierung,WpHG,,Node
+1472,Reference,§ 31f WpHG,,neue Wertpapierdienstleistung,Node
+2472,RFC,neue Wertpapierdienstleistung,WpHG,Wertpapierdienstleistungsunternehmen,Node
+3472,Subsubchapter,§ 2 I WpHG – Allgemeiner Wertpapierbegriff,,,Node
+1473,Reference,Art. 52 DRL, meint,Empfehlung,Node
+2473,RFC,Empfehlung,DRL,,Node
+1474,Reference,Art. 19 I II MIFID, kann vorliegen,Verstoß,Node
+2474,RFC,Verstoß,MIFID,,Node
+3474,Subsubchapter,§ 2 III WpHG – Wertpapierdienstleistungen,,,Node
+1475,Reference,§ 1 Ia 2 Nr. 1a KWG, erweitert,Tatbestand,Node
+2475,RFC,Tatbestand,KWG,Anlageberatung,Node
+1476,Reference,§ 32 Ii. V.m.§ 1 Ia 1 KWG, darstellt,Tätigkeit,Node
+2476,RFC,Tätigkeit,KWG,Kreditwesengesetz,Node
+1477,Reference,§ 32 I 1 KWG, darf erbracht werden,Erlaubnis,Node
+2477,RFC,Erlaubnis,KWG,Anlageberatung,Node
+1478,Reference,§ 34c I 1 Nr. 2 und 3 GewO, bleibt,Erlaubnispflicht,Node
+2478,RFC,Erlaubnispflicht,GewO,,Node
+1479,Reference,§ 64i KWG, hat getroffen,Änderungen,Node
+2479,RFC,Änderungen,KWG,Kreditwesengesetz,Node
+1480,Reference,§ 32 I 1 und 2 KWG,ist,Anlageberatung,Node
+2480,RFC,Anlageberatung,KWG,Anlageberatung,Node
+1481,Reference,§ 32 I KWG, sind,Erlaubnis,Node
+2481,RFC,Erlaubnis,KWG,Kreditwesengesetz,Node
+4481,Subchapter,§ 37 WpHG – Ausnahmen,,,Node
+1482,Reference,§ 33 I 2 KWG, liegen kann,Haftpflicht- Versicherung,Node
+2482,RFC,Haftpflicht- Versicherung,KWG,Kreditwesengesetz,Node
+1483,Reference,§ 2 IIIa WpHG,,Änderung von,Node
+2483,RFC,Änderung von,IIIa WpHG,,Node
+1484,Reference,Art. 24 I DRL;§ 34b WpHG,,Verbreitung,Node
+2484,RFC,Verbreitung,DRL,,Node
+1485,Reference,§ 2 IIb WpHG, beziehen würden,Finanzinstrument,Node
+2485,RFC,Finanzinstrument,IIb WpHG,Finanzinstrument,Node
+1486,Reference,§ 1 I KWG, sind,sind Kreditinstitute,Node
+2486,RFC,sind Kreditinstitute,KWG,Kreditwesengesetz,Node
+1487,Reference,§ 1 Ia KWG,ist,Finanzdienstleistungsinstitute,Node
+2487,RFC,Finanzdienstleistungsinstitute,KWG,Kreditwesengesetz,Node
+4487,Subchapter,§ 30b WpHG – Veröffentlichung von Mitteilungen und Übermittlung im Wege der Datenfernübertragung,,,Node
+1488,Reference,§ 53 I 1 KWG,,Banken,Node
+2488,RFC,Banken,KWG,Kreditwesengesetz,Node
+1489,Reference,§ 37i WpHG,,Märkte,Node
+2489,RFC,Märkte,WpHG,,Node
+4489,Subchapter,§ 31h WpHG – Veröffentlichungspflichten von Wertpapierdienstleistungsunternehmen nach dem Handel,,,Node
+1490,Reference,§ 32 I BörsG, neu geregelt,regulierten Markt,Node
+2490,RFC,regulierten Markt,BörsG,,Node
+4490,Subchapter,§ 33 WpHG – Organisationspflichten,,,Node
+1491,Reference,§ 10 WpPG, hinterlegen muss,BaFin,Node
+2491,RFC,BaFin,WpPG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1492,Reference,§ 10 I 1 Nr. 1 WpPG, wesentlich erweitert wurde,Katalog,Node
+2492,RFC,Katalog,WpPG,,Node
+1493,Reference,Art. 4 Nr. 7 MiFID,,Maßgabe von,Node
+2493,RFC,Maßgabe von,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1494,Reference,Art. 21 DVO,,häufig,Node
+2494,RFC,häufig,DVO,,Node
+1495,Reference,§ 53c KWG,ist,Grund,Node
+2495,RFC,Grund,KWG,Kreditwesengesetz,Node
+1496,Reference,§ 2a I Nr. 14 WpHG, ist,Ausnahmetatbestand,Node
+2496,RFC,Ausnahmetatbestand,WpHG,,Node
+1497,Reference,§ 2 X 1 KWG,,Abschlussvermittlung,Node
+2497,RFC,Abschlussvermittlung,KWG,Kreditwesengesetz,Node
+1498,Reference,§ 166 I BGB, zugerechnet werden,Bank,Node
+2498,RFC,Bank,BGB,,Node
+4498,Subchapter,§ 36 WpHG – Prüfung der Meldepflichten und Verhaltensregeln,,,Node
+1499,Reference,§ 3 WpHG, wurde aufgehoben,BaFin,Node
+2499,RFC,BaFin,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1500,Reference,§ 1 I FinDAG,,rechtsfähige Anstalt,Node
+2500,RFC,rechtsfähige Anstalt,FinDAG,,Node
+1501,Reference,§ 4 WpHG,,BT-Drucks,Node
+2501,RFC,BT-Drucks,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1502,Reference,§ 44c KWG,,anderer Gesetze,Node
+2502,RFC,anderer Gesetze,KWG,Kreditwesengesetz,Node
+1503,Reference,§ 6 I WpHG,,null,Node
+2503,RFC,null,WpHG,,Node
+1504,Reference,§ 20a WpHG,ist,Marktpreismanipulation,Node
+2504,RFC,Marktpreismanipulation,WpHG,,Node
+1505,Reference,Art. 49 MiFID,,WpHG,Node
+2505,RFC,WpHG,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1506,Reference,§ 34c GewO,,Fondsvermittler,Node
+2506,RFC,Fondsvermittler,GewO,,Node
+1507,Reference,§ 7 WpHG, wurden gebündelt,Staaten,Node
+2507,RFC,Staaten,WpHG,,Node
+1508,Reference,§ 36c WpHG, wurde aufgehoben,BT-Drucks,Node
+2508,RFC,BT-Drucks,WpHG,,Node
+1509,Reference,§ 8 I 1 WpHG, normiert,Verschwiegenheitspflicht,Node
+2509,RFC,Verschwiegenheitspflicht,WpHG,Verschwiegenheitspflicht,Node
+1510,Reference,§ 1 IFG, vorsieht,Anspruch auf Zugang,Node
+2510,RFC,Anspruch auf Zugang,IFG,Normadressat,Node
+1511,Reference,§ 8 WpHG,,Schutzgesetzeigenschaft,Node
+2511,RFC,Schutzgesetzeigenschaft,WpHG,,Node
+1512,Reference,§ 8 WpHG, wäre,unbefugt,Node
+2512,RFC,unbefugt,WpHG,,Node
+1513,Reference,§ 1 IFG, dürfte kommen,Anspruch,Node
+2513,RFC,Anspruch,IFG,,Node
+1514,Reference,§ 40b WpHG, nicht umfasst werden dürfte,Verhältnismäßigkeit,Node
+2514,RFC,Verhältnismäßigkeit,WpHG,,Node
+1515,Reference,Art. 25 MiFID,,WpHG,Node
+2515,RFC,WpHG,WpHG,EG_über_Märkte_für_Finanzinstrumente,Node
+1516,Reference,§ 9 Ii. V.m.§ 2a I Nr. 10 WpHG,,reine Eigenhändler,Node
+2516,RFC,reine Eigenhändler,WpHG,Eigenhandel,Node
+1517,Reference,§ 9 I 1 WpHG,,BaFin,Node
+2517,RFC,BaFin,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1518,Reference,Art. 5 DVO,,Finanzinstrumenten,Node
+2518,RFC,Finanzinstrumenten,DVO,,Node
+1519,Reference,§ 9 I 2 WpHG, einbezogen sind,regulierten Markt,Node
+2519,RFC,regulierten Markt,WpHG,,Node
+1520,Reference,§ 9 Ia 2 WpHG, besteht,Investmentgesellschaft emittierten Anteile,Node
+2520,RFC,Investmentgesellschaft emittierten Anteile,WpHG,,Node
+1521,Reference,Art. 25 III MiFID, ist aufgehoben,Freiverkehr,Node
+2521,RFC,Freiverkehr,MiFID,Freiverkehr,Node
+1522,Reference,§ 9 I 4 WpHG, sind,Unternehmen mit Sitz,Node
+2522,RFC,Unternehmen mit Sitz,WpHG,Drittstaat,Node
+1523,Reference,§ 9 WpHG, löst,Marktaufsicht zu Gunsten,Node
+2523,RFC,Marktaufsicht zu Gunsten,WpHG,,Node
+1524,Reference,§ 10 WpHG, erhielt,AnSVG,Node
+2524,RFC,AnSVG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+4524,Subchapter,§ 34a WpHG – Getrennte Vermögensverwahrung,,,Node
+1525,Reference,§ 14 WpHG,,zur Überwachung,Node
+2525,RFC,zur Überwachung,WpHG,,Node
+1526,Reference,§ 20a WpHG,,Marktmanipulation,Node
+2526,RFC,Marktmanipulation,WpHG,Marktmanipulation,Node
+1527,Reference,§ 2 WpAIV,,erfüllende Anzeigepflicht,Node
+2527,RFC,erfüllende Anzeigepflicht,WpAIV,,Node
+1528,Reference,§ 1 I KWG,,BaFin,Node
+2528,RFC,BaFin,KWG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1529,Reference,§§ 14 20a WpHG, verstoßen wird,Geschäfte gegen,Node
+2529,RFC,Geschäfte gegen,WpHG,,Node
+1530,Reference,§ 2 WpAIV,,Anzeige,Node
+2530,RFC,Anzeige,WpAIV,,Node
+1531,Reference,§ 10 I 2 WpHG, flankiert,Bußgeld,Node
+2531,RFC,Bußgeld,WpHG,Verschwiegenheitspflicht,Node
+1532,Reference,§ 10 WpHG, kann führen,Pflichtenkollision,Node
+2532,RFC,Pflichtenkollision,WpHG,Wertpapierdienstleistungsunternehmen,Node
+1533,Reference,§ 52 Wertpapierhandelsgesetz 1527 49 V.§ 11 WpHG,,Frisch,Node
+2533,RFC,Frisch,WpHG,Wertpapierhandelsgesetz,Node
+1534,Reference,§ 26 WpHGgemäß§§ 21 ff. WpHG,,Erfüllung,Node
+2534,RFC,Erfüllung,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1535,Reference,2003/ 6/ EG,,Richtlinie,Node
+2535,RFC,Richtlinie,EG,,Node
+1536,Reference,89/ 592/ EWG,,Richtlinie,Node
+2536,RFC,Richtlinie,EWG,,Node
+1537,Reference,§ 14 WpHG, geschützte,Chancengleichheit,Node
+2537,RFC,Chancengleichheit,WpHG,,Node
+1538,Reference,2003/ 6/ EG,,Erweiterung,Node
+2538,RFC,Erweiterung,EG,,Node
+1539,Reference,§ 12 S. 1 WpHG, sind,Finanzinstrumente,Node
+2539,RFC,Finanzinstrumente,WpHG,,Node
+1540,Reference,§ 12 S. 1 Nr. 3 WpHG, zählen,sog,Node
+2540,RFC,sog,WpHG,,Node
+1541,Reference,§ 12 S. 1 Nr. 1oder Nr. 2 WpHG, ausgestaltet sind,Regel als Insiderpapiere,Node
+2541,RFC,Regel als Insiderpapiere,WpHG,,Node
+1542,Reference,§ 14 I WpHG, knüpfen,Verbote,Node
+2542,RFC,Verbote,WpHG,,Node
+3542,Subsubchapter,Mehrstufige Entscheidungsprozesse,,,Node
+1543,Reference,Art. 1 I Nr. 1 S. 1 MAD; Art. 1 I DRLzur MAD RL 2003/ 124/ EG,,Insiderinformation,Node
+2543,RFC,Insiderinformation,MAD,,Node
+1544,Reference,Art. 1 I DRL;§ 13 I 3 WpHG,,derivativen Finanzinstrumenten,Node
+2544,RFC,derivativen Finanzinstrumenten,DRL,,Node
+1545,Reference,§ 33b V Nr. 1 WpHG, darstellen Informationsvorsprüngen,bevorstehenden Veröffentlichtung,Node
+2545,RFC,bevorstehenden Veröffentlichtung,WpHG,,Node
+1546,Reference,Art. 1 Nr. 1 Unterabs. 3 MAD, beauftragt sind hängt,Aufträgen,Node
+2546,RFC,Aufträgen,MAD,,Node
+1547,Reference,§ 13 I 1 WpHG,,Tatsache,Node
+2547,RFC,Tatsache,WpHG,,Node
+1548,Reference,§ 13 I 1 WpHG, erfasst,AnSVG,Node
+2548,RFC,AnSVG,WpHG,,Node
+1549,Reference,§ 13 I 3 WpHG,,künftiger Eintritt,Node
+2549,RFC,künftiger Eintritt,WpHG,,Node
+1550,Reference,Art. 234 II EG,,EuGH,Node
+2550,RFC,EuGH,EG,Stuttgart,Node
+1551,Reference,§ 13 I 2 WpHG, berücksichtigen würde,Information,Node
+2551,RFC,Information,WpHG,,Node
+1552,Reference,§ 13 I 3 WpHG,,bisherigen Entscheidungsstufen,Node
+2552,RFC,bisherigen Entscheidungsstufen,WpHG,Neue_Zeitschrift_für_Gesellschaftsrecht,Node
+4552,Subchapter,§ 33b WpHG – Mitarbeiter und Mitarbeitergeschäfte,,,Node
+1553,Reference,§ 14 I WpHG, ist verboten,Insider,Node
+2553,RFC,Insider,WpHG,,Node
+1554,Reference,§ 14 I WpHG, verstößt,Fall gegen,Node
+2554,RFC,Fall gegen,WpHG,,Node
+4554,Subchapter,Novellierungen,,,Node
+1555,Reference,§ 14 I Nr. 1 WpHG,,Verwendungsverbot,Node
+2555,RFC,Verwendungsverbot,WpHG,,Node
+4555,Subchapter,§ 11 WpHG – Verpflichtung des Insolvenzverwalters,,,Node
+1556,Reference,§ 33 WpHG, unterbinden,Insiderhandel,Node
+2556,RFC,Insiderhandel,WpHG,Insiderhandel,Node
+1557,Reference,§§ 13 27 StGB, bestraft werden könnte,Unterlassen,Node
+2557,RFC,Unterlassen,StGB,Strafgesetzbuch,Node
+4557,Subchapter,Zweck der §§ 21 ff. WpHG,,,Node
+1558,Reference,§ 131 I AktG, ist,Hauptversammlung,Node
+2558,RFC,Hauptversammlung,AktG,Generalversammlung,Node
+1559,Reference,§ 70 StGB, ist,Berufsverbot,Node
+2559,RFC,Berufsverbot,StGB,Strafgesetzbuch,Node
+1560,Reference,§ 73 StGB,ist,Anordnung,Node
+2560,RFC,Anordnung,StGB,Strafgesetzbuch,Node
+1561,Reference,§ 14 WpHG, wird verneint,Überwiegend,Node
+2561,RFC,Überwiegend,WpHG,,Node
+1562,Reference,§ 404 AktG,,Schadensersatzansprüche aufgrund,Node
+2562,RFC,Schadensersatzansprüche aufgrund,AktG,Aktienrecht,Node
+1563,Reference,§ 826 BGB,,BGB,Node
+2563,RFC,BGB,BGB,Bürgerliches_Gesetzbuch,Node
+1564,Reference,§ 15 I 1 WpHG,,Gegensatz zu,Node
+2564,RFC,Gegensatz zu,WpHG,,Node
+1565,Reference,§ 2 IIb WpHG,,Ad-hoc- Publizität,Node
+2565,RFC,Ad-hoc- Publizität,IIb WpHG,Ad-hoc-Publizität,Node
+1566,Reference,§ 15 I 1 WpHG, basiert,Weiteren,Node
+2566,RFC,Weiteren,WpHG,,Node
+1567,Reference,§ 13 WpHG,,WpHG,Node
+2567,RFC,WpHG,WpHG,,Node
+1568,Reference,§ 13 I WpHG,ist,Insidertatsache,Node
+2568,RFC,Insidertatsache,WpHG,Insiderhandel,Node
+1569,Reference,§ 15 I 1 WpHG, knüpft,Inlandsemittenten,Node
+2569,RFC,Inlandsemittenten,WpHG,,Node
+1570,Reference,§ 13 I WpHG,ist,WpHG,Node
+2570,RFC,WpHG,WpHG,,Node
+1571,Reference,§ 15 WpHG, ist,Terminmarkt,Node
+2571,RFC,Terminmarkt,WpHG,Terminmarkt,Node
+1572,Reference,§ 15 I 1 WpHG,,Inlandsemittent,Node
+2572,RFC,Inlandsemittent,WpHG,,Node
+1573,Reference,§ 2 IIb WpHG,,Finanzinstrumenten,Node
+2573,RFC,Finanzinstrumenten,IIb WpHG,,Node
+1574,Reference,§ 13 I WpHG,,Insiderinformationen,Node
+2574,RFC,Insiderinformationen,WpHG,,Node
+1575,Reference,§ 121 I 1 BGB,,angemessene Prüfungszeit,Node
+2575,RFC,angemessene Prüfungszeit,BGB,,Node
+1576,Reference,§ 6f. WpAIV, regelt,Veröffentlichung,Node
+2576,RFC,Veröffentlichung,WpAIV,ZIP-Dateiformat,Node
+1577,Reference,§ 15 WpHG, kommt,Publizitätspflicht aus,Node
+2577,RFC,Publizitätspflicht aus,WpHG,Rechtswidrigkeit,Node
+1578,Reference,§ 15 WpHG,ist,Information,Node
+2578,RFC,Information,WpHG,,Node
+1579,Reference,§§ 662 675 BGB, nicht verstehen,im Auftrag,Node
+2579,RFC,im Auftrag,BGB,Bürgerliches_Gesetzbuch,Node
+1580,Reference,§ 14 I Nr. 2 WpHG,,im Rahmen,Node
+2580,RFC,im Rahmen,WpHG,,Node
+1581,Reference,§ 15 I 6 WpHG,,null,Node
+2581,RFC,null,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1582,Reference,§ 15 I WpHG, nicht erfüllen,Voraussetzungen von,Node
+2582,RFC,Voraussetzungen von,WpHG,,Node
+1583,Reference,§ 3 UWG,ist,Wettbewerbshandlung,Node
+2583,RFC,Wettbewerbshandlung,UWG,Gesetz_gegen_den_unlauteren_Wettbewerb,Node
+1584,Reference,§ 37b WpHG, wird kommen,Fleischer,Node
+2584,RFC,Fleischer,WpHG,,Node
+1585,Reference,§ 15 I 1 WpHG,ist,Veröffentlichung,Node
+2585,RFC,Veröffentlichung,WpHG,,Node
+1586,Reference,§ 8 V WpAIV,,Aufschub,Node
+2586,RFC,Aufschub,WpAIV,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1587,Reference,§§ 37b 37c WpHG,,Schadensersatz,Node
+2587,RFC,Schadensersatz,WpHG,,Node
+1588,Reference,§ 15 WpHG, ist,Gesetzgebers,Node
+2588,RFC,Gesetzgebers,WpHG,,Node
+1589,Reference,§ 15 I 1 WpHG, hätte einfacher gemacht,Schutzgesetzeigenschaft von,Node
+2589,RFC,Schutzgesetzeigenschaft von,WpHG,,Node
+1590,Reference,§§ 37b 37c WpHG, stehen,Haftungsnormen,Node
+2590,RFC,Haftungsnormen,WpHG,,Node
+1591,Reference,§ 826 BGB, bereitet,Nachweis,Node
+2591,RFC,Nachweis,BGB,Kausalität,Node
+4591,Subchapter,Unterlassene unverzügliche oder unwahre Veröffentlichung von Insiderinformationen,,,Node
+1592,Reference,§ 15 I 1 WpHG, war,Schutzgesetz,Node
+2592,RFC,Schutzgesetz,WpHG,,Node
+1593,Reference,§ 263 I§ 264a I StGB§ 20 I 1 WpHG§ 400 I Nr. 1 AktG§ 4 UWG§ 826 BGB,,Anspruchsgrundlagen,Node
+2593,RFC,Anspruchsgrundlagen,StGB,Bürgerliches_Gesetzbuch,Node
+1594,Reference,§§ 37b und 37c WpHG, verpflichtet ist,Voraussetzungen,Node
+2594,RFC,Voraussetzungen,WpHG,,Node
+1595,Reference,§§ 263 264a StGB§ 826 BGB,,Schadensersatzansprüche,Node
+2595,RFC,Schadensersatzansprüche,StGB,Strafgesetzbuch,Node
+1596,Reference,§ 15 I 1 3oder 4 WpHG,,leichtfertig,Node
+2596,RFC,leichtfertig,WpHG,,Node
+1597,Reference,§ 30 OWiG, kann belangt werden,Unternehmen,Node
+2597,RFC,Unternehmen,OWiG,Gesetz_über_Ordnungswidrigkeiten,Node
+1598,Reference,§ 15 V 1 WpHG, vornimmt,Veröffentlichung,Node
+2598,RFC,Veröffentlichung,WpHG,,Node
+1599,Reference,§ 15a WpHG, verfolgt,Teilziele,Node
+2599,RFC,Teilziele,WpHG,,Node
+1600,Reference,§ 15a WpHG, kommt,Vorbeugungsfunktion,Node
+2600,RFC,Vorbeugungsfunktion,WpHG,,Node
+1601,Reference,§ 10 WpAIV, bafin,Emittenten,Node
+2601,RFC,Emittenten,WpAIV,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1602,Reference,§ 15a I 1 WpHG,ist,Werktagen,Node
+2602,RFC,Werktagen,WpHG,,Node
+1603,Reference,§ 15a I 3 Nrn. 1 2 WpHG, WpHG sind,zugelassen,Node
+2603,RFC,zugelassen,WpHG,,Node
+1604,Reference,§ 15a I 1 WpHG, obliegt,Pflicht,Node
+2604,RFC,Pflicht,WpHG,,Node
+1605,Reference,§§ 1601 ff. BGB,,eingetragene Lebenspartner,Node
+2605,RFC,eingetragene Lebenspartner,BGB,,Node
+1606,Reference,§ 8b HGB, übermitteln,Informationen,Node
+2606,RFC,Informationen,HGB,Unternehmensregister,Node
+1607,Reference,§ 13 WpAIV,,eigenen Homepage,Node
+2607,RFC,eigenen Homepage,WpAIV,,Node
+1608,Reference,§§ 3a und 3b WpAIV, gelten,es gelten die erhöhten Anforderungen,Node
+2608,RFC,es gelten die erhöhten Anforderungen,WpAIV,,Node
+1609,Reference,§ 3a I WPAIV, sein kann,Medien,Node
+2609,RFC,Medien,WPAIV,,Node
+1610,Reference,§ 15a WpHG,,autonom,Node
+2610,RFC,autonom,WpHG,,Node
+1611,Reference,§ 15 WpHG,,Mitteilungen,Node
+2611,RFC,Mitteilungen,WpHG,,Node
+1612,Reference,§§ 21 ff. WpHG, WpHG,sonstigen Publizitätspflichten,Node
+2612,RFC,sonstigen Publizitätspflichten,WpHG,Kreditwesengesetz,Node
+1613,Reference,§ 826 BGB, verweist,Nachweis eines Kausalzusammenhangs,Node
+2613,RFC,Nachweis eines Kausalzusammenhangs,BGB,,Node
+1614,Reference,§ 15 I 1 und 2 WpHG,ist,WpAIV,Node
+2614,RFC,WpAIV,WpAIV,,Node
+1615,Reference,§ 323 I 1 HGB, nicht,Kreditinstitute,Node
+2615,RFC,Kreditinstitute,HGB,Handelsgesetzbuch,Node
+1616,Reference,§§ 14 15 und 16 WpAIV,,Auskunft,Node
+2616,RFC,Auskunft,WpAIV,,Node
+1617,Reference,§ 12 WpHG, regelt,WpHG,Node
+2617,RFC,WpHG,WpHG,,Node
+4617,Subchapter,§ 9 WpHG – Meldepflichten,,,Node
+1618,Reference,§ 14oder§ 20a WpHG, vorliegen,Verstoß gegen,Node
+2618,RFC,Verstoß gegen,WpHG,,Node
+1619,Reference,§ 101 StPO, sind benachrichtigen,Betroffenen,Node
+2619,RFC,Betroffenen,StPO,Strafprozessordnung_(Deutschland),Node
+3619,Subsubchapter,§ 2 Ia WpHG – Geldmarktinstrumente,,,Node
+1620,Reference,2003/ 6/ EG,,basierend,Node
+2620,RFC,basierend,EG,,Node
+1621,Reference,§ 20a WpHG, wurde angepasst,Standard,Node
+2621,RFC,Standard,WpHG,,Node
+1622,Reference,§ 20a WpHG, bestehen nicht,Eichelberger,Node
+2622,RFC,Eichelberger,WpHG,,Node
+1623,Reference,§§ 15 I WpHG, korrigieren (,Ad-hoc- Berichtigung,Node
+2623,RFC,Ad-hoc- Berichtigung,WpHG,,Node
+1624,Reference,§ 2 IIb WpHG,,Bewertung,Node
+2624,RFC,Bewertung,IIb WpHG,,Node
+4624,Subchapter,§ 31g WpHG – Vor- und Nachhandeltransparenz für MTFs,,,Node
+1625,Reference,§ 13 WpHG, bedeutet nicht,EWR-Staat,Node
+2625,RFC,EWR-Staat,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1626,Reference,§ 15 WpHG, verwendet werden,Mitteilungen,Node
+2626,RFC,Mitteilungen,WpHG,,Node
+1627,Reference,§ 34b WpHG,,Tatsachenkern,Node
+2627,RFC,Tatsachenkern,WpHG,Finanzanalyse,Node
+1628,Reference,§ 2 I MaKonV, berücksichtigten würde,Anlageentscheidung,Node
+2628,RFC,Anlageentscheidung,MaKonV,,Node
+1629,Reference,§ 15 WpHG§§ 325 ff.i. V.m.§§ 264 HGB,,MaKonV,Node
+2629,RFC,MaKonV,WpHG,Kapitalmarkt,Node
+1630,Reference,§ 27 WpÜG,,Aufsichtsrat,Node
+2630,RFC,Aufsichtsrat,WpÜG,,Node
+1631,Reference,§ 20a I 1 Nr. 1 WpHG, erfüllen,Emittenten,Node
+2631,RFC,Emittenten,WpHG,,Node
+1632,Reference,§ 14 I Nr. 1 WpHG,,Fall,Node
+2632,RFC,Fall,WpHG,Prior,Node
+1633,Reference,§ 20a I 1 Nr. 2 WpHG, wurde eingeführt,Tatvariante,Node
+2633,RFC,Tatvariante,WpHG,,Node
+1634,Reference,§ 3 MaKonV, wird flankiert,Verbot,Node
+2634,RFC,Verbot,MaKonV,,Node
+1635,Reference,§ 20a WpHG,,Eichelberger,Node
+2635,RFC,Eichelberger,WpHG,Marktmanipulation,Node
+1636,Reference,§ 20a I 1 Nr. 3 WpHG,,kritisch,Node
+2636,RFC,kritisch,WpHG,,Node
+1637,Reference,§ 20a I 1 Nr. 3 WpHG, konkretisiert,MaKonV,Node
+2637,RFC,MaKonV,MaKonV,,Node
+1638,Reference,§ 34b WpHG,,wirtschaftlichen Interessen,Node
+2638,RFC,wirtschaftlichen Interessen,WpHG,,Node
+1639,Reference,§ 20a I 1 Nr. 3 WpHG, fallen,Warnungen,Node
+2639,RFC,Warnungen,WpHG,,Node
+1640,Reference,§§ 5 und 6 MaKonV, behandeln,MaKonV,Node
+2640,RFC,MaKonV,MaKonV,,Node
+1641,Reference,§ 5 MaKonV, nennt,Aktien,Node
+2641,RFC,Aktien,MaKonV,,Node
+4641,Subchapter,Gesetzgeberischer Zweck,,,Node
+1642,Reference,§ 20a I 1 Nr. 1 WpHG, ist beurteilen,Vorliegen von,Node
+2642,RFC,Vorliegen von,WpHG,,Node
+1643,Reference,§ 20a WpHG,,Schutzgesetzcharakter,Node
+2643,RFC,Schutzgesetzcharakter,WpHG,,Node
+1644,Reference,§ 88 BörsG,,Rekurs auf,Node
+2644,RFC,Rekurs auf,BörsG,,Node
+1645,Reference,§ 38 I WpHG,,null,Node
+2645,RFC,null,WpHG,,Node
+1646,Reference,§ 20a I 1 Nr. 2 WpHG,,Falle,Node
+2646,RFC,Falle,WpHG,,Node
+4646,Subchapter,§ 30a WpHG – Pflichten der Emittenten gegenüber Wertpapierinhabern,,,Node
+1647,Reference,§§ 21 ff. WpHG,,Zweck,Node
+2647,RFC,Zweck,WpHG,,Node
+1648,Reference,88/ 627/ EWG,,Ausgehend,Node
+2648,RFC,Ausgehend,EWG,,Node
+1649,Reference,§§ 21 ff. WpHG, wurden,Veröffentlichungspflichten gemäß,Node
+2649,RFC,Veröffentlichungspflichten gemäß,WpHG,,Node
+1650,Reference,2004/ 109/ EG,,Richtlinie,Node
+2650,RFC,Richtlinie,EG,,Node
+1651,Reference,§ 28 WpHG, können wirtschaftlich betrachtet,WpHG,Node
+2651,RFC,WpHG,WpHG,,Node
+1652,Reference,§ 30 I WpHG,,Handelstagen,Node
+2652,RFC,Handelstagen,WpHG,,Node
+1653,Reference,§§ 21 ff. WpHG, eingestellt,WpHG,Node
+2653,RFC,WpHG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1654,Reference,§ 71b AktG,,Eigene Aktien,Node
+2654,RFC,Eigene Aktien,AktG,Eigene_Aktie,Node
+1655,Reference,§ 21 I 1 WpHG, fällt,Mehrheits- ) Aktionärs,Node
+2655,RFC,Mehrheits- ) Aktionärs,WpHG,,Node
+1656,Reference,§§ 21 ff. WpHG, ergibt,BaFin Hinweise,Node
+2656,RFC,BaFin Hinweise,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1657,Reference,§ 20 I AktG, nicht unterliegen,Aktiengesellschaft,Node
+2657,RFC,Aktiengesellschaft,AktG,Aktienrecht,Node
+1658,Reference,§ 21 I Iaoder 25 I WpHG, abgegeben hat,Mitteilung,Node
+2658,RFC,Mitteilung,WpHG,,Node
+1659,Reference,§ 21 I und 1a WpHG, stehen,Mitteilungspflichtigen,Node
+2659,RFC,Mitteilungspflichtigen,WpHG,,Node
+1660,Reference,§§ 21 ff. WpHG, sind,WpHG,Node
+2660,RFC,WpHG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1661,Reference,§ 23 WpHG, enthält,Regelungen,Node
+2661,RFC,Regelungen,WpHG,,Node
+1662,Reference,§ 23 WpHG, stellt,Kreditinstitute,Node
+2662,RFC,Kreditinstitute,WpHG,,Node
+1663,Reference,§ 25 I WpHG, hat eingeführt,Mitteilungspflicht,Node
+2663,RFC,Mitteilungspflicht,WpHG,,Node
+1664,Reference,§ 21 I und 1a WpHG, kritisch betrachtet steht,selbstständig,Node
+2664,RFC,selbstständig,WpHG,,Node
+1665,Reference,§ 25 I WpHG, führt nicht,Meldepflicht,Node
+2665,RFC,Meldepflicht,WpHG,,Node
+1666,Reference,§ 25 I 4 WpHG-E, wird,Sonderregelung,Node
+2666,RFC,Sonderregelung,WpHG-E,,Node
+1667,Reference,§ 25 WpHG-E,ist,Finanzinstrumenten,Node
+2667,RFC,Finanzinstrumenten,WpHG-E,,Node
+1668,Reference,§§ 21 22 WpHG,,null,Node
+2668,RFC,null,WpHG,,Node
+4668,Subchapter,Europarecht,,,Node
+1669,Reference,§ 8b HGB,,Übermittlung,Node
+2669,RFC,Übermittlung,HGB,Unternehmensregister,Node
+1670,Reference,§ 21 I 1 1a und§ 25 I 1 WpHG,,Adressat,Node
+2670,RFC,Adressat,WpHG,Europäische_Union,Node
+1671,Reference,§ 26 WpHG, regelt,Pflicht,Node
+2671,RFC,Pflicht,WpHG,,Node
+1672,Reference,§ 19 WpAIV,,Inhalt,Node
+2672,RFC,Inhalt,WpAIV,,Node
+1673,Reference,§ 20i. V.m.§ 3a WpAIV,,Art,Node
+2673,RFC,Art,WpAIV,Bloomberg_L.P.,Node
+1674,Reference,§ 3bi. V.m.§ 20 WpAIV,,),Node
+2674,RFC,),WpAIV,,Node
+1675,Reference,§ 71d AktG, erwähnt nicht,WpHG,Node
+2675,RFC,WpHG,WpHG,Aktienrecht,Node
+1676,Reference,§ 8b HGB,,Mitteilungen,Node
+2676,RFC,Mitteilungen,HGB,Unternehmensregister,Node
+1677,Reference,§ 21i. V.m.§ 3c WpHG, enthalten,Einzelheiten,Node
+2677,RFC,Einzelheiten,WpHG,,Node
+1678,Reference,§ 30b I Nr. 1 WpHG, angeht,Gesamtzahl,Node
+2678,RFC,Gesamtzahl,WpHG,,Node
+1679,Reference,§ 21 WpHG, nicht berechnen,Gesamtzahl zukünftig,Node
+2679,RFC,Gesamtzahl zukünftig,WpHG,,Node
+1680,Reference,§ 26a WpHG, betrifft,bzw,Node
+2680,RFC,bzw,WpHG,,Node
+1681,Reference,§ 27 WpHG, soll,BT-Drucks,Node
+2681,RFC,BT-Drucks,WpHG,Risikobegrenzungsgesetz,Node
+1682,Reference,§ 28 WpHG, wäre,Sanktion,Node
+2682,RFC,Sanktion,WpHG,,Node
+1683,Reference,§ 30 WpHG, ist,Emittenten,Node
+2683,RFC,Emittenten,WpHG,,Node
+1684,Reference,§§ 22 23 und 24 WpHG, sind,anwendbar,Node
+2684,RFC,anwendbar,WpHG,,Node
+1685,Reference,§ 26 I und§ 26a WpHG, kann befreien,WpHG,Node
+2685,RFC,WpHG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1686,Reference,§ 22 I I Nr. 1oder 2 WpHG, gehören zugerechnet werden,Stimmrechte gemäß,Node
+2686,RFC,Stimmrechte gemäß,WpHG,,Node
+1687,Reference,§ 21 Ioder 1a WpHG, nicht erfüllt wurden,Mitteilungspflichten,Node
+2687,RFC,Mitteilungspflichten,WpHG,,Node
+1688,Reference,§ 237 AktG, ist,Ausnahme,Node
+2688,RFC,Ausnahme,AktG,Aktienrecht,Node
+1689,Reference,§ 271 AktG,,Anspruch,Node
+2689,RFC,Anspruch,AktG,Aktienrecht,Node
+1690,Reference,§ 28 2 WpHG, ist,Entscheidend,Node
+2690,RFC,Entscheidend,WpHG,,Node
+1691,Reference,§ 28 WpHG, ist,Norm,Node
+2691,RFC,Norm,WpHG,,Node
+4691,Subchapter,§ 1 WpHG – Anwendungsbereich,,,Node
+1692,Reference,§ 28 WpHG, ausübt,Aktionär entgegen,Node
+2692,RFC,Aktionär entgegen,WpHG,Generalversammlung,Node
+1693,Reference,§ 28 WpHG,,Verschärfung der Sanktion,Node
+2693,RFC,Verschärfung der Sanktion,WpHG,,Node
+1694,Reference,§ 28 S. 2 WpHG-E, vorgesehen ist,fahrlässige Verletzung,Node
+2694,RFC,fahrlässige Verletzung,WpHG-E,,Node
+1695,Reference,§§ 30a bisg WpHG, wurden zusammengefasst,a,Node
+2695,RFC,a,WpHG,,Node
+1696,Reference,§§ 30d ff. WpHG,,Frequently Asked Questions,Node
+2696,RFC,Frequently Asked Questions,WpHG,Frequently_Asked_Questions,Node
+1697,Reference,§ 30a I WpHG, fasst,Pflichten,Node
+2697,RFC,Pflichten,WpHG,,Node
+1698,Reference,2004/ 109/ EG, behandelt werden,gleichen Voraussetzungen,Node
+2698,RFC,gleichen Voraussetzungen,EG,Neue_Juristische_Wochenschrift,Node
+1699,Reference,§ 21 I 2 WpHG,,Inhabern,Node
+2699,RFC,Inhabern,WpHG,,Node
+1700,Reference,§ 39 I Nr. 1 BörsG, gilt,Gleichbehandlungspflicht,Node
+2700,RFC,Gleichbehandlungspflicht,BörsG,Zenithal_Hourly_Rate,Node
+1701,Reference,§ 20 I Nrn. 2 und 3 WpHG, verpflichten,Emittenten,Node
+2701,RFC,Emittenten,WpHG,,Node
+1702,Reference,§ 125 AktG,ist,Falle,Node
+2702,RFC,Falle,AktG,Aktienrecht,Node
+1703,Reference,§ 28 WpHGoder§ 71b AktG,,börsennotierten Unternehmen,Node
+2703,RFC,börsennotierten Unternehmen,WpHG,Aktienrecht,Node
+1704,Reference,§ 30b I und 2 WpHG,ist,Veröffentlichungen,Node
+2704,RFC,Veröffentlichungen,WpHG,,Node
+1705,Reference,§ 195 AktGnach§ 26a WpHGmit Ausgabe der Aktien(vgl. BaFin„ FAQ“zu§§ 21 ff. WpHG),,Ausgabe neuer Aktien,Node
+2705,RFC,Ausgabe neuer Aktien,AktG,Aktienrecht,Node
+1706,Reference,§ 189 AktG,,WpHG,Node
+2706,RFC,WpHG,WpHG,Aktienrecht,Node
+1707,Reference,§ 30c WpHG, sind nicht,mitteilungspflichtig,Node
+2707,RFC,mitteilungspflichtig,WpHG,,Node
+1708,Reference,§ 15 I WpHG,,Ad-hoc- Publizitätspflicht,Node
+2708,RFC,Ad-hoc- Publizitätspflicht,WpHG,,Node
+1709,Reference,§ 13 I WpHG, darstellen werden,Einziehung,Node
+2709,RFC,Einziehung,WpHG,,Node
+1710,Reference,§§ 30a bisc WpHG, WpHG sein können,Emittenten,Node
+2710,RFC,Emittenten,WpHG,,Node
+1711,Reference,§§ 30a bisc WpHG, kennt,Herkunftstaat,Node
+2711,RFC,Herkunftstaat,WpHG,,Node
+1712,Reference,§ 8b HGB, enthält,WpHG,Node
+2712,RFC,WpHG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1713,Reference,§ 4 PfandBG, anknüpfen,organisierten Markt,Node
+2713,RFC,organisierten Markt,PfandBG,Organisierter_Markt,Node
+1714,Reference,§§ 30a ff. WpHG,,„,Node
+2714,RFC,„,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1715,Reference,§§ 26i. V.m. 3a bisc WpAIV, sieht,Veröffentlichung,Node
+2715,RFC,Veröffentlichung,WpAIV,,Node
+1716,Reference,§§ 30a 30b und 30e I 1 Nrn. 1 und 2 WpHG, enthält,WpHG,Node
+2716,RFC,WpHG,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1717,Reference,§ 30g WpHG, ist,Anfechtung in,Node
+2717,RFC,Anfechtung in,WpHG,,Node
+1718,Reference,§ 30b I 1 Nr. 1 WpHG, kann nicht,Verstoß gegen,Node
+2718,RFC,Verstoß gegen,WpHG,,Node
+1719,Reference,§ 243 I AktG, geltend gemacht werden,geltend,Node
+2719,RFC,geltend,AktG,Aktienrecht,Node
+1720,Reference,§ 30b I WpHG,,Inhalt der Einberufung,Node
+2720,RFC,Inhalt der Einberufung,WpHG,,Node
+1721,Reference,2004/ 39/ EG,,Markets,Node
+2721,RFC,Markets,EG,EG_über_Märkte_für_Finanzinstrumente,Node
+1722,Reference,§§ 31 ff. WpHG, ergibt,Änderungsbedarf,Node
+2722,RFC,Änderungsbedarf,WpHG,,Node
+1723,Reference,§§ 31 32 WpHG, waren,Literatur,Node
+2723,RFC,Literatur,WpHG,,Node
+1724,Reference,§ 31 Abs. 2 Nr. 1 WpHG, begonnen kodifiziert wurde,Urteil,Node
+2724,RFC,Urteil,WpHG,,Node
+1725,Reference,Art. 19 IV u. V MiFID, finde,Beratung,Node
+2725,RFC,Beratung,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1726,Reference,§ 280 I BGB, führen können,Schadensersatz,Node
+2726,RFC,Schadensersatz,BGB,,Node
+1727,Reference,§§ 31 ff. WpHG,,Schutzbereich,Node
+2727,RFC,Schutzbereich,WpHG,,Node
+1728,Reference,§§ 31 ff. WpHG,,Schutzbereich,Node
+2728,RFC,Schutzbereich,WpHG,,Node
+1729,Reference,§ 263 StGB,,Verleitung,Node
+2729,RFC,Verleitung,StGB,Spekulation_(Wirtschaft),Node
+1730,Reference,§§ 195 199 I Nr. 2 BGB,,Verjährung,Node
+2730,RFC,Verjährung,BGB,,Node
+1731,Reference,§ 34 RVG,,anwaltlichen Vergügungsrecht im Bereich,Node
+2731,RFC,anwaltlichen Vergügungsrecht im Bereich,RVG,,Node
+1732,Reference,§ 3 I Nr. 1 UKlaG,,Möglichkeiten,Node
+2732,RFC,Möglichkeiten,UKlaG,Unterlassungsklagengesetz,Node
+1733,Reference,Art. 1§ 3 Nr. 8 RBerG, ausgestattet werden,Verbrauchern,Node
+2733,RFC,Verbrauchern,RBerG,Bonn,Node
+1734,Reference,§ 1 I 3 KapMuG,,Ansprüchen,Node
+2734,RFC,Ansprüchen,KapMuG,Verbraucher_und_Recht,Node
+1735,Reference,Art. 153 III EGV und Art. 95 EGV, ergebe,EU-Sammelklage,Node
+2735,RFC,EU-Sammelklage,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1736,Reference,§ 543 I ZPO,,Gang,Node
+2736,RFC,Gang,ZPO,Bundesgerichtshof,Node
+1737,Reference,Art. 2 I GG u. Art. 20 III GG, liegt,Verstoß gegen,Node
+2737,RFC,Verstoß gegen,GG,,Node
+1738,Reference,§ 826 BGB, bejaht,Recht,Node
+2738,RFC,Recht,BGB,Bürgerliches_Gesetzbuch,Node
+1739,Reference,§§ 31 32 WpHG der§§ 31 und 32 WpHG,,Verstoß,Node
+2739,RFC,Verstoß,WpHG,Bundesanstalt_für_Finanzdienstleistungsaufsicht,Node
+1740,Reference,§ 31 I Nr. 1 WpHG, hat,Wertpapierdienstleistungsunternehmen,Node
+2740,RFC,Wertpapierdienstleistungsunternehmen,WpHG,Wertpapierdienstleistungsunternehmen,Node
+1741,Reference,§ 31 I Nr. 1 WpHG, bleibt,Regelungsgehalt,Node
+2741,RFC,Regelungsgehalt,WpHG,,Node
+1742,Reference,§ 32 WpHG, werden,Sachverhalte,Node
+2742,RFC,Sachverhalte,WpHG,,Node
+1743,Reference,§ 31 I Nr. 1 WpHG, erfasst,BT-Drucks,Node
+2743,RFC,BT-Drucks,WpHG,,Node
+1744,Reference,§ 31 I Nr. 2 WpHG, wurde neu gefasst,FRUG,Node
+2744,RFC,FRUG,WpHG,,Node
+1745,Reference,§ 13 WpDVerOV,,allgemeine Art,Node
+2745,RFC,allgemeine Art,WpDVerOV,,Node
+1746,Reference,§ 33 I Nr. 3 WpHG, nicht ausreichen,Vorkehrungen,Node
+2746,RFC,Vorkehrungen,WpHG,,Node
+1747,Reference,§ 33 I Nr. 3 WpHG,,Organisationspflichten,Node
+2747,RFC,Organisationspflichten,WpHG,,Node
+1748,Reference,§ 34b WpHG, ansehen,gesamtes Tätigkeitsfeld,Node
+2748,RFC,gesamtes Tätigkeitsfeld,WpHG,Finanzanalyse,Node
+1749,Reference,§ 13 WpDVerOV, geregelt werden müssen,dienstleistungen,Node
+2749,RFC,dienstleistungen,WpDVerOV,,Node
+1750,Reference,Art. 22 I DRL, ergibt,Gebot,Node
+2750,RFC,Gebot,DRL,,Node
+1751,Reference,§ 34b WpHG,ist,Finanzanalysen,Node
+2751,RFC,Finanzanalysen,WpHG,,Node
+1752,Reference,Art. 24 II DRL,,MiFID,Node
+2752,RFC,MiFID,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1753,Reference,Art. 19 III MiFID, mitgeteilt werden,Privatanlegern,Node
+2753,RFC,Privatanlegern,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1754,Reference,§ 13 WpDVerOV,,internen Grundsätze,Node
+2754,RFC,internen Grundsätze,WpDVerOV,,Node
+1755,Reference,Art. 35 II DRL,,WpHG,Node
+2755,RFC,WpHG,DRL,,Node
+1756,Reference,§ 6 I Nr. 1 WpDVerOV,,finanziellen Verhältnisse,Node
+2756,RFC,finanziellen Verhältnisse,WpDVerOV,,Node
+1757,Reference,§ 280 I BGB, führt,sondern führt nur zu einer Schadensersatzpflicht,Node
+2757,RFC,sondern führt nur zu einer Schadensersatzpflicht,BGB,,Node
+1758,Reference,Art. 19 V MiFID,,andere Finanzdienstleistungen,Node
+2758,RFC,andere Finanzdienstleistungen,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1759,Reference,§ 31 V WpHG,,WpDVerOV,Node
+2759,RFC,WpDVerOV,WpHG,,Node
+1760,Reference,Art. 36 Unterabs. 2 DRL, verstehen,Risiken,Node
+2760,RFC,Risiken,DRL,,Node
+1761,Reference,§ 31b WpHG( Art. 24 I MiFID),,Angemessenheitsprüfung,Node
+2761,RFC,Angemessenheitsprüfung,WpHG,EG_über_Märkte_für_Finanzinstrumente,Node
+1762,Reference,Art. 19 MiFID,,WpHG,Node
+2762,RFC,WpHG,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1763,Reference,Art. 19 VI MiFID,,reine Ausführungsgeschäft,Node
+2763,RFC,reine Ausführungsgeschäft,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1764,Reference,§ 7 WpDVerOV; Art. 19 VI MiFID Art. 38 b-d DRL,,nicht-komplexe Produkte,Node
+2764,RFC,nicht-komplexe Produkte,WpDVerOV,EG_über_Märkte_für_Finanzinstrumente,Node
+1765,Reference,§ 31 V WpHG, nicht erfolgt,Geschäft,Node
+2765,RFC,Geschäft,WpHG,,Node
+1766,Reference,Art. 19 VIII MiFID, regelt,WpHG,Node
+2766,RFC,WpHG,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1767,Reference,§ 8 WpDVerOV,,Ausführung,Node
+2767,RFC,Ausführung,WpDVerOV,,Node
+1768,Reference,§ 31 WpHG,,Kundengruppe,Node
+2768,RFC,Kundengruppe,WpHG,,Node
+1769,Reference,Art. 24 I MiFID,,geeigneten Gegenparteien,Node
+2769,RFC,geeigneten Gegenparteien,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1770,Reference,§ 2a I Nr. 12 WpHG,,Unternehmen,Node
+2770,RFC,Unternehmen,WpHG,,Node
+1771,Reference,Art. 24 III MiFID, behandelt werden,geeignete Gegenpartei,Node
+2771,RFC,geeignete Gegenpartei,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1772,Reference,§§ 31c 31d und 33a WpHG, nicht,WpHG,Node
+2772,RFC,WpHG,WpHG,,Node
+1773,Reference,§ 31b I 1 WpHG,,geringeren Schutzniveaus,Node
+2773,RFC,geringeren Schutzniveaus,WpHG,,Node
+1774,Reference,§ 52 Wertpapierhandelsgesetz 1561 132 V.§ 31c WpHG,,Frisch,Node
+2774,RFC,Frisch,WpHG,Wertpapierhandelsgesetz,Node
+1775,Reference,§ 31 WpHG,ist,Verhaltensregeln,Node
+2775,RFC,Verhaltensregeln,WpHG,,Node
+1776,Reference,Art. 22 MiFID,,entsprechend,Node
+2776,RFC,entsprechend,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1777,Reference,§ 32 Abs. 1 Nr. 3 und Abs. 2 Nr. 2 WpHG;§ 14 I Nr. 1 WpHG, nicht missbraucht werden,ausgeführten Kundenaufträgen,Node
+2777,RFC,ausgeführten Kundenaufträgen,WpHG,Frontrunning,Node
+1778,Reference,§ 31d I WpHG, darf,Erbringung von Wertpapier,Node
+2778,RFC,Erbringung von Wertpapier,WpHG,Wertpapier,Node
+1779,Reference,§§ 675 667 BGB,,Bank,Node
+2779,RFC,Bank,BGB,Bürgerliches_Gesetzbuch,Node
+1780,Reference,§ 31d V WpHG, nimmt,Gebühren,Node
+2780,RFC,Gebühren,WpHG,,Node
+1781,Reference,Art. 2 VIII DVO,,MiFID,Node
+2781,RFC,MiFID,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1782,Reference,Art. 4 I Nr. 14 MiFID, werden,Marktplatzbetreiber,Node
+2782,RFC,Marktplatzbetreiber,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1783,Reference,Art. 40 MiFID, müssen erfüllen,Zulassung von Wertpapieren,Node
+2783,RFC,Zulassung von Wertpapieren,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1784,Reference,§ 31f WpHG,,Umsetzung von Art,Node
+2784,RFC,Umsetzung von Art,WpHG,,Node
+1785,Reference,§ 59 BörsG, war,MTFs,Node
+2785,RFC,MTFs,BörsG,,Node
+1786,Reference,§§ 14 und 20a WpHG,ist,Überwachung der Einhaltung,Node
+2786,RFC,Überwachung der Einhaltung,WpHG,,Node
+1787,Reference,Art. 14 VI MiFID,,WpHG,Node
+2787,RFC,WpHG,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1788,Reference,Art. 28 30 und 45 MiFID, werden,Inhalte,Node
+2788,RFC,Inhalte,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1789,Reference,Art. 27 ff. DVO, konkretisiert,Märkte,Node
+2789,RFC,Märkte,DVO,,Node
+1790,Reference,§ 31g I WpHG, normiert,Vorhandelstransparenz für Aktien,Node
+2790,RFC,Vorhandelstransparenz für Aktien,WpHG,,Node
+1791,Reference,Art. 4 I Nr. 7 MiFID. Art. 21 und Erw. 13 DVO, betreiben,geregelten Marktes,Node
+2791,RFC,geregelten Marktes,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1792,Reference,§ 2 Nr. 10 WpHG, betreibt,Unternehmen gemäß,Node
+2792,RFC,Unternehmen gemäß,WpHG,Eigenhandel,Node
+1793,Reference,§ 32 ff. WpHG, WpHG unterworfen,Internalisierer,Node
+2793,RFC,Internalisierer,WpHG,Systematischer_Internalisierer,Node
+1794,Reference,Art. 21- 26 DVO, vorschreiben,Transparenzvorschriften,Node
+2794,RFC,Transparenzvorschriften,DVO,,Node
+1795,Reference,Art. 21 DVO, legt,Beurteilung,Node
+2795,RFC,Beurteilung,DVO,,Node
+1796,Reference,§§ 32a bis 32d WpHG, gelten,Internalisierer,Node
+2796,RFC,Internalisierer,WpHG,Systematischer_Internalisierer,Node
+1797,Reference,Art. 27 VII MiFID, setzt,WpHG,Node
+2797,RFC,WpHG,WpHG,EG_über_Märkte_für_Finanzinstrumente,Node
+1798,Reference,§ 27 BörsG, aufweisen ausgenommen werden können,Vergleich,Node
+2798,RFC,Vergleich,BörsG,Aktie,Node
+1799,Reference,§ 32a I 3 WpHG, muss,WpHG,Node
+2799,RFC,WpHG,WpHG,,Node
+1800,Reference,§ 32c I 1 WpHG, sind,Auftragseingangs,Node
+2800,RFC,Auftragseingangs,WpHG,,Node
+1801,Reference,§ 33a WpHG, ist,Privatkunden,Node
+2801,RFC,Privatkunden,WpHG,,Node
+1802,Reference,§ 33c I 1 WpHG, ausgeführt werden können,Kunden zu,Node
+2802,RFC,Kunden zu,WpHG,,Node
+1803,Reference,Art. 27 V 2 und VI MiFID, setzt,WpHG,Node
+2803,RFC,WpHG,MiFID,EG_über_Märkte_für_Finanzinstrumente,Node
+1804,Reference,§ 32 WpHG,,Exkurs,Node
+2804,RFC,Exkurs,WpHG,,Node
+1805,Reference,§ 31 I Nr. 1 WpHG,,Grundregel,Node
+2805,RFC,Grundregel,WpHG,,Node
+1806,Reference,§ 826 BGB, sind,Balzer,Node
+2806,RFC,Balzer,BGB,Bürgerliches_Gesetzbuch,Node
+1807,Reference,§ 826 BGB,,Anleger,Node
+2807,RFC,Anleger,BGB,Bürgerliches_Gesetzbuch,Node
+1808,Reference,§ 89 BörsG,,StGB,Node
+2808,RFC,StGB,StGB,Strafgesetzbuch,Node
+1809,Reference,Art. 2 EGV,,erster Stelle,Node
+2809,RFC,erster Stelle,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+6809,Chapter,Europäisches-Bankrecht-mit-Länderabschnitten,,,Node
+5809,Part,Ausgangspunkte der Harmonisierung im europäischen Bankrecht,,,Node
+1810,Reference,Art. 95 EGV, erlässt,Rat,Node
+2810,RFC,Rat,EGV,Mehrheit,Node
+4810,Subchapter,Rechtsgrundlagen und Instrumente der Rechtsangleichung,,,Node
+1811,Reference,Art. 251 EGV,,Verfahren,Node
+2811,RFC,Verfahren,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+5811,Part,Einzelne Koordinierungsschritte,,,Node
+4811,Subchapter,Neuanfang und Durchbruch,,,Node
+1812,Reference,Art. 249 V EGV, werden ausgesprochen,Mitgliedstaaten gemäß,Node
+2812,RFC,Mitgliedstaaten gemäß,EGV,,Node
+1813,Reference,Art. 43 ff. 49 ff. EGV,,im EG-Vertrag,Node
+2813,RFC,im EG-Vertrag,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1814,Reference,Art. 47 EGV, ermächtigt,Ausübung,Node
+2814,RFC,Ausübung,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1815,Reference,Art. 56 EGV( Art. 58 I EGV), sind ergeben,grenzüberschreitende Erbringung,Node
+2815,RFC,grenzüberschreitende Erbringung,EGV,Vertrag_von_Maastricht,Node
+1816,Reference,Art. 1 Spiegelstrich 1 RL,,europarechtliche Grundlage,Node
+2816,RFC,europarechtliche Grundlage,RL,,Node
+4816,Subchapter,Anfänge bankrechtlicher Koordinierung auf Gemeinschaftsebene,,,Node
+1817,Reference,Art. 4 RL Heinrich§ 73 Bankrechtskoordinierung und-integration 2187 Art. 11 I RL, hervorgehen,organisatorische Aufbau,Node
+2817,RFC,organisatorische Aufbau,RL,,Node
+1818,Reference,Art. 7 I RLheute Art. 42 RL, festgeschrieben,Überwachung,Node
+2818,RFC,Überwachung,RL,Liquidität,Node
+1819,Reference,Art. 57 ff. RL,,Ausschuss,Node
+2819,RFC,Ausschuss,RL,,Node
+1820,Reference,Art. 95 EGV,,qualifizierten Mehrheit,Node
+2820,RFC,qualifizierten Mehrheit,EGV,Ministerrat,Node
+1821,Reference,Art. 18 I und I RLheute Art. 17 und 18 RL, abgedeckt werden,Zulassung,Node
+2821,RFC,Zulassung,RL,,Node
+1822,Reference,Art. 13 I RLheute Art. 40 I RL,,zuständigen Behörde,Node
+2822,RFC,zuständigen Behörde,RL,,Node
+1823,Reference,Art. 12 I RLheute Art. 120 I RL, nicht,Banken,Node
+2823,RFC,Banken,RL,,Node
+1824,Reference,Art. 6 RL,,ergänzenden Eigenmittel,Node
+2824,RFC,ergänzenden Eigenmittel,RL,,Node
+3824,Subsubchapter,Die Zweite Bankrechtskoordinierungsrichtlinie und die Harmonisierung der Eigenmittel- und Solvabilitätsbestimmungen,,,Node
+1825,Reference,Art. 5i. V.m. Art. 6 RL, ergibt,risikogewichtete Wert,Node
+2825,RFC,risikogewichtete Wert,RL,,Node
+1826,Reference,Art. 3 I RL– Art. 5 I und II RL, betreiben,Portefeuillemanagement,Node
+2826,RFC,Portefeuillemanagement,RL,,Node
+1827,Reference,Art. 3 RLheute Art. 5 RL,,Regelungen,Node
+2827,RFC,Regelungen,RL,,Node
+1828,Reference,Art. 4 II RL, erreichen,höheren Schutzumfang,Node
+2828,RFC,höheren Schutzumfang,RL,,Node
+3828,Subsubchapter,Weitere Initiativen,,,Node
+1829,Reference,Art. 2 II RL,,Rücknahme,Node
+2829,RFC,Rücknahme,RL,,Node
+3829,Subsubchapter,BCCI-Folgerichtlinie,,,Node
+1830,Reference,Art. 2 I RL,,Transparenz,Node
+2830,RFC,Transparenz,RL,,Node
+4830,Subchapter,Systeme der Einlagensicherung,,,Node
+1831,Reference,Art. 3 RL,,Hauptverwaltung,Node
+2831,RFC,Hauptverwaltung,RL,,Node
+1832,Reference,Art. 4 RL,,Informationsaustausch,Node
+2832,RFC,Informationsaustausch,RL,,Node
+1833,Reference,Art. 7sowie 15.- 17. Erwägungsgrund RL,,Informationspflichten,Node
+2833,RFC,Informationspflichten,RL,Erwägungsgrund,Node
+4833,Subchapter,Nachfolgende bank- und wertpapieraufsichtsrechtliche Maßnahmen,,,Node
+3833,Subsubchapter,Bankaufsichtsrechtliches Änderungspaket,,,Node
+1834,Reference,Art. 1 RL,,Aufsichtsbehörden,Node
+2834,RFC,Aufsichtsbehörden,RL,Amtsblatt,Node
+1835,Reference,Art. 3 RL, waren,aufsichtsrechtliche Behandlung,Node
+2835,RFC,aufsichtsrechtliche Behandlung,RL,,Node
+1836,Reference,Art. 1 I Buchst.a RL, ausgesetzt sind,Marktrisiken,Node
+2836,RFC,Marktrisiken,RL,,Node
+1837,Reference,Art. 1 I RL, ausgeweitet,Mitgliedstaaten,Node
+2837,RFC,Mitgliedstaaten,RL,,Node
+1838,Reference,Art. 20 ff. der RL,,dingliche Rechte,Node
+2838,RFC,dingliche Rechte,RL,,Node
+1839,Reference,Art. 4 und 5 der RL,,Mitgliedstaaten im Falle,Node
+2839,RFC,Mitgliedstaaten im Falle,RL,,Node
+1840,Reference,Art. 13- 15 der RL,,Informationspflichten,Node
+2840,RFC,Informationspflichten,RL,,Node
+4840,Subchapter,Harmonisierung bank- und wertpapieraufsichtsrechtlicher Vorschriften,,,Node
+1841,Reference,Art. 16 der RL,,Konkretisierungen,Node
+2841,RFC,Konkretisierungen,RL,,Node
+3841,Subsubchapter,Richtlinie über die Sanierung und Liquidation von Kreditinstituten,,,Node
+1842,Reference,Art. 28 EGBGB,,Grundsatz,Node
+2842,RFC,Grundsatz,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+5842,Part,Grundsätze des anwendbaren Rechts,,,Node
+3842,Subsubchapter,Darlehen,,,Node
+1843,Reference,Art. 3 EVÜ; Art. 27 EGBGB,,Grundsatz,Node
+2843,RFC,Grundsatz,EVÜ,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+5843,Part,International harmonisierte Regeln für Bankgeschäfte unabhängig von der Europäischen Gemeinschaft,,,Node
+4843,Subchapter,Gemeinschaftsprimärrecht : Grundfreiheiten und Wettbewerbsregeln,,,Node
+1844,Reference,Art. 29 EGBGB,,1. Verbraucherschutz,Node
+2844,RFC,1. Verbraucherschutz,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+4844,Subchapter,Gemeinschaftssekundärrecht : Richtlinien und Verordnungen,,,Node
+3844,Subsubchapter,Verordnungen,,,Node
+1845,Reference,Art. 34 EGBGB; Art. 7 II EVÜ,,International,Node
+2845,RFC,International,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1846,Reference,§ 1 I KWG, lassen aufgeführten,Geschäfte,Node
+2846,RFC,Geschäfte,KWG,Kreditwesengesetz,Node
+5846,Part,Länderübergreifende Bankgeschäfte und ihre Risiken,,,Node
+3846,Subsubchapter,Anerkennung und Vollstreckung,,,Node
+1847,Reference,Art. 28 EGBGB,,fehlender Rechtswahl,Node
+2847,RFC,fehlender Rechtswahl,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1848,Reference,Art. 28 EGBGB,,Grundsatz,Node
+2848,RFC,Grundsatz,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1849,Reference,Art. 28 II EGBGB, stellt,Vermutungen,Node
+2849,RFC,Vermutungen,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1850,Reference,Art. 28 III EGBGB,,Vermutung,Node
+2850,RFC,Vermutung,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1851,Reference,Art. 28 IV EGBGB,,Beförderers,Node
+2851,RFC,Beförderers,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1852,Reference,Art. 23 ff. EGV,,Grundfreiheiten,Node
+2852,RFC,Grundfreiheiten,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+4852,Subchapter,Grundsatz der engsten Verbindungen (Art. 28 EGBGB),,,Node
+1853,Reference,Art. 49 ff. EGV,,Dienstleistungsfreiheit,Node
+2853,RFC,Dienstleistungsfreiheit,EGV,Dienstleistungsfreiheit,Node
+1854,Reference,Art. 56 ff. EGV,,Zahlungsverkehrsfreiheit,Node
+2854,RFC,Zahlungsverkehrsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+3854,Subsubchapter,Dokumenten- Akkreditiv,,,Node
+1855,Reference,Art. 43 ff. EGV,,Zweigniederlassung,Node
+2855,RFC,Zweigniederlassung,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1856,Reference,Art. 49 50 EGV,ist,Schutz der Dienstleistungsfreiheit,Node
+2856,RFC,Schutz der Dienstleistungsfreiheit,EGV,Dienstleistungsfreiheit,Node
+3856,Subsubchapter,Börsengeschäfte,,,Node
+1857,Reference,Art. 49 EGV, beinhaltet,Sachverhalt,Node
+2857,RFC,Sachverhalt,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1858,Reference,Art. 49 EGV,,Überprüfung anhand,Node
+2858,RFC,Überprüfung anhand,EGV,,Node
+1859,Reference,Art. 50 I EGV, ist,Dienstleistungsfreiheit,Node
+2859,RFC,Dienstleistungsfreiheit,EGV,Dienstleistungsfreiheit,Node
+1860,Reference,Art. 56 I EGV,,Vorschriften,Node
+2860,RFC,Vorschriften,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1861,Reference,Art. 56 EGV,,Kapitaltransfer,Node
+2861,RFC,Kapitaltransfer,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1862,Reference,Art. 49 EGV,,selbständigen Begleitmaßnahmen,Node
+2862,RFC,selbständigen Begleitmaßnahmen,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1863,Reference,Art. 49 EGV, ist,Inhaltlich,Node
+2863,RFC,Inhaltlich,EGV,,Node
+1864,Reference,Art. 51 II EGV, beachten,Abstimmungsgebot,Node
+2864,RFC,Abstimmungsgebot,EGV,,Node
+1865,Reference,Art. 49 EGV und Art. 56 EGV, kommen,Vorgängen,Node
+2865,RFC,Vorgängen,EGV,,Node
+1866,Reference,Art. 56 I EGV, ist,Ausnahme,Node
+2866,RFC,Ausnahme,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1867,Reference,Art. 56 II EGV,,Im Verhältnis,Node
+2867,RFC,Im Verhältnis,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1868,Reference,Art. 50 I EGV, ordnet,Dienstleistungsfreiheit,Node
+2868,RFC,Dienstleistungsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1869,Reference,Art. 49 EGV und Art. 56 II EGV, sind,sachgegenständlich,Node
+2869,RFC,sachgegenständlich,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1870,Reference,Art. 43 ff. EGV,,Niederlassungsfreiheit,Node
+2870,RFC,Niederlassungsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1871,Reference,Art. 43 EGV, begründet nicht,Büros,Node
+2871,RFC,Büros,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1872,Reference,Art. 49 EGV,,Grundlage,Node
+2872,RFC,Grundlage,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1873,Reference,Art. 56 I EGV,,Niederlassungsfreiheit,Node
+2873,RFC,Niederlassungsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1874,Reference,Art. 81 I EGV,,Verbot,Node
+2874,RFC,Verbot,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1875,Reference,Art. 82 EGV,,Verbot,Node
+2875,RFC,Verbot,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1876,Reference,Art. 86 II S. 1 EGV, verhindert,besonderen Aufgaben,Node
+2876,RFC,besonderen Aufgaben,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1877,Reference,Art. 249 II EGV, hat,dieVerordnung gemäß,Node
+2877,RFC,dieVerordnung gemäß,EGV,,Node
+3877,Subsubchapter,Bankgeschäfte im Recht der Grundfreiheiten,,,Node
+1878,Reference,Art. 249 III EGV, bindet,Richtlinie gemäß,Node
+2878,RFC,Richtlinie gemäß,EGV,,Node
+1879,Reference,Art. 47 II 55 EGV,,null,Node
+2879,RFC,null,EGV,,Node
+1880,Reference,Art. 65 67 EGV,,Regeln,Node
+2880,RFC,Regeln,EGV,,Node
+1881,Reference,Art. 94 95 EGV,,Privatrecht,Node
+2881,RFC,Privatrecht,EGV,Privatrecht,Node
+1882,Reference,Art. 3 EVÜ Art. 27 EGBGB, entscheiden,anwendbare Recht,Node
+2882,RFC,anwendbare Recht,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1883,Reference,Art. 249 II EGV,,unmittelbarer Geltung,Node
+2883,RFC,unmittelbarer Geltung,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1884,Reference,Art. 2 EuGVO, ist erheben,Grundsätzlich,Node
+2884,RFC,Grundsätzlich,EuGVO,,Node
+3884,Subsubchapter,Bankgeschäfte im Recht der Wettbewerbsregeln,,,Node
+1885,Reference,Art. 59 ff. EuGVO. Während Art. 59 EuGVO, richtet verweist,Forumstaates,Node
+2885,RFC,Forumstaates,EuGVO,,Node
+1886,Reference,Art. 50 EGV, ist,Bankgeschäfte,Node
+2886,RFC,Bankgeschäfte,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1887,Reference,Art. 13 EuGVÜ,,Kommissionsgeschäft,Node
+2887,RFC,Kommissionsgeschäft,EuGVÜ,Köln,Node
+1888,Reference,Art. 13 EuGVÜ, nicht gelten sollten,Bericht,Node
+2888,RFC,Bericht,EuGVÜ,Europäisches_Gerichtsstands-_und_Vollstreckungsübereinkommen,Node
+1889,Reference,Art. 5 Nr. 1b EuGVO, fallen,Rahmen,Node
+2889,RFC,Rahmen,EuGVO,,Node
+3889,Subsubchapter,Das inhaltliche Grundkonzept der Richtliniengebung für die binnenmarktweite Banktätigkeit,,,Node
+1890,Reference,Art. 5 Nr. 3 EuGVO, ist gegeben,Gerichtsstand,Node
+2890,RFC,Gerichtsstand,EuGVO,Deliktsrecht,Node
+1891,Reference,Art. 16 II EuGVO, verklagt werden,Heimatstaat,Node
+2891,RFC,Heimatstaat,EuGVO,,Node
+1892,Reference,Art. 16 I EuGVO, hat,Vertragspartner,Node
+2892,RFC,Vertragspartner,EuGVO,,Node
+1893,Reference,Art. 23 I EuGVO, eröffnet,Zuständigkeitsvereinbarung,Node
+2893,RFC,Zuständigkeitsvereinbarung,EuGVO,,Node
+1894,Reference,Art. 23 V EuGVO, haben,rechtliche Wirkung,Node
+2894,RFC,rechtliche Wirkung,EuGVO,,Node
+1895,Reference,Art. 32 ff. EuGVO, richtet,Vollstreckung von Gerichtsentscheidungen,Node
+2895,RFC,Vollstreckung von Gerichtsentscheidungen,EuGVO,,Node
+1896,Reference,Art. 33 Müller- Graff§ 74 Länderübergreifende Bankgeschäfte 2217 EuGVO, wird iure anerkannt,Grundsätzlich,Node
+2896,RFC,Grundsätzlich,EuGVO,Ipso_iure,Node
+1897,Reference,§ 722 ZPO, tritt,vgl,Node
+2897,RFC,vgl,ZPO,Zivilprozessordnung_(Deutschland),Node
+1898,Reference,Art. 3 EVÜ; Art. 27 EGBGB,,Grundsatz,Node
+2898,RFC,Grundsatz,EVÜ,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1899,Reference,Art. 3 EVÜ; Art. 27 I EGBGB,,Wahl,Node
+2899,RFC,Wahl,EVÜ,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1900,Reference,Art. 31 I EGBGB, wäre,Vertrag,Node
+2900,RFC,Vertrag,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1901,Reference,Art. 6 I dervondenprivaten Bankenverwendeten AGB, ist,Rechtswahl,Node
+2901,RFC,Rechtswahl,AGB,,Node
+1902,Reference,Art. 29 EGBGB,,1. Verbraucherschutz,Node
+2902,RFC,1. Verbraucherschutz,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1903,Reference,§ 1 I KWG, können,Bankgeschäfte,Node
+2903,RFC,Bankgeschäfte,KWG,Kreditwesengesetz,Node
+1904,Reference,Art. 29 EGBGB, erfasst werden,Knaul,Node
+2904,RFC,Knaul,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+3904,Subsubchapter,Gerichtstand,,,Node
+1905,Reference,Art. 5 EVÜ, hat,deutsche Rechtslehre,Node
+2905,RFC,deutsche Rechtslehre,EVÜ,,Node
+1906,Reference,Art. 36 EGBGB,,Erfordernis,Node
+2906,RFC,Erfordernis,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1907,Reference,Art. 29 EGBGB,,Anwendung,Node
+2907,RFC,Anwendung,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1908,Reference,Art. 29 I EGBGB, darstellen,Kreditverträge Dienstleistungen im Sinne,Node
+2908,RFC,Kreditverträge Dienstleistungen im Sinne,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1909,Reference,Art. 29 I EGBGB,,Anwendungsbereich,Node
+2909,RFC,Anwendungsbereich,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1910,Reference,Art. 29 EGBGB, wird eingestuft,Durchführung,Node
+2910,RFC,Durchführung,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1911,Reference,Art. 29 EGBGB, Nicht erfasst sind,Anwendungsbereich,Node
+2911,RFC,Anwendungsbereich,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1912,Reference,Art. 34 EGBGB; Art. 7 II EVÜ,,International,Node
+2912,RFC,International,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1913,Reference,Art. 34 EGBGB, enthält,Einschränkung,Node
+2913,RFC,Einschränkung,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1914,Reference,Art. 34 EGBGB, bleibt unberührt,Bestimmungen,Node
+2914,RFC,Bestimmungen,EGBGB,Einführungsgesetz_zum_Bürgerlichen_Gesetzbuche,Node
+1915,Reference,Art. 7 II EVÜ,,kollisionsrechtlichen Regel,Node
+2915,RFC,kollisionsrechtlichen Regel,EVÜ,,Node
+1916,Reference,Art. 95 EGV, hat harmonisiert geschaffen,Teilbereich des Kreditsicherungsrechts,Node
+2916,RFC,Teilbereich des Kreditsicherungsrechts,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+5916,Part,Primäres Gemeinschaftsrecht : Einwirkung der Grundfreiheiten des EG-Vertrags auf die nationalen Kreditsicherungsrechte,,,Node
+4916,Subchapter,Bestellung von Sicherungsrechten,,,Node
+3916,Subsubchapter,Mitgliedstaatliche Regelung,,,Node
+1917,Reference,§ 2 DepG, geben,) Verwahrung,Node
+2917,RFC,) Verwahrung,DepG,,Node
+4917,Subchapter,Mobilität von Sicherungsgut,,,Node
+3917,Subsubchapter,Anwendungsbereich der Richtlinie,,,Node
+1918,Reference,§ 6 I DepG, besitzt,Gesamtbestand,Node
+2918,RFC,Gesamtbestand,DepG,BuB,Node
+1919,Reference,Art. 1 V UAbs, nachgewiesen werden kann,gleichwertige Weise,Node
+2919,RFC,gleichwertige Weise,UAbs,Erwägungsgrund,Node
+4919,Subchapter,Die EG-Richtlinie über Finanzsicherheiten,,,Node
+3919,Subsubchapter,Bestellung von Sicherungsrechten,,,Node
+1920,Reference,§ 1206 Alt. 2 BGB,ist,Einräumung,Node
+2920,RFC,Einräumung,BGB,,Node
+1921,Reference,Art. 1 V UAbs, nachgewiesen wird,dauerhaften Träger,Node
+2921,RFC,dauerhaften Träger,UAbs,Erwägungsgrund,Node
+1922,Reference,§ 1221 BGB,,Einschaltung,Node
+2922,RFC,Einschaltung,BGB,,Node
+3922,Subsubchapter,Verfügungen über den Sicherungsgegenstand während der Sicherungszeit,,,Node
+1923,Reference,§ 130 I 2 InsO, nehmen voraussetzt,Gläubigerfehlverhaltens,Node
+2923,RFC,Gläubigerfehlverhaltens,InsO,,Node
+3923,Subsubchapter,Verwertung des Sicherungsgegenstands im Sicherungsfall,,,Node
+1924,Reference,§ 17a DepG, umgesetzt,Deutschland,Node
+2924,RFC,Deutschland,DepG,,Node
+3924,Subsubchapter,Insolvenz des Sicherungsgebers,,,Node
+1925,Reference,Art. 3 II 10 21 22 RL, befindet,Gegenstand,Node
+2925,RFC,Gegenstand,RL,,Node
+1926,Reference,Art. 4 V der RL, hat,Finanzsicherheiten,Node
+2926,RFC,Finanzsicherheiten,RL,,Node
+1927,Reference,Art. 56 EGV, bestehen,Kapitalverkehrsfreiheit,Node
+2927,RFC,Kapitalverkehrsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+5927,Part,Rechtsquellen des europäischen Bankenaufsichtsrechts,,,Node
+4927,Subchapter,Primärrechtliche Grundlagen der europäischen Bankenaufsicht,,,Node
+3927,Subsubchapter,Kreditrisiken,,,Node
+1928,Reference,Art. 43 I EGV, handelt,Niederlassungsfreiheit,Node
+2928,RFC,Niederlassungsfreiheit,EGV,,Node
+3928,Subsubchapter,Verbriefung,,,Node
+1929,Reference,Art. 43 II EGV,ist,Niederlassungsfreiheit,Node
+2929,RFC,Niederlassungsfreiheit,EGV,,Node
+1930,Reference,Art. 43 EGV,ist,Niederlassungsfreiheit,Node
+2930,RFC,Niederlassungsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1931,Reference,Art. 46 EGV,,Gründen aus,Node
+2931,RFC,Gründen aus,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+5931,Part,Inanspruchnahme der Niederlassungs- und Dienstleistungsfreiheit,,,Node
+4931,Subchapter,Besonderheiten bei Wertpapierfirmen,,,Node
+1932,Reference,Art. 47 II 1 und 3 EGV, bildet,Erlass,Node
+2932,RFC,Erlass,EGV,,Node
+1933,Reference,73/ 183/ EWG,,Änderungsrichtlinien,Node
+2933,RFC,Änderungsrichtlinien,EWG,,Node
+4933,Subchapter,Richtlinien zur Harmonisierung des Aufsichtsrechts,,,Node
+3933,Subsubchapter,Niederlassungsfreiheit,,,Node
+1934,Reference,Art. 57lit.a undb RL, lit,Kapitalbestandteile,Node
+2934,RFC,Kapitalbestandteile,RL,,Node
+5934,Part,Zulassung zum Bankgeschäft,,,Node
+4934,Subchapter,Begriff des Kreditinstituts,,,Node
+1935,Reference,Art. 4 Nr. 11 RL, halten,qualifizierte Beteiligung,Node
+2935,RFC,qualifizierte Beteiligung,RL,Kreditinstitut,Node
+4935,Subchapter,Zulassungsvoraussetzungen,,,Node
+1936,Reference,Art. 12 III UAbs, behindern ,ordnungsgemäße Wahrnehmung,Node
+2936,RFC,ordnungsgemäße Wahrnehmung,UAbs,,Node
+1937,Reference,Art. 12 III UAbs,,Anwendung,Node
+2937,RFC,Anwendung,UAbs,,Node
+5937,Part,Technische Instrumente der laufenden Bankenaufsicht,,,Node
+4937,Subchapter,Ermittlung des Kreditrisikos,,,Node
+1938,Reference,Art. 43 EGV,ist,Niederlassungsfreiheit,Node
+2938,RFC,Niederlassungsfreiheit,EGV,Vertrag_zur_Gründung_der_Europäischen_Gemeinschaft,Node
+1939,Reference,Art. 23 RL, abgedeckt laufend beaufsichtigt sein,Zulassung im Herkunftsmitgliedstaat,Node
+2939,RFC,Zulassung im Herkunftsmitgliedstaat,RL,,Node
+1940,Reference,Art. 25 IV UAbs, ist eröffnet,Entscheidung,Node
+2940,RFC,Entscheidung,UAbs,,Node
+1941,Reference,Art. 30 II UAbs, festlegen ,zuständige Behörde,Node
+2941,RFC,zuständige Behörde,UAbs,,Node
+1942,Reference,Art. VII GATS, Vorgesehen ist,Möglichkeit,Node
+2942,RFC,Möglichkeit,GATS,Allgemeines_Abkommen_über_den_Handel_mit_Dienstleistungen,Node
+3942,Subsubchapter,Ziele des sekundärrechtlichen Aufsichtsrechts,,,Node
+1943,Reference,Art. 81 RL,,Ratingagentur,Node
+2943,RFC,Ratingagentur,RL,Ratingagentur,Node
+4943,Subchapter,Gegenseitige Anerkennung . . . . . . . . . . . . . (Europäischer Pass),,,Node
+1944,Reference,Art. 80 VII und VIII,,Vorgabe,Node
+2944,RFC,Vorgabe,VIII,Wehrbereichskommando,Node
+4944,Subchapter,Anzeigepflicht und Kontrollverfahren,,,Node
+1945,Reference,Art. 87 VIIden Kreditinstitutendie Schätzungdes LGD, gestattet schafft,Richtlinie in,Node
+2945,RFC,Richtlinie in,LGD,,Node
+5945,Part,Drittlandsbeziehungen,,,Node
+1946,Reference,Art. 120 I RL,,Eigenmittel,Node
+2946,RFC,Eigenmittel,RL,,Node
+4946,Subchapter,Eigenmittelbegriff,,,Node
+1947,Reference,Art. 4 Nr. 20 RL,ist,Unternehmen,Node
+2947,RFC,Unternehmen,RL,,Node
+1948,Reference,Art. 138 RL,,einzelnen Kreditinstituten,Node
+2948,RFC,einzelnen Kreditinstituten,RL,,Node
+4948,Subchapter,Großkredite und Beteiligungsbesitz,,,Node
+3948,Subsubchapter,Subjektive Zulassungsvoraussetzungen,,,Node
+1949,Reference,Art. 6 RL, erteilt hat,Mutterunternehmen,Node
+2949,RFC,Mutterunternehmen,RL,,Node
+1950,Reference,Art. 126 I UAbs, ist,Tochter,Node
+2950,RFC,Tochter,UAbs,,Node
+1951,Reference,Art. 34 BG,,Kontrollinstitution,Node
+2951,RFC,Kontrollinstitution,BG,,Node
+5951,Part,Rahmenbedingungen,,,Node
+4951,Subchapter,Bankensystem,,,Node
+1952,Reference,Art. 34 BG, ist geregelt,Nationalbank auszuübende Aufsichtsrecht,Node
+2952,RFC,Nationalbank auszuübende Aufsichtsrecht,BG,,Node
+1953,Reference,Art. 13 BG, sind,Erwerb einer Lizenz,Node
+2953,RFC,Erwerb einer Lizenz,BG,,Node
+1954,Reference,Art. 145 BG,,Häufigkeit,Node
+2954,RFC,Häufigkeit,BG,,Node
+1955,Reference,Art. 137 BG, stellen,Kredits,Node
+2955,RFC,Kredits,BG,,Node
+4955,Subchapter,Kreditformen,,,Node
+1956,Reference,Art. 31 BG, festgelegt wird,Nationalbank,Node
+2956,RFC,Nationalbank,BG,,Node
+4956,Subchapter,Konten,,,Node
+1957,Reference,Art. 143 BG, vorliegt,derartige Vereinbarung,Node
+2957,RFC,derartige Vereinbarung,BG,,Node
+1958,Reference,Art. 144 BG, verlangen,anderer Ausstände,Node
+2958,RFC,anderer Ausstände,BG,,Node
+1959,Reference,Art. 143 BG, nicht zurückzahlt,Kreditnehmer,Node
+2959,RFC,Kreditnehmer,BG,Schuldner,Node
+1960,Reference,Art. 145 BG, zurückgezahlt wird,Kredit,Node
+2960,RFC,Kredit,BG,,Node
+1961,Reference,Art. 14 BG,,Gebiet,Node
+2961,RFC,Gebiet,BG,,Node
+1962,Reference,Art. 147 BG,,Sicherungseigentum,Node
+2962,RFC,Sicherungseigentum,BG,Sicherungsübereignung,Node
+1963,Reference,Art. 149 BG,,Eigentum,Node
+2963,RFC,Eigentum,BG,,Node
+1964,Reference,Art. 342 ZG, hat,Nichtbeachtung,Node
+2964,RFC,Nichtbeachtung,ZG,,Node
+1965,Reference,Art. 349 ZG, erheben,Kreditnehmer,Node
+2965,RFC,Kreditnehmer,ZG,Kreditnehmer,Node
+1966,Reference,Art. 148 BG, eintreiben ,Schulden,Node
+2966,RFC,Schulden,BG,,Node
+1967,Reference,Art. 199 BG, abschließen,Bank vorgeschriebenen Richtlinien zur Eröffnung,Node
+2967,RFC,Bank vorgeschriebenen Richtlinien zur Eröffnung,BG,,Node
+1968,Reference,Art. 197 BG,,Arten,Node
+2968,RFC,Arten,BG,,Node
+1969,Reference,Art. 208 BG,,Kurzzeitkonten,Node
+2969,RFC,Kurzzeitkonten,BG,,Node
+1970,Reference,Art. 209 BG,,Geschäftskonten,Node
+2970,RFC,Geschäftskonten,BG,,Node
+1971,Reference,Art. 210 BG,,Spendenkonten,Node
+2971,RFC,Spendenkonten,BG,,Node
+1972,Reference,Art. 211 BG,,Kreditkonten,Node
+2972,RFC,Kreditkonten,BG,,Node
+4972,Subchapter,Kreditsicherheiten,,,Node
+1973,Reference,Art. 775c ZG und Kapitel 24 BG, sind enthalten,Vorschriften über Zahlungen,Node
+2973,RFC,Vorschriften über Zahlungen,BG,,Node
+1974,Reference,Art. 231 BG, vorgenommen,Überweisungen,Node
+2974,RFC,Überweisungen,BG,,Node
+1975,Reference,Art. 38 HypKreditG, wird überwacht,Hypothekengeschäft,Node
+2975,RFC,Hypothekengeschäft,HypKreditG,,Node
+1976,Reference,§ 24a Abs. 2 KWG,,vollständigen Unterlagen,Node
+2976,RFC,vollständigen Unterlagen,KWG,Kreditwesengesetz,Node
+1977,Reference,Art. 1874 bis 1914 CC,,Darlehensvertrag,Node
+2977,RFC,Darlehensvertrag,CC,,Node
+1978,Reference,Art. 1984 bis 2010 CC,,Auftrag,Node
+2978,RFC,Auftrag,CC,,Node
+1979,Reference,Art. 2011 bis 2043 CC,,Bürgschaftsvertrag,Node
+2979,RFC,Bürgschaftsvertrag,CC,,Node
+1980,Reference,Art. 1349 CC, ist,Legaldefinition,Node
+2980,RFC,Legaldefinition,CC,Legaldefinition,Node
+1981,Reference,Art. 1353 CC, obliegt,Gericht,Node
+2981,RFC,Gericht,CC,,Node
+1982,Reference,Art. 1134 Abs. 1 CC, haben,Vertragsautonomie,Node
+2982,RFC,Vertragsautonomie,CC,Legalitätsprinzip,Node
+1983,Reference,Art. 1134 Abs. 3 CC,,Vertragserfüllung,Node
+2983,RFC,Vertragserfüllung,CC,,Node
+1984,Reference,Art. 1165 CC,,relative Bedeutung,Node
+2984,RFC,relative Bedeutung,CC,,Node
+1985,Reference,Art. 1 HypKreditG, geschlossen hat,Vertrag,Node
+2985,RFC,Vertrag,HypKreditG,Belgien,Node
+3985,Subsubchapter,Bankgesetze,,,Node
+1986,Reference,Art. 8 HypG,,Haftungsmasse,Node
+2986,RFC,Haftungsmasse,HypG,,Node
+5986,Part,Kredit und Kreditsicherheiten,,,Node
+1987,Reference,Art. 1875 ff. CC, endet,Vertrag,Node
+2987,RFC,Vertrag,CC,,Node
+1988,Reference,Art. 1892 CC, verbraucht wird,Gebrauch,Node
+2988,RFC,Gebrauch,CC,,Node
+1989,Reference,Art. 1902 CC, zurückgeben,Menge,Node
+2989,RFC,Menge,CC,,Node
+3989,Subsubchapter,Bankkredit,,,Node
+1990,Reference,Art. 1893 CC,,Eigentümer,Node
+2990,RFC,Eigentümer,CC,,Node
+3990,Subsubchapter,Bürgschaft,,,Node
+1991,Reference,Art. 1895 CC, wird bezifferte geschuldet,Gelddarlehen,Node
+2991,RFC,Gelddarlehen,CC,,Node
+3991,Subsubchapter,Bankinkasso,,,Node
+1992,Reference,Art. 1899 CC, zurückgefordert werden,vereinbarten Termin,Node
+2992,RFC,vereinbarten Termin,CC,,Node
+1993,Reference,Art. 1900 CC, festlegen ,Gericht,Node
+2993,RFC,Gericht,CC,,Node
+1994,Reference,Art. 1905 ff. CC, können verzinslich gewährt werden,Darlehen,Node
+2994,RFC,Darlehen,CC,,Node
+1995,Reference,Art. 1907 CC,,im Einzelfall,Node
+2995,RFC,im Einzelfall,CC,,Node
+1996,Reference,Art. 1907 CC, nicht übersteigen,halbes Prozent,Node
+2996,RFC,halbes Prozent,CC,,Node
+1997,Reference,Art. 1907ter CC und Art. 494 Code Pénal. Nach Art. 1907ter CC, bestehen kann,Wuchergrenzen,Node
+2997,RFC,Wuchergrenzen,CC,Code_pénal,Node
+1998,Reference,Art. 1907ter CC, hat nicht abgeschafft,Bezug,Node
+2998,RFC,Bezug,CC,Vertragsfreiheit,Node
+1999,Reference,Art. 1 Nr. 1 VerbraucherKG, gehört,handwerklichen Aktivitäten,Node
+2999,RFC,handwerklichen Aktivitäten,VerbraucherKG,,Node
+11000,Reference,Art. 10 VerbraucherKG, unterrichten,finanzielle Situation,Node
+21000,RFC,finanzielle Situation,VerbraucherKG,,Node
+11001,Reference,§ 14 VerbraucherKG,,Beratungspflichten,Node
+21001,RFC,Beratungspflichten,VerbraucherKG,,Node
+11002,Reference,Art. 1907 der CC,,Wuchervorschriften,Node
+21002,RFC,Wuchervorschriften,CC,,Node
+11003,Reference,Art. 14 HypKreditG, enthalten,Darlehenskonditionen,Node
+21003,RFC,Darlehenskonditionen,HypKreditG,,Node
+11004,Reference,Art. 13 Königl. AO, sind,übernehmende Kosten,Node
+21004,RFC,übernehmende Kosten,AO,Abgabenordnung,Node
+11005,Reference,Art. 15 HypKreditG, berechtigen ,einseitigen Änderung,Node
+21005,RFC,einseitigen Änderung,HypKreditG,,Node
+11006,Reference,Art. 16 HypKreditG, ausgereicht werden,Kontoguthaben,Node
+21006,RFC,Kontoguthaben,HypKreditG,,Node
+11007,Reference,Art. 19 HypKreditG,,Koppelgeschäfte,Node
+21007,RFC,Koppelgeschäfte,HypKreditG,Arbeitnehmersparzulage,Node
+11008,Reference,Art. 5 und 6 HypKreditG,,Kreditrückführung,Node
+21008,RFC,Kreditrückführung,HypKreditG,,Node
+11009,Reference,Art. 7 HypKreditG, kann sein,Zinssatz,Node
+21009,RFC,Zinssatz,HypKreditG,,Node
+11010,Reference,Art. 8 ff. HypKreditG, regeln,Einzelheiten,Node
+21010,RFC,Einzelheiten,HypKreditG,,Node
+11011,Reference,Art. 1907 CC, kann nicht verlangen muss,Verzugszins im Sinne,Node
+21011,RFC,Verzugszins im Sinne,CC,,Node
+11012,Reference,Art. 9 HypG, stellen,Privilegien,Node
+21012,RFC,Privilegien,HypG,,Node
+11013,Reference,Art. 1328 CC,,Bezug,Node
+21013,RFC,Bezug,CC,,Node
+11014,Reference,Art. 2074 CC,,Registrierung,Node
+21014,RFC,Registrierung,CC,,Node
+11015,Reference,Art. 8 HypG,,Gläubiger,Node
+21015,RFC,Gläubiger,HypG,,Node
+11016,Reference,Art. 8 HypG, haben,einzelne Gläubiger,Node
+21016,RFC,einzelne Gläubiger,HypG,,Node
+11017,Reference,Art. 9 HypG, können,Vorrechte,Node
+21017,RFC,Vorrechte,HypG,,Node
+11018,Reference,Art. 12 HypG,,anderen Gläubigern,Node
+21018,RFC,anderen Gläubigern,HypG,,Node
+11019,Reference,Art. 16 HypG, lasten,Mobilien,Node
+21019,RFC,Mobilien,HypG,,Node
+11020,Reference,Art. 13 HypG,,unterschiedliche Qualität,Node
+21020,RFC,unterschiedliche Qualität,HypG,,Node
+11021,Reference,Art. 14 HypG, konkurrieren,gleichem Rang,Node
+21021,RFC,gleichem Rang,HypG,,Node
+11022,Reference,Art. 1798 CC,,Privileg,Node
+21022,RFC,Privileg,CC,,Node
+11023,Reference,§§ 13 20 HypG, sind,anwendbar,Node
+21023,RFC,anwendbar,HypG,,Node
+11024,Reference,Art. 29 HypG, eingetragen wurden,im Hypothekenregister,Node
+21024,RFC,im Hypothekenregister,HypG,,Node
+11025,Reference,Art. 34 HypG,,Eintragung,Node
+21025,RFC,Eintragung,HypG,,Node
+11026,Reference,Art. 38 HypG,,Hypothek,Node
+21026,RFC,Hypothek,HypG,Hypothek,Node
+11027,Reference,Art. 41 HypG, verschafft,bevorzugte Befriedigung,Node
+21027,RFC,bevorzugte Befriedigung,HypG,,Node
+11028,Reference,Art. 45 HypG,,Wohnungseigentumsrechte,Node
+21028,RFC,Wohnungseigentumsrechte,HypG,,Node
+11029,Reference,Art. 43 HypG, entstehen,vertraglicher Grundlage,Node
+21029,RFC,vertraglicher Grundlage,HypG,,Node
+11030,Reference,Art. 76 HypG, notariell erteilt werden,Belastungsvollmacht,Node
+21030,RFC,Belastungsvollmacht,HypG,Belastungsvollmacht,Node
+11031,Reference,Art. 108 HypG,,Bestand,Node
+21031,RFC,Bestand,HypG,,Node
+11032,Reference,Art. 108 Abs. 1 Nr. 2 HypG, verzichten ,Forderung,Node
+21032,RFC,Forderung,HypG,Hypothek,Node
+11033,Reference,Art. 2071 CC, übergibt,Gläubiger,Node
+21033,RFC,Gläubiger,CC,,Node
+11034,Reference,Art. 2073 ff. CC, ist näher geregelt,Pfandrecht an Mobilien,Node
+21034,RFC,Pfandrecht an Mobilien,CC,Pfandrecht,Node
+11035,Reference,Art. 2074 CC, eingetragen werden,Register,Node
+21035,RFC,Register,CC,Verzeichnis,Node
+11036,Reference,Art. 2085 CC, verrechnen,Kapital,Node
+21036,RFC,Kapital,CC,,Node
+11037,Reference,Art. 2086 CC, übernehmen ,Instandhaltung,Node
+21037,RFC,Instandhaltung,CC,,Node
+11038,Reference,Art. 2088 CC, betreiben,Gläubiger,Node
+21038,RFC,Gläubiger,CC,,Node
+11039,Reference,Art. 2088 CC, sind,Entgegenstehende Vereinbarungen,Node
+21039,RFC,Entgegenstehende Vereinbarungen,CC,,Node
+11040,Reference,Art. 2011 CC, nicht tut,Schuldner,Node
+21040,RFC,Schuldner,CC,Schuldner,Node
+11041,Reference,Art. 2015 CC, ausdrücklich übernommen werden,Bürgschaft,Node
+21041,RFC,Bürgschaft,CC,Die_Bürgschaft,Node
+11042,Reference,Art. 2015 CC, kann nicht vermutet werden,Bürgschaftsvertrages,Node
+21042,RFC,Bürgschaftsvertrages,CC,,Node
+11043,Reference,Art. 1326 CC, unterschrieben werden,bezifferten Betrag,Node
+21043,RFC,bezifferten Betrag,CC,,Node
+11044,Reference,Art. 1326 CC, hat ausgehebelt,Entscheidung,Node
+21044,RFC,Entscheidung,CC,,Node
+11045,Reference,Art. 2036 CC,,persönlichen Gründen,Node
+21045,RFC,persönlichen Gründen,CC,,Node
+11046,Reference,Art. 2018 CC, begeben werden soll,Bürgschaft,Node
+21046,RFC,Bürgschaft,CC,Hermesdeckungen,Node
+11047,Reference,Art. 2019 CC, ist,Verpflichtung,Node
+21047,RFC,Verpflichtung,CC,,Node
+11048,Reference,Art. 2020 CC, stellen,Schuldner,Node
+21048,RFC,Schuldner,CC,Schuldner,Node
+11049,Reference,Art. 2037 CC, wird,Verpflichtung frei,Node
+21049,RFC,Verpflichtung frei,CC,,Node
+11050,Reference,Art. 2037 CC, können erheben,Einwand,Node
+21050,RFC,Einwand,CC,,Node
+11051,Reference,Art. 2023 CC, vorstrecken ,Kosten,Node
+21051,RFC,Kosten,CC,,Node
+11052,Reference,Art. 2024 CC, vollstreckt,mitgeteilten Vermögenswerte,Node
+21052,RFC,mitgeteilten Vermögenswerte,CC,,Node
+11053,Reference,Art. 2025 CC,,Hauptschuld,Node
+21053,RFC,Hauptschuld,CC,,Node
+11054,Reference,Art. 2026 2027 CC, können verlangen,Maßgabe,Node
+21054,RFC,Maßgabe,CC,,Node
+11055,Reference,Art. 2028 CC, umfasst,Regressanspruch,Node
+21055,RFC,Regressanspruch,CC,,Node
+11056,Reference,Art. 2029 CC, besaß,Gläubiger,Node
+21056,RFC,Gläubiger,CC,Schuldner,Node
+11057,Reference,Art. 2033 CC, verlangen,Ausgleich,Node
+21057,RFC,Ausgleich,CC,,Node
+11058,Reference,Art. 2029 CC,,Bürge,Node
+21058,RFC,Bürge,CC,,Node
+11059,Reference,Art. 2043ter CC, führen,Gemäß,Node
+21059,RFC,Gemäß,CC,,Node
+11060,Reference,Art. 2014 Abs. 1 2018 und 2019 CC, finden,Ausnahme,Node
+21060,RFC,Ausnahme,CC,Hermesdeckungen,Node
+11061,Reference,Art. 2043octies CC,,im Verhältnis,Node
+21061,RFC,im Verhältnis,CC,,Node
+11062,Reference,§ 2 VerbraucherKG,,Restwerte zum Zeitpunkt,Node
+21062,RFC,Restwerte zum Zeitpunkt,VerbraucherKG,,Node
+11063,Reference,Art. 2 Königl. AO, zugelassen sein,Belgischen Wirtschaftsministerium,Node
+21063,RFC,Belgischen Wirtschaftsministerium,AO,Abgabenordnung,Node
+11064,Reference,Art. 2 MinAO, steht,Gegenstand,Node
+21064,RFC,Gegenstand,MinAO,,Node
+11065,Reference,Art. 47 CIR, besteuert,Gesetzgeber,Node
+21065,RFC,Gesetzgeber,CIR,,Node
+11066,Reference,Art. 1690 Abs. 3 CC,,Verbindung,Node
+21066,RFC,Verbindung,CC,,Node
+11067,Reference,Art. 1915 CC,,Natur,Node
+21067,RFC,Natur,CC,,Node
+11068,Reference,Art. 1917 CC,,unentgeltlichen Vertrag,Node
+21068,RFC,unentgeltlichen Vertrag,CC,,Node
+11069,Reference,Art. 1932 CC, herausgegeben werden,geltender Währung,Node
+21069,RFC,geltender Währung,CC,,Node
+11070,Reference,Art. 1991 CC,,Schadensersatz,Node
+21070,RFC,Schadensersatz,CC,,Node
+11071,Reference,Art. 1993 CC,,Erlangte,Node
+21071,RFC,Erlangte,CC,,Node
+11072,Reference,Art. 1998 CC, eingegangen ist,Auftragnehmer,Node
+21072,RFC,Auftragnehmer,CC,,Node
+11073,Reference,Art. 1999 CC, sind erstatten,Kosten,Node
+21073,RFC,Kosten,CC,,Node
+11074,Reference,Art. 2003 CC,,Auftragnehmers,Node
+21074,RFC,Auftragnehmers,CC,,Node
+11075,Reference,Art. 1991 CC,,Auftrag,Node
+21075,RFC,Auftrag,CC,,Node
+11076,Reference,Art. 1937 CC, schulde,Bank,Node
+21076,RFC,Bank,CC,,Node
+11077,Reference,Art. 1293 Nr. 3 CC, nicht verrechnen,Gelder,Node
+21077,RFC,Gelder,CC,,Node
+11078,Reference,Art. 1154 CC,,verstößt grundsätzlich,Node
+21078,RFC,verstößt grundsätzlich,CC,,Node
+11079,Reference,Art. 1134 CC, entspricht,Rechtslage,Node
+21079,RFC,Rechtslage,CC,,Node
+11080,Reference,Art. 2 5 92 Abs. 2 HypothekenG,,Formanforderungen,Node
+21080,RFC,Formanforderungen,HypothekenG,,Node
+11081,Reference,Art. 51§ 1 HypKreditG,,Abtretung verbriefter Hypothekenforderungen,Node
+21081,RFC,Abtretung verbriefter Hypothekenforderungen,HypKreditG,,Node
+51081,Part,Kapitalmarktrecht,,,Node
+11082,Reference,Art. 16 der Anordnung der CBFA, dürfen nicht berücksichtigt werden,Spekulative Elemente,Node
+21082,RFC,Spekulative Elemente,CBFA,,Node
+11083,Reference,93/ 22/ EWG,,Artikel,Node
+21083,RFC,Artikel,EWG,,Node
+11084,Reference,Art. 54 Königl. AO, ist,ständige Praxis,Node
+21084,RFC,ständige Praxis,AO,Abgabenordnung,Node
+11085,Reference,Art. 2 Abs. GBNBaufindemerdie BNB, beruht nimmt verpflichtet,Wirtschaft,Node
+21085,RFC,Wirtschaft,BNB,,Node
+11086,Reference,Art. 2 Abs. 4 GKI,,Länderabschnitten,Node
+21086,RFC,Länderabschnitten,GKI,,Node
+11087,Reference,Art. 15 Abs. 3 GKI, nicht erfüllt sind,gesetzliche Erfordernisse,Node
+21087,RFC,gesetzliche Erfordernisse,GKI,,Node
+11088,Reference,2006/ 48/ EES, überführt,bulgarisches Recht,Node
+21088,RFC,bulgarisches Recht,EES,,Node
+11089,Reference,Art. 1 Abs. 1 GKI, sorgt,DieBulgarische Nationalbank,Node
+21089,RFC,DieBulgarische Nationalbank,GKI,Artikel_1_des_Grundgesetzes_für_die_Bundesrepublik_Deutschland,Node
+51089,Part,Aktuelle Entwicklungen,,,Node
+11090,Reference,§ 17des GKI, geändert,Gesetz,Node
+21090,RFC,Gesetz,GKI,,Node
+11091,Reference,Art. 50 und 51 GBNB,,Parlament,Node
+21091,RFC,Parlament,GBNB,,Node
+11092,Reference,Art. 29 Abs. 2 GBNB,,Euro,Node
+21092,RFC,Euro,GBNB,,Node
+11093,Reference,Art. 6 Abs. 1 DevG,,Angabe,Node
+21093,RFC,Angabe,DevG,,Node
+11094,Reference,Art. 42 Abs. 2 GBNB,,DevG,Node
+21094,RFC,DevG,DevG,,Node
+11095,Reference,Art. 2 Abs. 4 11 GKFA,,Exekutive,Node
+21095,RFC,Exekutive,GKFA,Juristische_Person,Node
+11096,Reference,Art. 2 Abs. 4 29 GKFA, ist,Parlament,Node
+21096,RFC,Parlament,GKFA,Rechnungshof,Node
+11097,Reference,Art. 1 Abs. 2 12 GKFA,,Aufsicht,Node
+21097,RFC,Aufsicht,GKFA,,Node
+11098,Reference,Art. 4 Abs. 2des GBNB, ist verpflichtet,Wahrung des Bankoder Geschäftsgeheimnisses,Node
+21098,RFC,Wahrung des Bankoder Geschäftsgeheimnisses,GBNB,,Node
+11099,Reference,Art. 79 Abs. 3 GKI,,jeweiligen Bank,Node
+21099,RFC,jeweiligen Bank,GKI,,Node
+11100,Reference,Art. 103 Abs. 1 GKIkanndie BNB, gem kann,Normenverstößen,Node
+21100,RFC,Normenverstößen,BNB,,Node
+11101,Reference,Art. 133 ff. bzw. 141 ff. GKI, kann vornehmen,Sanierungsmaßnahmen,Node
+21101,RFC,Sanierungsmaßnahmen,GKI,,Node
+11102,Reference,Art. 137 ff. GKI, gelten,Vorschriften,Node
+21102,RFC,Vorschriften,GKI,,Node
+11103,Reference,Art. 607 ff.des HGB, finden,Artikel,Node
+21103,RFC,Artikel,HGB,Handelsgesetzbuch,Node
+11104,Reference,Art. 44 ff. GBI,,wichtige Rolle,Node
+21104,RFC,wichtige Rolle,GBI,,Node
+11105,Reference,Art. 36 Abs. 2 GKI, eingeleitet,Lizenz,Node
+21105,RFC,Lizenz,GKI,,Node
+11106,Reference,Art. 137 GKI, weitergeführt,Gerichten,Node
+21106,RFC,Gerichten,GKI,,Node
+11107,Reference,Art. 1 Abs. 2 GBI,,Banken,Node
+21107,RFC,Banken,GBI,,Node
+11108,Reference,Art. 133 ff.des GKI, finden,EU-Mitgliedstaaten,Node
+21108,RFC,EU-Mitgliedstaaten,GKI,,Node
+11109,Reference,Art. 80 Abs. 3 GKI, haben,Befugnisse,Node
+21109,RFC,Befugnisse,GKI,,Node
+11110,Reference,Art. 103 Abs. Ziff. 3 GKI,ist,Verletzungen,Node
+21110,RFC,Verletzungen,GKI,,Node
+11111,Reference,§ 3 ÜSB,ist,EU-Richtlinien,Node
+21111,RFC,EU-Richtlinien,ÜSB,,Node
+11112,Reference,§ 3 ÜSB GKI, erlassen,Finanzinstitutionen,Node
+21112,RFC,Finanzinstitutionen,ÜSB GKI,,Node
+11113,Reference,Art. 13 GKI ff.durchdie BNB, ist,Erteilung der Bankenlizenz,Node
+21113,RFC,Erteilung der Bankenlizenz,BNB,,Node
+11114,Reference,§ 5 ÜSB, aufgehoben,Gesetz,Node
+21114,RFC,Gesetz,ÜSB,,Node
+11115,Reference,Art. 240- 242 GSV, regeln,Darlehensvertrag,Node
+21115,RFC,Darlehensvertrag,GSV,,Node
+11116,Reference,Art. 430 Abs. 1 HGB,,vereinbarten Bedingungen,Node
+21116,RFC,vereinbarten Bedingungen,HGB,Handelsgesetzbuch,Node
+11117,Reference,Art. 59 GKI, verständlich formuliert sein,Kunden,Node
+21117,RFC,Kunden,GKI,,Node
+11118,Reference,Art. 61 GKI, erlauben,zweckentsprechenden Verwendung,Node
+21118,RFC,zweckentsprechenden Verwendung,GKI,,Node
+11119,Reference,Art. 60 Abs. 1 GKI, gegeben wurden,nahestehenden Personen,Node
+21119,RFC,nahestehenden Personen,GKI,,Node
+11120,Reference,Art. 60 Abs. 2 GKI, beantragen ,Grund,Node
+21120,RFC,Grund,GKI,,Node
+11121,Reference,Art. 60 Abs. 4 GKI, erworben wurden,Kredit,Node
+21121,RFC,Kredit,GKI,,Node
+11122,Reference,Art. 434 HGB, zahlen,ermächtigenden Bank,Node
+21122,RFC,ermächtigenden Bank,HGB,Aufwendungsersatz,Node
+11123,Reference,Art. 12die Diskriminierungsverbote der Artikel 143- 148 VerbrSchutzG,,Anwendung,Node
+21123,RFC,Anwendung,VerbrSchutzG,,Node
+11124,Reference,Art. 150 GSV, sind,Pfand,Node
+21124,RFC,Pfand,GSV,Hypothek,Node
+11125,Reference,Art. 149 ff. 166- 179 GSV, ist geregelt,Hypothek,Node
+21125,RFC,Hypothek,GSV,Hypothek,Node
+11126,Reference,Art. 138- 148des GSV, regeln,Bürgschaft,Node
+21126,RFC,Bürgschaft,GSV,Hermesdeckungen,Node
+11127,Reference,Art. 149 ff. GSV, ist geregelt,Forderung,Node
+21127,RFC,Forderung,GSV,,Node
+11128,Reference,Art. 442 HGB, verpflichtet,schriftlich,Node
+21128,RFC,schriftlich,HGB,Handelsgesetzbuch,Node
+11129,Reference,Art. 60 Abs. 3 GKI, nicht versteigern,Pfand,Node
+21129,RFC,Pfand,GKI,,Node
+11130,Reference,Art. 57 und 59 GKI, legen,Zahlungsverkehr,Node
+21130,RFC,Zahlungsverkehr,GKI,,Node
+11131,Reference,Art. 61 GKI, verständlich formuliert sein,Kunden,Node
+21131,RFC,Kunden,GKI,,Node
+11132,Reference,Art. 4 AntidiskrG, nicht benachteiligt werden dürfte,Kunde,Node
+21132,RFC,Kunde,AntidiskrG,,Node
+11133,Reference,Art. 10des EinlagengarantieGerlassene VO der BNB,,Grund,Node
+21133,RFC,Grund,BNB,,Node
+11134,Reference,94/ 19/ EEC und 2001/ 24/ EU, Eingeflossen sind,Vorschriften die EU-Richtlinien,Node
+21134,RFC,Vorschriften die EU-Richtlinien,EEC,Europäische_Union,Node
+11135,Reference,Art. 40 GBNB, erlassen wurde,Grund,Node
+21135,RFC,Grund,GBNB,,Node
+11136,Reference,Art. 5 der VO, kann,Kontos,Node
+21136,RFC,Kontos,VO,,Node
+11137,Reference,Art. 3 Abs. 6 der VO, ablehnen,Kontos,Node
+21137,RFC,Kontos,VO,,Node
+11138,Reference,Art. 427 HGB, schuldet,Bank eine Vergütung,Node
+21138,RFC,Bank eine Vergütung,HGB,Handelsgesetzbuch,Node
+11139,Reference,Art. 420- 425 HGB,,Mischform,Node
+21139,RFC,Mischform,HGB,Handelsgesetzbuch,Node
+11140,Reference,Art. 429 HGB,,Anwendung,Node
+21140,RFC,Anwendung,HGB,Handelsgesetzbuch,Node
+11141,Reference,Art. 448450 HGB, sind,Überweisung,Node
+21141,RFC,Überweisung,HGB,Handelsgesetzbuch,Node
+11142,Reference,Art. 539562 HGB, ist geregelt,Scheckrecht,Node
+21142,RFC,Scheckrecht,HGB,Handelsgesetzbuch,Node
+11143,Reference,Art. 455- 538 HGB,,Vorschriften,Node
+21143,RFC,Vorschriften,HGB,Handelsgesetzbuch,Node
+11144,Reference,85/ 611/ EIU, inkorporiert,EU-Richtlinien,Node
+21144,RFC,EU-Richtlinien,EU-Richtlinien,,Node
+11145,Reference,Art. 20 Abs. 1 GÖZAWeine AG, ist,Börse,Node
+21145,RFC,Börse,AG,,Node
+11146,Reference,Art. 70- 77 GÖZAW, posrednik,KFA lizenzierten Finanzmakler,Node
+21146,RFC,KFA lizenzierten Finanzmakler,GÖZAW,,Node
+11147,Reference,Art. 605- 606a HGB, ersetzt,Fassung,Node
+21147,RFC,Fassung,HGB,Handelsgesetzbuch,Node
+11148,Reference,Art. 443- 447 HGB, kann einziehen,Kunden gegen Vergütung,Node
+21148,RFC,Kunden gegen Vergütung,HGB,Handelsgesetzbuch,Node
