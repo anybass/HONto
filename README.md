@@ -24,25 +24,28 @@ We used a pdf file of selected subchapters from the book (Handbuch zum deutschen
 3. As for the configurable exporter, two .conf files are available.
 Select 
 * toc.conf 
+
 for the output file for the table of contents annotation, select *Token* as the instance name and name the file with the following suffix:
 * _toc.txt
+
 and 
 * rel.conf
+
 for the output file for the rfc and relationship annotation, select *RFC_NE* as the instance name and name the file with the following suffix:
 * _rel.txt
 
 Those suffixes are important. Both files and the *\_raw.txt* file shall be in the same folder as the python script 
 * gate_postprocess.py
 
-This script will output a file with the ending *\_features.json*
+4. Run this script. It will output a file with the ending *\_features.json*
 
-The file shall be modified by inserting a linebreak (\n) after each curly brace. Replace "}," with "},\n" for the subsequent steps.
+5. The file shall be modified by inserting a linebreak (\n) after each curly brace. Replace "}," with "},\n" for the subsequent steps.
 
-Now, you have the input for the clustering script 
+6. Now, you have the input for the clustering script 
 * concept_formation.py
 
 and for the classification script
 * concept_prediction.py
 
-and you are done.
+and after running either of them, you are done.
 
