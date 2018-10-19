@@ -1,5 +1,5 @@
 ﻿Phase:	subTocPartExtractor
-Input: Token Number Lookup Date
+Input: Token Number Date
 Options: control = appelt 
 
 Rule: subtoc-part
