@@ -24,6 +24,8 @@ We used a pdf file of selected subchapters from the book [Handbuch zum deutschen
 
 ``pdftotext -enc utf-8 1_Grundlagen.pdf 1_Grundlagen_raw.txt``
 
+Hint: It may be helpful for reference and reason for citing detection if you execute *removeHyphens.py* afterwards to join separated words at line breaks. However, it may impact your table of contents detection, which is why we leave this step optional for simplicity.
+*
 2. Then load the file into GATE and follow the instructions in the appendix of the extended paper version. As indicated, the order of the JAPE files matters, so the correct order is:
 
 * toc_ref.jape
