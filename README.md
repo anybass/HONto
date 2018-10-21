@@ -3,6 +3,12 @@ Extracting Concept Hierarchies from Textbooks, based on the paper to be publishe
 
 The folder ContextSelection contains the implementation for a follow-up paper "Context Selection in a Heterogeneous Legal Ontology", submitted at [BTW '19](https://btw.informatik.uni-rostock.de/index.php/de/). More information on this can be found within the folder.
 
+*HONto* is a project which aims for: 
+
+* Information extraction from textbooks (*hon* means "book" in Japanese, and we transform its content *to* knowledge ) 
+* Modeling this knowledge in a heterogeneous (h) ontology (onto)
+* Having a reliable source for domain knowledge (*honto* means "really, seriously" in Japanese)
+
 This work uses the [Concept Formation library for python](https://github.com/cmaclell/concept_formation).
 
 We added (averaged) Precision and Recall support.
