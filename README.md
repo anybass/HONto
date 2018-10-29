@@ -18,7 +18,7 @@ For copyright reasons, we did not add the raw text file from the book we based o
 ## Prerequisites
 
 * [pdftotext](http://www.xpdfreader.com/)
-* [GATE](https://gate.ac.uk/) with the [plugins](https://gate.ac.uk/gate/doc/plugins.html) listed in *LeDAM_wehnert_extended.pdf* 
+* [GATE 8.4.1](https://gate.ac.uk/) with the [plugins](https://gate.ac.uk/gate/doc/plugins.html) listed in *LeDAM_wehnert_extended.pdf* 
 * Python 3 with additional libraries, such as scikit-learn, numpy, matplotlib, csv and concept_formation with our additional files (see concept_formation folder).
 * Some text editor with search and replace functions (scite, notepad++,...)
 
