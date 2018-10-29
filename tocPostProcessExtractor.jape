@@ -1,0 +1,505 @@
+﻿Phase:	tocPostProcessExtractor
+Input: Token Number Lookup Date Part SubChapter SubSubChapter
+Options: control = appelt 
+
+Rule: omittedPart
+Priority:60
+({SubChapter}|{Part})
+ (({Token.orth==upperInitial, Token.string=~"[A-Z]", Token.length==1, !Part, !SubChapter, !SubSubChapter}):partnumber 
+ {Token.string=="."}
+ (({Token.kind==word, Token.length>1}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==ADJA}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==NN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==VVFIN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string=="/"}|{Token.string=="–"}|{Token.string==","}|
+{Token.string==";"}|({Token.string=="("}{Token.string=="Nr"}{Token.string=="."}{Token.category==number}({Token.kind==word}|{Token.string=="."}|{Token.string==","})*{Token.string==")"}))+):parttopic 
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+ ({Token.string=="."})*
+({Token.kind==number, !Date}):Partpage):Part {SubChapter}
+   
+
+-->
+
+{
+	gate.AnnotationSet Part = (AnnotationSet)bindings.get("Part");
+	
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+
+		
+	String partnumberStr ="";
+	
+	try {
+	gate.Annotation partnumberAnn = ((gate.AnnotationSet)bindings.get("partnumber")).iterator().next();
+	partnumberStr = doc.getContent().getContent(partnumberAnn.getStartNode().getOffset(),partnumberAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 2 "+partnumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		
+	String parttopicStr ="";
+	
+		try {
+		gate.AnnotationSet parttopicAs = (gate.AnnotationSet)bindings.get("parttopic");
+		java.util.ArrayList tokens = new java.util.ArrayList(parttopicAs);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		String text = "";
+		Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		parttopicStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+parttopicStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+			String partpageStr ="";
+	
+	try {
+	gate.Annotation partpageAnn = ((gate.AnnotationSet)bindings.get("Partpage")).iterator().next();
+	partpageStr = doc.getContent().getContent(partpageAnn.getStartNode().getOffset(),partpageAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 4 "+partpageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("partnumber", partnumberStr);
+		features.put("parttopic", parttopicStr);
+		features.put("partpage", partpageStr);
+		features.put("rule","omittedPart");
+		outputAS.add(Part.firstNode(), Part.lastNode(),"Part", features);
+}
+
+Rule:omittedSubchapter
+Priority:50
+({Part}|{SubChapter}|{SubSubChapter})
+( ({Number.type==roman, Token.string!="C", Token.string!="D", !Part, !SubChapter, !SubSubChapter}):subtocsubchapternumber
+	{Token.kind==punctuation, Token.string=="."}
+(({Token.kind==word, Token.length>1}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.kind==number}|{Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string==","}|{Token.string=="/"}|{Token.string=="–"})+):subchapter
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+({Token.kind==punctuation, Token.string=="."})*
+({Token.kind==number, Token.category!=ADJA, !Date, !SubSubChapter, !SubChapter}):page):SubChapter
+({Part}|{SubChapter}|{SubSubChapter})
+
+
+-->
+{
+		gate.AnnotationSet SubChapter = (AnnotationSet)bindings.get("SubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	String subtocsubchapternumberStr ="";
+	
+	try {
+		gate.AnnotationSet subtocsubchapternumberAnn = (AnnotationSet)bindings.get("subtocsubchapternumber");
+		gate.AnnotationSet numberToken = inputAS.get("Number", subtocsubchapternumberAnn.firstNode().getOffset(), subtocsubchapternumberAnn.lastNode().getOffset());
+		gate.Annotation numberTokens = numberToken.iterator().next();
+		subtocsubchapternumberStr = numberTokens.getFeatures().get("value").toString();
+		subtocsubchapternumberStr=  subtocsubchapternumberStr.substring(0, subtocsubchapternumberStr.length() - 2);
+		
+		Out.println("Here 4 "+subtocsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapternumber", subtocsubchapternumberStr);
+		
+	String subchapterStr ="";
+	
+	try {
+	gate.AnnotationSet subChapterAs = (gate.AnnotationSet)bindings.get("subchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+			
+
+		Out.println("Here 5 "+subchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapter", subchapterStr);
+		
+
+		
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","omittedSubchapter");
+outputAS.add(SubChapter.firstNode(), SubChapter.lastNode(),"SubChapter", features);
+
+ }
+ Rule: omittedSubsubchapter
+Priority:40
+
+({SubChapter}|{SubSubChapter})
+(({Token.kind==number, Token.category==ADJA, Token.length==2, !Part, !SubChapter, !SubSubChapter}):subtocsubsubchapternumber
+(({Token.kind==word, Token.length>1, Token.string!="Rn", Token.string!="Aufl", Token.string!="Abs"}|{Token.kind==number,  !SubSubChapter}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")",Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string=="/"}|{Token.string=="–"}|{Token.string==","})+):subtocsubsubchapter
+({Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD}|{Token.kind==word, Token.length<3, Token.string!="Rn", Token.string!="Art" }|{Token.kind==punctuation, Token.string!="."}|{Token.kind==number,  !Date})*
+({Token.kind==punctuation, Token.string=="."})*
+({Token.kind==number, Token.kind!=word, Token.category!=ADJA, !Date, !SubSubChapter}):page
+	):SubTocSubSubChapter 
+({Part}|{SubChapter}|{SubSubChapter})
+
+-->
+{
+		gate.AnnotationSet subTocSubSubChapter = (AnnotationSet)bindings.get("SubTocSubSubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+
+	
+		String subsubchapternumberStr ="";
+	
+		try {
+		gate.Annotation subsubchapternumberAnn = ((gate.AnnotationSet)bindings.get("subtocsubsubchapternumber")).iterator().next();
+		subsubchapternumberStr = doc.getContent().getContent(subsubchapternumberAnn.getStartNode().getOffset(),subsubchapternumberAnn.getEndNode().getOffset()).toString();
+
+			if(".".equals(subsubchapternumberStr.substring(subsubchapternumberStr.length() - 1, subsubchapternumberStr.length() )))
+			{subsubchapternumberStr=subsubchapternumberStr.substring(0,subsubchapternumberStr.length() - 1);}
+			
+
+		Out.println("Here 6 "+subsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapternumber", subsubchapternumberStr);
+		
+	String subsubchapterStr ="";
+		
+	
+	
+	try {
+	gate.AnnotationSet subSubChapterAs = (gate.AnnotationSet)bindings.get("subtocsubsubchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subSubChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subsubchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+	
+		
+		Out.println("Here 7 "+subsubchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapter", subsubchapterStr);
+	
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","omittedSubsubchapter");
+outputAS.add(subTocSubSubChapter.firstNode(), subTocSubSubChapter.lastNode(),"SubSubChapter", features);
+		
+	}
+	
+Rule: omittedBetweenPart
+Priority:30
+({SubChapter}|{Part}|{SubSubChapter})
+ (({Token.orth==upperInitial, Token.string=~"[A-Z]", Token.length==1, !Part, !SubChapter, !SubSubChapter}):partnumber 
+ {Token.string=="."}
+( (({Token.string!="."})|(({Token.string=="bzw"}|{Token.string=="Nr"}|{Token.string=="u"}|{Token.string=="n"}|{Token.string=="a"}|{Token.string=="F"}|{Token.string=="f"}|{Token.string=="ff"})({Token.string=="."})))+):parttopic 
+ ({Token.string=="."})+
+({Token.kind==number, !Date}):Partpage):Part 
+({Part}|{SubChapter})
+   
+
+-->
+
+{
+	gate.AnnotationSet Part = (AnnotationSet)bindings.get("Part");
+	
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+
+		
+	String partnumberStr ="";
+	
+	try {
+	gate.Annotation partnumberAnn = ((gate.AnnotationSet)bindings.get("partnumber")).iterator().next();
+	partnumberStr = doc.getContent().getContent(partnumberAnn.getStartNode().getOffset(),partnumberAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 2 "+partnumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		
+	String parttopicStr ="";
+	
+		try {
+		gate.AnnotationSet parttopicAs = (gate.AnnotationSet)bindings.get("parttopic");
+		java.util.ArrayList tokens = new java.util.ArrayList(parttopicAs);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		String text = "";
+		Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		parttopicStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+parttopicStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+			String partpageStr ="";
+	
+	try {
+	gate.Annotation partpageAnn = ((gate.AnnotationSet)bindings.get("Partpage")).iterator().next();
+	partpageStr = doc.getContent().getContent(partpageAnn.getStartNode().getOffset(),partpageAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 4 "+partpageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("partnumber", partnumberStr);
+		features.put("parttopic", parttopicStr);
+		features.put("partpage", partpageStr);
+		features.put("rule","omittedBetweenPart");
+		outputAS.add(Part.firstNode(), Part.lastNode(),"Part", features);
+}
+
+Rule:omittedBetweenSubchapter
+Priority:20
+({Part}|{SubChapter}|{SubSubChapter})
+( ({Number.type==roman, !Part, !SubChapter, !SubSubChapter}):subtocsubchapternumber
+	{Token.kind==punctuation, Token.string=="."}
+( (({Token.string!="."})|(({Token.string=="bzw"}|{Token.string=="Nr"}|{Token.string=="f"}|{Token.string=="u"}|{Token.string=="n"}|{Token.string=="a"}|{Token.string=="F"}|{Token.string=="ff"}){Token.string=="."}))+):subchapter
+({Token.kind==punctuation, Token.string=="."})+
+({Token.kind==number, Token.category!=ADJA, !Date, !SubSubChapter, !SubChapter}(({Token.string=="-"}|{Token.string==","}){Token.kind==number})?):page):SubChapter
+({Part}|{SubChapter}|{SubSubChapter})?
+
+
+-->
+{
+		gate.AnnotationSet SubChapter = (AnnotationSet)bindings.get("SubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+	String subtocsubchapternumberStr ="";
+	
+	try {
+		gate.AnnotationSet subtocsubchapternumberAnn = (AnnotationSet)bindings.get("subtocsubchapternumber");
+		gate.AnnotationSet numberToken = inputAS.get("Number", subtocsubchapternumberAnn.firstNode().getOffset(), subtocsubchapternumberAnn.lastNode().getOffset());
+		gate.Annotation numberTokens = numberToken.iterator().next();
+		subtocsubchapternumberStr = numberTokens.getFeatures().get("value").toString();
+		subtocsubchapternumberStr=  subtocsubchapternumberStr.substring(0, subtocsubchapternumberStr.length() - 2);
+		
+		Out.println("Here 4 "+subtocsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapternumber", subtocsubchapternumberStr);
+		
+	String subchapterStr ="";
+	
+	try {
+	gate.AnnotationSet subChapterAs = (gate.AnnotationSet)bindings.get("subchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+			
+
+		Out.println("Here 5 "+subchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subchapter", subchapterStr);
+		
+
+		
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","omittedBetweenSubchapter");
+outputAS.add(SubChapter.firstNode(), SubChapter.lastNode(),"SubChapter", features);
+
+ }
+ Rule: omittedBetweenSubsubchapter
+Priority:10
+
+({SubChapter}|{SubSubChapter})
+(({Token.kind==number, Token.category==ADJA, Token.length==2, !Part, !SubChapter, !SubSubChapter}|({Token.kind==number, Token.category==ADJD, Token.length==2, !Part, !SubChapter, !SubSubChapter})|{Token.kind==number, Token.category==ADV, Token.length==2, !Part, !SubChapter, !SubSubChapter}):subtocsubsubchapternumber
+	( (({Token.string!="."})|(({Token.string=="bzw"}|{Token.string=="Nr"}|{Token.string=="f"}|{Token.string=="u"}|{Token.string=="n"}|{Token.string=="a"}|{Token.string=="F"}|{Token.string=="ff"})({Token.string=="."})))+):subtocsubsubchapter
+	 ({Token.kind==punctuation, Token.string=="."})+
+({Token.kind==number, Token.kind!=word, Token.category!=ADJA, !Date, !SubSubChapter}(({Token.string=="-"}|{Token.string==","}){Token.kind==number})?):page
+	):SubTocSubSubChapter 
+({Part}|{SubChapter}|{SubSubChapter})
+
+-->
+{
+		gate.AnnotationSet subTocSubSubChapter = (AnnotationSet)bindings.get("SubTocSubSubChapter");
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+	
+
+	
+		String subsubchapternumberStr ="";
+	
+		try {
+		gate.Annotation subsubchapternumberAnn = ((gate.AnnotationSet)bindings.get("subtocsubsubchapternumber")).iterator().next();
+		subsubchapternumberStr = doc.getContent().getContent(subsubchapternumberAnn.getStartNode().getOffset(),subsubchapternumberAnn.getEndNode().getOffset()).toString();
+
+			if(".".equals(subsubchapternumberStr.substring(subsubchapternumberStr.length() - 1, subsubchapternumberStr.length() )))
+			{subsubchapternumberStr=subsubchapternumberStr.substring(0,subsubchapternumberStr.length() - 1);}
+			
+
+		Out.println("Here 6 "+subsubchapternumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapternumber", subsubchapternumberStr);
+		
+	String subsubchapterStr ="";
+		
+	
+	
+	try {
+	gate.AnnotationSet subSubChapterAs = (gate.AnnotationSet)bindings.get("subtocsubsubchapter");
+	java.util.ArrayList tokens = new java.util.ArrayList(subSubChapterAs);
+	Collections.sort(tokens, new gate.util.OffsetComparator());
+	String text = "";
+	Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		subsubchapterStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+	
+		
+		Out.println("Here 7 "+subsubchapterStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("subsubchapter", subsubchapterStr);
+	
+	String pageStr ="";
+	
+		try {
+		gate.Annotation pageAnn = ((gate.AnnotationSet)bindings.get("page")).iterator().next();
+		pageStr = doc.getContent().getContent(pageAnn.getStartNode().getOffset(),pageAnn.getEndNode().getOffset()).toString();
+		
+		Out.println("Here 8 "+pageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		features.put("page", pageStr);
+
+features.put("rule","omittedBetweenSubsubchapter");
+outputAS.add(subTocSubSubChapter.firstNode(), subTocSubSubChapter.lastNode(),"SubSubChapter", features);
+		
+	}
+	Rule: omittedRomanPart
+Priority:5
+({SubChapter}|{Part})
+ (({Token.orth==upperInitial, Token.length==1, !SubChapter, !Part}):partnumber 
+ {Token.string=="."}
+ (({Token.kind==word, Token.length>1}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==ADJA}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==NN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==VVFIN}|{Token.kind==punctuation,  Token.position== startpunct, Token.category==CARD,  Token.string!=")", Token.string!="("}| {Token.category==ADJA, Token.kind==punctuation}| {Token.category==XY, Token.kind==punctuation}| {Token.category==VVFIN, Token.kind==punctuation}|{Token.string=="§"}|{Token.string==":"}|{Token.string=="–"}|{Token.string==";"}|{Token.string=="-"}|
+ ({Token.kind==number}{Token.string=="ff"}{Token.string=="."}{Token.kind==word})|{Token.string==","}|
+ ({Token.string=="bzw"}{Token.string=="."})|
+   ({Token.string=="Nr"}{Token.string=="."}{Token.kind==number}({Token.kind==word}|({Token.string==","}{Token.kind==number}))?)|
+ (({Token.string=="("})({Token.string=="Nr"}{Token.string=="."}{Token.kind==number})?(({Token.string!="."}|({Token.string=="u"}{Token.string=="."}))[0,3])({Token.string==")"})))+):parttopic 
+ ({Token.string==".", !Part, !SubChapter})+
+({Token.kind==number, !Date, !Part, !SubChapter}(({Token.string=="-"}|{Token.string==","}){Token.kind==number})?):Partpage):Part
+
+
+-->
+
+{
+	gate.AnnotationSet Part = (AnnotationSet)bindings.get("Part");
+	
+	
+	gate.FeatureMap features = Factory.newFeatureMap();
+
+
+		
+	String partnumberStr ="";
+	
+	try {
+	gate.Annotation partnumberAnn = ((gate.AnnotationSet)bindings.get("partnumber")).iterator().next();
+	partnumberStr = doc.getContent().getContent(partnumberAnn.getStartNode().getOffset(),partnumberAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 2 "+partnumberStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		
+	String parttopicStr ="";
+	
+		try {
+		gate.AnnotationSet parttopicAs = (gate.AnnotationSet)bindings.get("parttopic");
+		java.util.ArrayList tokens = new java.util.ArrayList(parttopicAs);
+		Collections.sort(tokens, new gate.util.OffsetComparator());
+		String text = "";
+		Iterator tokIter = tokens.iterator();
+	
+	while(tokIter.hasNext())
+		parttopicStr += " "+(String)((Annotation)tokIter.next()).getFeatures().get("string");
+		
+		Out.println("Here 3 "+parttopicStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+			String partpageStr ="";
+	
+	try {
+	gate.Annotation partpageAnn = ((gate.AnnotationSet)bindings.get("Partpage")).iterator().next();
+	partpageStr = doc.getContent().getContent(partpageAnn.getStartNode().getOffset(),partpageAnn.getEndNode().getOffset()).toString();
+
+
+		Out.println("Here 4 "+partpageStr);}
+	catch (Exception e) {
+		Out.println(e);
+		}
+		
+		
+		features.put("partnumber", partnumberStr);
+		features.put("parttopic", parttopicStr);
+		features.put("partpage", partpageStr);
+		features.put("rule","omittedRomanPart");
+		outputAS.add(Part.firstNode(), Part.lastNode(),"Part", features);
+}
