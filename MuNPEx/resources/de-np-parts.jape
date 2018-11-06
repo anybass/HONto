@@ -49,7 +49,7 @@ Priority: 50
 
 Rule: pronoun
 	//{Token.category == PPER}|
-	{Token.category == PDS})
+	({Token.category == PDS}
 ):head
 -->
 	:head.tempNP = {kind = "HEAD", Pronoun="true"}
@@ -58,12 +58,12 @@ Rule: pronoun
 Rule: head
 (
 	(({Token.category == TRUNC})[0,5])
-	  ({Token.category == NN}|
+	  {Token.category == NN}|
 	  {Token.category == NE}|
-	  {Token.category == FM}|
+	  {Token.category == FM}
 ):head
 -->
-	:head.tempNP = {kind = "HEAD", Pronoun="false"}}
+	:head.tempNP = {kind = "HEAD", Pronoun="false"}
 
 
 Rule: head2
@@ -75,4 +75,4 @@ Rule: head2
 	)*
 ):head
 -->
-	:head.tempNP = {kind = "HEAD", Pronoun="false"}}
+	:head.tempNP = {kind = "HEAD", Pronoun="false"}
