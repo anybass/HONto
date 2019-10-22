@@ -1,7 +1,9 @@
 # HONto
 Extracting Concept Hierarchies from Textbooks, based on the paper to be published at [LeDAM Workshop 2018](https://sites.google.com/site/legaldam2018/programme)
 
-The folder ContextSelection contains the implementation for a follow-up paper "Context Selection in a Heterogeneous Legal Ontology", submitted at [BTW '19](https://btw.informatik.uni-rostock.de/index.php/de/). More information on this can be found within the folder.
+The folder ContextSelection contains the implementation for a follow-up paper "Context Selection in a Heterogeneous Legal Ontology", accepted by the BigDS Workshop at [BTW '19](https://btw.informatik.uni-rostock.de/index.php/de/). More information on this can be found within the folder.
+
+Please find the code for the paper "ERST: Leveraging Topic Features for Context-Aware Legal Reference Linking" in the reference_linking folder.
 
 *HONto* is a project which aims for: 
 
