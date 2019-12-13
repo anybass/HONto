@@ -3,7 +3,7 @@ Extracting Concept Hierarchies from Textbooks, based on the paper to be publishe
 
 The folder ContextSelection contains the implementation for a follow-up paper "Context Selection in a Heterogeneous Legal Ontology", accepted by the BigDS Workshop at [BTW '19](https://btw.informatik.uni-rostock.de/index.php/de/). More information on this can be found within the folder.
 
-In the folder reference_linking you find code for the paper "ERST: Leveraging Topic Features for Context-Aware Legal Reference Linking", presented at the JURIX 2019 conference.
+In the folder reference_linking you find code for the paper "ERST: Leveraging Topic Features for Context-Aware Legal Reference Linking", presented at the [JURIX 2019](https://jurix2019.oeg-upm.net/index.html) conference.
 
 
 *HONto* is a project which aims for: 
