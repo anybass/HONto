@@ -1,0 +1,241 @@
+IMPORT PACKAGE de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos FROM Stanfordtagger AS spos;
+
+
+UIMAFIT de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter;
+UIMAFIT de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordPosTagger;
+
+//CONFIGURE(de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordSegmenter, "boundaryFollowers"= {
+ //  ")", "]", "}", "\"", "'", "''", "\u2019", "\u201D", "-RRB-", "-RSB-", "-RCB-", ")", "]", "}", "vgl."});
+Document{-> SETFEATURE("language","de")};  //Set language
+
+Document{-> EXEC(StanfordSegmenter)};    //Execute stanford segmenter
+
+Document{-> EXEC(StanfordPosTagger, {spos.POS})};
+
+Document{-> RETAINTYPE(SPACE)};
+Document{-> RETAINTYPE(BREAK)};
+
+//Roman Numeral Tagger
+DECLARE RN(STRING Value);
+WORDTABLE RomanNumeral ='RomanNumeral.txt';
+Document {-> MARKTABLE (RN, 1, RomanNumeral, "Value" = 2)};
+
+//Rules
+
+
+//------------------------------------------------------------------------------//
+//----------------------- GESETZ (Norms) ----------------------------------------//
+//------------------------------------------------------------------------------//
+
+DECLARE gesetz, gesetzno, gesetznope, lref, rref;
+DECLARE Gesetz(gesetz gesetz);
+//The meaning of REF changed. It now is a combination of two laws, separated by i.V.m or a conjunction
+DECLARE REF1(lref lref, rref rref);
+
+        (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.CARD
+            (org.apache.uima.ruta.type.ANY{REGEXP("[\\(\\)a-z0-9,\\-–§]+"), -PARTOF(pos.V)} )[0,40]//\\& W{-REGEXP("Rdnr|Rn")} &-CAP\\& -pos.V{FEATURE("PosValue","VAFIN")} \\& -pos.V{FEATURE("PosValue","VVFIN")} \\& -pos.PP{FEATURE("PosValue","APPR")} \\& -pos.ADJ{FEATURE("PosValue","ADJD")})[1,15])    
+           // (org.apache.uima.ruta.type.ANY{REGEXP("([A-Za-z\\-,])")})* 
+            ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                |
+                ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+            ) {->gesetz})
+             {-> CREATE (Gesetz, "gesetz" = gesetz)};
+//org.apache.uima.ruta.type.NUM  (org.apache.uima.ruta.type.ANY{REGEXP("[^B-MO-RT-Z]{0,15}")}
+ (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) (pos.CARD) ((COMMA|W{REGEXP("und")}|W{REGEXP("bis")}|W{REGEXP("sowie")}|SPECIAL{REGEXP("–")}) (SPECIAL{REGEXP("§")})* pos.CARD)*
+              ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                  |
+                  ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+              ) {->gesetz})
+               {-> CREATE (Gesetz, "gesetz" = gesetz)};  
+
+     
+
+
+(((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) org.apache.uima.ruta.type.NUM (((W{REGEXP("und")})|W{REGEXP("bis")}|SPECIAL{REGEXP("-")}|SPECIAL{REGEXP("–")}) (SPECIAL{REGEXP("§")})* org.apache.uima.ruta.type.NUM )? (pos.CARD (COMMA pos.CARD)*)?
+
+(org.apache.uima.ruta.type.ANY{REGEXP("[^\\/;]"), -PARTOF(pos.V)})[0,40] //\\& W{-REGEXP("Rdnr|Rn")} &-CAP\\& -pos.V{FEATURE("PosValue","VAFIN")} \\& -pos.V{FEATURE("PosValue","VVFIN")} \\& -pos.PP{FEATURE("PosValue","APPR")} \\& -pos.ADJ{FEATURE("PosValue","ADJD")})[1,15])    
+   // (org.apache.uima.ruta.type.ANY{REGEXP("([A-Za-z\\-,])")})* 
+    ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+    |
+    ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+    ) {->gesetz})
+     {-> CREATE (Gesetz, "gesetz" = gesetz)};
+     
+        
+
+   
+   (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.CARD
+       (org.apache.uima.ruta.type.ANY{REGEXP("[\\(\\)a-z0-9]+"), -PARTOF(pos.V)})[0,40]//\\& W{-REGEXP("Rdnr|Rn")} &-CAP\\& -pos.V{FEATURE("PosValue","VAFIN")} \\& -pos.V{FEATURE("PosValue","VVFIN")} \\& -pos.PP{FEATURE("PosValue","APPR")} \\& -pos.ADJ{FEATURE("PosValue","ADJD")})[1,15])    
+      // (org.apache.uima.ruta.type.ANY{REGEXP("([A-Za-z\\-,])")})* 
+       ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+           |
+           ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+       ) {->gesetz})
+        {-> CREATE (Gesetz, "gesetz" = gesetz)};
+        
+       
+                        
+        
+          (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.CARD(((W{REGEXP("und")})|W{REGEXP("bis")}|SPECIAL{REGEXP("-")}|SPECIAL{REGEXP("–")}) (SPECIAL{REGEXP("§")})* org.apache.uima.ruta.type.NUM )? (pos.CARD (COMMA pos.CARD)*)?
+           
+               (org.apache.uima.ruta.type.ANY{REGEXP("[\\(\\)a-z0-9]+"), -PARTOF(pos.V)})[0,40]//\\& W{-REGEXP("Rdnr|Rn")} &-CAP\\& -pos.V{FEATURE("PosValue","VAFIN")} \\& -pos.V{FEATURE("PosValue","VVFIN")} \\& -pos.PP{FEATURE("PosValue","APPR")} \\& -pos.ADJ{FEATURE("PosValue","ADJD")})[1,15])    
+              // (org.apache.uima.ruta.type.ANY{REGEXP("([A-Za-z\\-,])")})* 
+               ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                   |
+                   ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+               ) {->gesetz})
+                {-> CREATE (Gesetz, "gesetz" = gesetz)};
+                
+        
+        
+          (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.CARD
+          
+            W{REGEXP("[A-Z]([a-z]){0,6}")}PERIOD (pos.CARD)
+              ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                  |
+                  ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+              ) {->gesetz})
+               {-> CREATE (Gesetz, "gesetz" = gesetz)};
+      (((pos.CARD{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.CARD+
+          
+              ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                  |
+                  ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                   ){->gesetz})
+                    {-> CREATE (Gesetz, "gesetz" = gesetz)};
+      (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) (pos.CARD) ((COMMA|W{REGEXP("und")}|W{REGEXP("bis")}|W{REGEXP("sowie")}|pos.NP|pos.NN|SPECIAL{REGEXP("-")}|SPECIAL{REGEXP("–")}) (SPECIAL{REGEXP("§")})*(org.apache.uima.ruta.type.NUM|pos.CARD))*
+              ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                  |
+                  ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+              ) {->gesetz})
+               {-> CREATE (Gesetz, "gesetz" = gesetz)};  
+     
+     (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) (org.apache.uima.ruta.type.NUM) ((COMMA|W{REGEXP("und")}|W{REGEXP("bis")}|W{REGEXP("sowie")}|pos.NP|pos.NN|SPECIAL{REGEXP("-")}|SPECIAL{REGEXP("–")}) (SPECIAL{REGEXP("§")})*(org.apache.uima.ruta.type.NUM|pos.CARD))*
+         ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+             |
+             ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+         ) {->gesetz})
+          {-> CREATE (Gesetz, "gesetz" = gesetz)};  
+     
+  (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) (pos.CARD|org.apache.uima.ruta.type.NUM)+ ((COMMA|W{REGEXP("und")}|W{REGEXP("bis")}|W{REGEXP("sowie")})(SPECIAL{REGEXP("§")})*(pos.CARD|org.apache.uima.ruta.type.NUM)+)*
+      ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+          |
+          ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+      ) {->gesetz})
+       {-> CREATE (Gesetz, "gesetz" = gesetz)};
+       
+(((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) org.apache.uima.ruta.type.NUM (pos.CARD)? ((W{REGEXP("Nr\\b")}|W{REGEXP("Abs\\b")}|W{REGEXP("S\\b")}|W{REGEXP("UAbs\\b")}) PERIOD pos.CARD)*
+      ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+          |
+          ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+      ) {->gesetz})
+       {-> CREATE (Gesetz, "gesetz" = gesetz)};            
+  (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) org.apache.uima.ruta.type.NUM
+      ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+          |
+          ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+      ) {->gesetz})
+       {-> CREATE (Gesetz, "gesetz" = gesetz)};
+         (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) (pos.CARD)
+             ((pos.NN{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+                 |
+                 ( pos.NP{REGEXP("([A-Za-z\\-]){1,15}([A-HJ-UVWY-ZÄÖÜ])\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)})
+             ) {->gesetz})
+              {-> CREATE (Gesetz, "gesetz" = gesetz)};
+            (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) org.apache.uima.ruta.type.ANY{REGEXP("[0-9]+[a-z]?")}
+                (W{REGEXP("([A-HJ-UVWY-ZÄÖÜ]){1,7}\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)}
+                     ) {->gesetz})
+                      {-> CREATE (Gesetz, "gesetz" = gesetz)};
+                             (((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD)) pos.O{REGEXP("[0-9]+[a-z]?")}
+                                      (pos.O{REGEXP("([A-HJ-UVWY-ZÄÖÜ]){1,7}\\b"),-REGEXP("OLG\\b"),-REGEXP("BGH\\b"),-REGEXP("BGHZ\\b"),-REGEXP("EUGH\\b"),-REGEXP("LG\\b"),-REGEXP("WG\\b"),-REGEXP("EG\\b"),-REGEXP("BFHE\\b"),-PARTOF(gesetz)}
+                                           ) {->gesetz})
+                                            {-> CREATE (Gesetz, "gesetz" = gesetz)};
+// Here, wrong annotations of Gesetz are unmarked, can be extended
+Gesetz.gesetz{PARTOF(RN)->UNMARK (Gesetz)};
+Gesetz{REGEXP("(.)*UN")->UNMARK (Gesetz)};
+  Gesetz{REGEXP("(.)*UA")->UNMARK (Gesetz)};
+    Gesetz{REGEXP("(.)*VO")->UNMARK (Gesetz)};
+        Gesetz{REGEXP("(.)*RL")->UNMARK (Gesetz)};
+         Gesetz{REGEXP("(.)*RiL")->UNMARK (Gesetz)};
+        Gesetz{REGEXP("(.)*IV")->UNMARK (Gesetz)};
+        Gesetz->{ANY t:@Gesetz{-> UNMARK(t)};t:@Gesetz{-> UNMARK(t)} ANY;};
+    //SGesetz{NEAR(toc,0,15,false)->UNMARK(Gesetz)};
+
+
+//-----------------------------------------------------------------------------------------//
+//----- Richtlinie (Directive), Verordnung (Regulation) and Gericht (Court Decision)-------//
+//-----------------------------------------------------------------------------------------//
+
+DECLARE rili;
+DECLARE Richtlinie(rili rili);
+DECLARE vo;
+DECLARE Verordnung(vo vo);
+DECLARE ger;
+DECLARE Gericht(ger ger);
+(
+(
+(
+(pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*RL")} PERIOD?) 
+|(pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*RL")} PERIOD?) 
+|(W{REGEXP("([a-zA-ZÖÄÜ\\-])*Rl")} PERIOD?) 
+| (pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*RI")} PERIOD?) 
+| (pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*RI")} PERIOD?) 
+| (pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*Ri")} PERIOD?)
+|(pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*Ri")} PERIOD?)
+| (pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*RiL")} PERIOD?)
+|(pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*RiL")} PERIOD?) 
+| pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*RiLi")}
+| pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*RiLi")}
+|  pos.NN{REGEXP("(.)*Richtlinie")}|pos.NP{REGEXP("(.)*Richtlinie")}| W{REGEXP("(.)+richtlinie\b")})) 
+( (org.apache.uima.ruta.type.NUM{REGEXP("([0-9]){1,5}")} SPECIAL{REGEXP("/")} 
+org.apache.uima.ruta.type.NUM{REGEXP("([0-9]){1,5}")} SPECIAL{REGEXP("/")} CAP)?
+((((W{REGEXP("für")}W{-PARTOF(pos.ART)}))//(pos.NN|pos.NP))
+|(W{REGEXP("über")})) W*)*) 
+{ -> MARK(rili)}){-> CREATE (Richtlinie, "rili" = rili)}; 
+
+
+(
+(
+pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*VO\\b")}
+|pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*VO\\b")}
+| W{REGEXP("(.)*Verordnung\\b")}
+| W{REGEXP("(.)+ordnung\\b")}
+)
+ 
+(org.apache.uima.ruta.type.NUM{REGEXP("([0-9]){1,5}")} SPECIAL{REGEXP("/")}
+ org.apache.uima.ruta.type.NUM{REGEXP("([0-9]){1,4}")} (SPECIAL{REGEXP("/")} CAP)?
+//(W{REGEXP("über")} ((org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.NN) |W |(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.NP)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ADJ)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.PP)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.O)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ADV)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ART))[1,9])*)
+(
+ANY{OR(REGEXP("über"),REGEXP("für"))}
+(ANY{AND(-REGEXP("vom"), -REGEXP("nach"))})+
+(W{REGEXP("vom")} 
+org.apache.uima.ruta.type.NUM PERIOD org.apache.uima.ruta.type.NUM  
+PERIOD org.apache.uima.ruta.type.NUM )?
+//(pos.NN|pos.NP))*)
+)?)
+{ -> MARK(vo)}){-> CREATE (Verordnung, "vo" = vo)}; 
+((
+(((SPECIAL{REGEXP("§")})+ |  (W{REGEXP("Art")} PERIOD))(org.apache.uima.ruta.type.NUM|pos.CARD)(pos.CARD (COMMA pos.CARD)?)?)? ( pos.NP{REGEXP("([a-zA-ZÖÄÜ\\-])*VO\b")}| pos.NN{REGEXP("([a-zA-ZÖÄÜ\\-])*VO\b")}| org.apache.uima.ruta.type.ANY{REGEXP("(.)*Verordnung\b")}| org.apache.uima.ruta.type.ANY{REGEXP("(.)+verordnung$")})
+
+(W{REGEXP("vom")} org.apache.uima.ruta.type.NUM PERIOD org.apache.uima.ruta.type.NUM  PERIOD org.apache.uima.ruta.type.NUM )?
+//(W{REGEXP("über")} ((org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.NN) |W|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.NP)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ADJ)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.PP)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.O)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ADV)|(org.apache.uima.ruta.type.ANY{REGEXP("[^\\.]")}&pos.ART))[1,10])*
+((W{REGEXP("über")}|(W{REGEXP("für")}))(W{-REGEXP("vom"),-REGEXP("nach")})+)*
+(W{REGEXP("vom")} org.apache.uima.ruta.type.NUM PERIOD org.apache.uima.ruta.type.NUM  PERIOD org.apache.uima.ruta.type.NUM )?
+//( pos.NN | pos.NN))*
+(COMMA )?(pos.NP|pos.NN) (PERIOD? (pos.CARD PERIOD?)[0,5])?
+ ){ -> MARK(vo)}
+ ){-> CREATE (Verordnung, "vo" = vo)}; 
+((pos.NN{REGEXP("\\b([a-zA-ZÖÄÜ\\-])*GH\\b")}|pos.NP{REGEXP("\\b([a-zA-ZÖÄÜ\\-])*GH\\b")}){->MARK(ger)}  (org.apache.uima.ruta.type.ANY{REGEXP("[A-ZÄÖÜ]+")})+ org.apache.uima.ruta.type.NUM (COMMA org.apache.uima.ruta.type.NUM (SPECIAL{REGEXP("\\(")} org.apache.uima.ruta.type.NUM SPECIAL{REGEXP("\\)")})?)?){->CREATE( Gericht, "ger"=ger)}; 
+((pos.NN{REGEXP("\\b([a-zA-ZÖÄÜ\\-])*GH\\b")}|pos.NP{REGEXP("\\b([a-zA-ZÖÄÜ\\-])*GH\\b")}){->MARK(ger)} COMMA (org.apache.uima.ruta.type.ANY{REGEXP("[0-9\\/\\-A-Z]+")})+){->CREATE( Gericht, "ger"=ger)};
+(((pos.NN{REGEXP("OLG\\b")}|pos.NP{REGEXP("OLG\\b")}) W){->MARK(ger)}  (org.apache.uima.ruta.type.ANY{REGEXP("[A-ZÄÖÜ]+")})+ org.apache.uima.ruta.type.NUM (COMMA org.apache.uima.ruta.type.NUM (SPECIAL{REGEXP("\\(")} org.apache.uima.ruta.type.NUM SPECIAL{REGEXP("\\)")})?)?){->CREATE( Gericht, "ger"=ger)};
+
+ Richtlinie{COUNT(W,6,10)->UNMARK(Richtlinie)};
+  Richtlinie{PARTOF(pos.V)->UNMARK(Richtlinie)};
+   Verordnung{PARTOF(pos.V)->UNMARK(Verordnung)};
+
+
+ //------------------------------------------------------------------------------//
+ //-------------------------- COMBINED REFERENCES -----------------------------------------------//
+ //------------------------------------------------------------------------------//
+
+((Gesetz | Verordnung | Richtlinie ){-> MARK(lref)} (pos.ADJ{REGEXP("i.V.m.")}|W{REGEXP("vom")})(Gesetz | Verordnung | Richtlinie){-> MARK(rref)}){-> CREATE (REF1, "lref" = lref, "rref" = rref)};
