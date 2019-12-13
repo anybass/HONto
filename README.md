@@ -5,7 +5,6 @@ The folder ContextSelection contains the implementation for a follow-up paper "C
 
 In the folder reference_linking you find code for the paper "ERST: Leveraging Topic Features for Context-Aware Legal Reference Linking", presented at the JURIX 2019 conference.
 
-Please find the code for the paper "ERST: Leveraging Topic Features for Context-Aware Legal Reference Linking" in the reference_linking folder.
 
 *HONto* is a project which aims for: 
 
